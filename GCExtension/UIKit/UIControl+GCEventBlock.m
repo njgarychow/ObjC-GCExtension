@@ -11,22 +11,56 @@
 #import <objc/runtime.h>
 
 
+@interface UIControlEventBlockWrapper : NSObject
+
+@property (nonatomic, strong) GCEventActionBlock eventActionBlock;
+
++ (instancetype)createWrapperWithControl:(UIControl *)control
+                           controlEvents:(UIControlEvents)event
+                        eventActionBlock:(GCEventActionBlock)eventActionBlock;
+
+@end
+
+@implementation UIControlEventBlockWrapper
+
++ (instancetype)createWrapperWithControl:(UIControl *)control
+                           controlEvents:(UIControlEvents)event
+                        eventActionBlock:(GCEventActionBlock)eventActionBlock {
+    return [[self alloc] initWithControl:control controlEvents:event eventActionBlock:eventActionBlock];
+}
+- (instancetype)initWithControl:(UIControl *)control
+                  controlEvents:(UIControlEvents)event
+               eventActionBlock:(GCEventActionBlock)eventActionBlock {
+    if (self = [self init]) {
+        [control addTarget:self action:@selector(_executeActionBlockByControl:touches:) forControlEvents:event];
+        _eventActionBlock = eventActionBlock;
+    }
+    return self;
+}
+
+- (void)_executeActionBlockByControl:(UIControl *)control touches:(NSSet *)touches {
+    _eventActionBlock(control, touches);
+}
+
+@end
+
+
+
+
+
 
 @implementation UIControl (GCEventBlock)
 
 - (void)addControlEvents:(UIControlEvents)event action:(GCEventActionBlock)action {
     
-    if (!action) {
-        return;
-    }
+    NSParameterAssert(action);
     
-    SEL selector = [self _selectorForControlEvents:event];
-    if (![self respondsToSelector:selector]) {
-        class_addMethod([self class], selector, (IMP)_eventActionHandler, "v@:@@");
-        [self addTarget:self action:selector forControlEvents:event];
-    }
+    UIControlEventBlockWrapper* wrapper = [UIControlEventBlockWrapper
+                                           createWrapperWithControl:self
+                                           controlEvents:event
+                                           eventActionBlock:action];
     
-    [[self _eventActionBlocksForControlEvents:event] addObject:action];
+    [[self _eventActionBlocksForControlEvents:event] addObject:wrapper];
 }
 
 - (void)removeAllControlEventsAction:(UIControlEvents)event {
@@ -56,23 +90,6 @@
     }
     
     return blocksArr;
-}
-
-#pragma mark - the IMP of the event's action handler.
-void _eventActionHandler(id self, SEL _cmd, id target, id touchEvent) {
-    NSString* stringName = [self _stringNameForControlEventsFromSelector:_cmd];
-    for (GCEventActionBlock block in [self _eventActionBlocksForControlEventsStringName:stringName]) {
-        block(target, [touchEvent allTouches]);
-    }
-}
-
-#pragma mark - |stringName|, |selector|, |event| convert to each other.
-- (SEL)_selectorForControlEvents:(UIControlEvents)event {
-    NSString* selectorNameString = [self _stringNameForControlEvents:event];
-    return sel_registerName([selectorNameString cStringUsingEncoding:NSUTF8StringEncoding]);
-}
-- (NSString *)_stringNameForControlEventsFromSelector:(SEL)selector {
-    return [NSString stringWithCString:sel_getName(selector) encoding:NSUTF8StringEncoding];
 }
 - (NSString *)_stringNameForControlEvents:(UIControlEvents)event {
     return [NSString stringWithFormat:@"method_avoid_conflict_placeholder_%@_target:touches:", @(event)];
