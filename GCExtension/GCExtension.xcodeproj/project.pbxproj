@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61CCBD93198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CCBD91198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61CCBD94198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CCBD92198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m */; };
 		61F29884198E93F600461164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29883198E93F600461164 /* Foundation.framework */; };
 		61F29889198E93F600461164 /* GCExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 61F29888198E93F600461164 /* GCExtension.h */; };
 		61F29892198E93F600461164 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29891198E93F600461164 /* XCTest.framework */; };
@@ -44,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61CCBD91198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
+		61CCBD92198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
 		61F29880198E93F600461164 /* libGCExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F29883198E93F600461164 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61F29887198E93F600461164 /* GCExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCExtension-Prefix.pch"; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61CCBD8C198FCED800C1E5CD /* ObjectKit */ = {
+			isa = PBXGroup;
+			children = (
+				61CCBD91198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h */,
+				61CCBD92198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m */,
+			);
+			path = ObjectKit;
+			sourceTree = SOURCE_ROOT;
+		};
 		61F29877198E93F600461164 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				61F29888198E93F600461164 /* GCExtension.h */,
+				61CCBD8C198FCED800C1E5CD /* ObjectKit */,
 				61F298A9198E942400461164 /* UIKit */,
 				61F29886198E93F600461164 /* Supporting Files */,
 			);
@@ -164,6 +178,7 @@
 			files = (
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
 				61F298AF198E945300461164 /* UIControl+GCEventBlock.h in Headers */,
+				61CCBD93198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CCBD94198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m in Sources */,
 				61F298AC198E942400461164 /* UIControl+GCEventBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

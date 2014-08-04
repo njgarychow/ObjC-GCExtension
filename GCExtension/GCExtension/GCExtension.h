@@ -7,3 +7,5 @@
 //
 
 #import "UIControl+GCEventBlock.h"
+
+#import "NSObject+GCNotificationObserver.h"

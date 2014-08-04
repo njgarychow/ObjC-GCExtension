@@ -52,7 +52,6 @@
 @implementation UIControl (GCEventBlock)
 
 - (void)addControlEvents:(UIControlEvents)event action:(GCEventActionBlock)action {
-    
     NSParameterAssert(action);
     
     UIControlEventBlockWrapper* wrapper = [UIControlEventBlockWrapper
@@ -60,41 +59,31 @@
                                            controlEvents:event
                                            eventActionBlock:action];
     
-    [[self _eventActionBlocksForControlEvents:event] addObject:wrapper];
+    [[self _controlEventsBlockWrappersForControlEvents:event] addObject:wrapper];
 }
 
 - (void)removeAllControlEventsAction:(UIControlEvents)event {
-    [[self _eventActionBlocksForControlEvents:event] removeAllObjects];
+    [[self _controlEventsBlockWrappersForControlEvents:event] removeAllObjects];
 }
 
 
 #pragma mark - instance private method
-
-#pragma mark - storage the blocks of the events.
-- (NSMutableArray *)_eventActionBlocksForControlEvents:(UIControlEvents)event {
-    NSString* stringName = [self _stringNameForControlEvents:event];
-    return [self _eventActionBlocksForControlEventsStringName:stringName];
-}
-- (NSMutableArray *)_eventActionBlocksForControlEventsStringName:(NSString *)stringName {
-    static char const eventActionBlocksDicKey;
-    NSMutableDictionary* blocksDic = objc_getAssociatedObject(self, &eventActionBlocksDicKey);
-    if (!blocksDic) {
-        blocksDic = [NSMutableDictionary dictionary];
-        objc_setAssociatedObject(self, &eventActionBlocksDicKey, blocksDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (NSMutableArray *)_controlEventsBlockWrappersForControlEvents:(UIControlEvents)event {
+    static char const wrappersDicKey;
+    NSMutableDictionary* wrapperDic = objc_getAssociatedObject(self, &wrappersDicKey);
+    if (!wrapperDic) {
+        wrapperDic = [NSMutableDictionary dictionary];
+        objc_setAssociatedObject(self, &wrappersDicKey, wrapperDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
-    NSMutableArray* blocksArr = blocksDic[stringName];
-    if (!blocksArr) {
-        blocksArr = [NSMutableArray array];
-        blocksDic[stringName] = blocksArr;
+    NSMutableArray* wrapperArr = wrapperDic[@(event)];
+    if (!wrapperArr) {
+        wrapperArr = [NSMutableArray array];
+        wrapperDic[@(event)] = wrapperArr;
     }
     
-    return blocksArr;
+    return wrapperArr;
 }
-- (NSString *)_stringNameForControlEvents:(UIControlEvents)event {
-    return [NSString stringWithFormat:@"method_avoid_conflict_placeholder_%@_target:touches:", @(event)];
-}
-
 
 
 @end

@@ -10,9 +10,24 @@
 
 typedef void(^GCEventActionBlock)(UIControl* control, NSSet* touches);
 
+/**
+ *  This Extension is used for add UIControlEvents to the UIControls.
+ */
 @interface UIControl (GCEventBlock)
 
+/**
+ *  add actionBlock for paticular event. you can call this method mutiple times for a paticular event.
+ *
+ *  @param event    the particular event.
+ *  @param action   action will be invoked when the particular event happen. |action| can't be nil.
+ */
 - (void)addControlEvents:(UIControlEvents)event action:(GCEventActionBlock)action;
+
+/**
+ *  remove all the actionBlocks for paticular event.
+ *
+ *  @param event    the particular event.
+ */
 - (void)removeAllControlEventsAction:(UIControlEvents)event;
 
 @end
