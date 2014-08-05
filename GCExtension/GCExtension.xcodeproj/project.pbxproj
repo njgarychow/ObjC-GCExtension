@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61CCBD93198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CCBD91198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61CCBD94198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CCBD92198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m */; };
 		61F29884198E93F600461164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29883198E93F600461164 /* Foundation.framework */; };
 		61F29889198E93F600461164 /* GCExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 61F29888198E93F600461164 /* GCExtension.h */; };
 		61F29892198E93F600461164 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29891198E93F600461164 /* XCTest.framework */; };
@@ -17,9 +15,14 @@
 		61F29898198E93F600461164 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29880198E93F600461164 /* libGCExtension.a */; };
 		61F2989E198E93F600461164 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61F2989C198E93F600461164 /* InfoPlist.strings */; };
 		61F298A0198E93F600461164 /* GCExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F2989F198E93F600461164 /* GCExtensionTests.m */; };
-		61F298AC198E942400461164 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F298AB198E942400461164 /* UIControl+GCEventBlock.m */; };
 		61F298AE198E945100461164 /* GCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F29888198E93F600461164 /* GCExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61F298AF198E945300461164 /* UIControl+GCEventBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F298AA198E942400461164 /* UIControl+GCEventBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */; };
+		B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3D1990B0E100B6EA49 /* UIControl+GCEventBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */; };
+		B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		61CCBD91198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
-		61CCBD92198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
 		61F29880198E93F600461164 /* libGCExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F29883198E93F600461164 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		61F29887198E93F600461164 /* GCExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCExtension-Prefix.pch"; sourceTree = "<group>"; };
 		61F29888198E93F600461164 /* GCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCExtension.h; sourceTree = "<group>"; };
 		61F29890198E93F600461164 /* GCExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F29891198E93F600461164 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,8 +58,13 @@
 		61F2989B198E93F600461164 /* GCExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCExtensionTests-Info.plist"; sourceTree = "<group>"; };
 		61F2989D198E93F600461164 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61F2989F198E93F600461164 /* GCExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCExtensionTests.m; sourceTree = "<group>"; };
-		61F298AA198E942400461164 /* UIControl+GCEventBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GCEventBlock.h"; sourceTree = "<group>"; };
-		61F298AB198E942400461164 /* UIControl+GCEventBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GCEventBlock.m"; sourceTree = "<group>"; };
+		B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
+		B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
+		B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionKit.h; sourceTree = "<group>"; };
+		B745FB3D1990B0E100B6EA49 /* UIControl+GCEventBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GCEventBlock.h"; sourceTree = "<group>"; };
+		B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GCEventBlock.m"; sourceTree = "<group>"; };
+		B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtensionKit.h; sourceTree = "<group>"; };
+		B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCExtension-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,15 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		61CCBD8C198FCED800C1E5CD /* ObjectKit */ = {
-			isa = PBXGroup;
-			children = (
-				61CCBD91198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h */,
-				61CCBD92198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m */,
-			);
-			path = ObjectKit;
-			sourceTree = SOURCE_ROOT;
-		};
 		61F29877198E93F600461164 = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +122,9 @@
 		61F29885198E93F600461164 /* GCExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B745FB381990B0E100B6EA49 /* ObjectKit */,
+				B745FB3C1990B0E100B6EA49 /* UIKit */,
 				61F29888198E93F600461164 /* GCExtension.h */,
-				61CCBD8C198FCED800C1E5CD /* ObjectKit */,
-				61F298A9198E942400461164 /* UIKit */,
 				61F29886198E93F600461164 /* Supporting Files */,
 			);
 			path = GCExtension;
@@ -137,7 +133,7 @@
 		61F29886198E93F600461164 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				61F29887198E93F600461164 /* GCExtension-Prefix.pch */,
+				B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,14 +156,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61F298A9198E942400461164 /* UIKit */ = {
+		B745FB381990B0E100B6EA49 /* ObjectKit */ = {
 			isa = PBXGroup;
 			children = (
-				61F298AA198E942400461164 /* UIControl+GCEventBlock.h */,
-				61F298AB198E942400461164 /* UIControl+GCEventBlock.m */,
+				B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */,
+				B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */,
+				B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */,
+			);
+			path = ObjectKit;
+			sourceTree = "<group>";
+		};
+		B745FB3C1990B0E100B6EA49 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B745FB3D1990B0E100B6EA49 /* UIControl+GCEventBlock.h */,
+				B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */,
+				B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */,
 			);
 			path = UIKit;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -176,9 +183,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */,
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
-				61F298AF198E945300461164 /* UIControl+GCEventBlock.h in Headers */,
-				61CCBD93198FD34A00C1E5CD /* NSObject+GCNotificationObserver.h in Headers */,
+				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
+				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
+				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
+				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,8 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CCBD94198FD34A00C1E5CD /* NSObject+GCNotificationObserver.m in Sources */,
-				61F298AC198E942400461164 /* UIControl+GCEventBlock.m in Sources */,
+				B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */,
+				B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +386,7 @@
 			buildSettings = {
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GCExtension/GCExtension-Prefix.pch";
+				GCC_PREFIX_HEADER = "GCExtension-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
@@ -390,7 +400,7 @@
 			buildSettings = {
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GCExtension/GCExtension-Prefix.pch";
+				GCC_PREFIX_HEADER = "GCExtension-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
