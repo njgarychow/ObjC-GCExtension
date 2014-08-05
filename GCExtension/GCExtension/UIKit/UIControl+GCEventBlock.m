@@ -13,11 +13,11 @@
 
 @interface UIControlEventBlockWrapper : NSObject
 
-@property (nonatomic, strong) GCEventActionBlock eventActionBlock;
+@property (nonatomic, strong) GCControlEventActionBlock eventActionBlock;
 
 + (instancetype)createWrapperWithControl:(UIControl *)control
                            controlEvents:(UIControlEvents)event
-                        eventActionBlock:(GCEventActionBlock)eventActionBlock;
+                        eventActionBlock:(GCControlEventActionBlock)eventActionBlock;
 
 @end
 
@@ -25,12 +25,12 @@
 
 + (instancetype)createWrapperWithControl:(UIControl *)control
                            controlEvents:(UIControlEvents)event
-                        eventActionBlock:(GCEventActionBlock)eventActionBlock {
+                        eventActionBlock:(GCControlEventActionBlock)eventActionBlock {
     return [[self alloc] initWithControl:control controlEvents:event eventActionBlock:eventActionBlock];
 }
 - (instancetype)initWithControl:(UIControl *)control
                   controlEvents:(UIControlEvents)event
-               eventActionBlock:(GCEventActionBlock)eventActionBlock {
+               eventActionBlock:(GCControlEventActionBlock)eventActionBlock {
     if (self = [self init]) {
         [control addTarget:self action:@selector(_executeActionBlockByControl:touches:) forControlEvents:event];
         _eventActionBlock = eventActionBlock;
@@ -38,8 +38,8 @@
     return self;
 }
 
-- (void)_executeActionBlockByControl:(UIControl *)control touches:(NSSet *)touches {
-    _eventActionBlock(control, touches);
+- (void)_executeActionBlockByControl:(UIControl *)control touches:(id/*UITouchesEvent*/)touches {
+    _eventActionBlock(control, [touches allTouches]);
 }
 
 @end
@@ -51,7 +51,7 @@
 
 @implementation UIControl (GCEventBlock)
 
-- (void)addControlEvents:(UIControlEvents)event action:(GCEventActionBlock)action {
+- (void)addControlEvents:(UIControlEvents)event action:(GCControlEventActionBlock)action {
     NSParameterAssert(action);
     
     UIControlEventBlockWrapper* wrapper = [UIControlEventBlockWrapper

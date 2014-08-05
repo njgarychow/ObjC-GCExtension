@@ -10,5 +10,6 @@
 #define GCExtension_ObjectExtensionKit_h
 
 #import "NSObject+GCNotificationObserver.h"
+#import "UIGestureRecognizer+GCActionBlock.h"
 
 #endif

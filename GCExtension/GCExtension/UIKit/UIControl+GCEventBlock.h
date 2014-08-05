@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^GCEventActionBlock)(UIControl* control, NSSet* touches);
+typedef void(^GCControlEventActionBlock)(UIControl* control, NSSet* touches);
 
 /**
  *  This Extension is used for add UIControlEvents to the UIControls.
@@ -21,7 +21,7 @@ typedef void(^GCEventActionBlock)(UIControl* control, NSSet* touches);
  *  @param event    the particular event.
  *  @param action   action will be invoked when the particular event happen. |action| can't be nil.
  */
-- (void)addControlEvents:(UIControlEvents)event action:(GCEventActionBlock)action;
+- (void)addControlEvents:(UIControlEvents)event action:(GCControlEventActionBlock)action;
 
 /**
  *  remove all the actionBlocks for paticular event.

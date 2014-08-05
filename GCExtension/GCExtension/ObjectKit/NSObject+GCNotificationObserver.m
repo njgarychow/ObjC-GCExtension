@@ -13,15 +13,15 @@
 
 @interface GCNotificationObserverWrapper : NSObject
 
-@property (nonatomic, strong) GCObserverBlock handleBlock;
+@property (nonatomic, strong) GCNotificationObserverBlock handleBlock;
 
-- (instancetype)initWithObserverForName:(NSString *)name handlerBlock:(GCObserverBlock)block;
+- (instancetype)initWithObserverForNotificationName:(NSString *)name handlerBlock:(GCNotificationObserverBlock)block;
 
 @end
 
 @implementation GCNotificationObserverWrapper
 
-- (instancetype)initWithObserverForName:(NSString *)name handlerBlock:(GCObserverBlock)block {
+- (instancetype)initWithObserverForNotificationName:(NSString *)name handlerBlock:(GCNotificationObserverBlock)block {
     if (self = [self init]) {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(_observerHandlerAction:)
@@ -48,23 +48,23 @@
 @implementation NSObject (GCNotificationObserver)
 
 #pragma mark - instance public method
-- (void)addObserverForName:(NSString *)name usingBlock:(GCObserverBlock)block {
+- (void)addObserverForNotificationName:(NSString *)name usingBlock:(GCNotificationObserverBlock)block {
     NSParameterAssert(name);
     NSParameterAssert(block);
     
-    GCNotificationObserverWrapper* wrapper = [[GCNotificationObserverWrapper alloc] initWithObserverForName:name handlerBlock:block];
+    GCNotificationObserverWrapper* wrapper = [[GCNotificationObserverWrapper alloc] initWithObserverForNotificationName:name handlerBlock:block];
     
-    [[self _observerWappersForName:name] addObject:wrapper];
+    [[self _observerWappersForNotificationName:name] addObject:wrapper];
 }
-- (void)removeObserverForName:(NSString *)name {
+- (void)removeObserverForNotificationName:(NSString *)name {
     NSParameterAssert(name);
     
-    [[self _observerWappersForName:name] removeAllObjects];
+    [[self _observerWappersForNotificationName:name] removeAllObjects];
 }
 
 
 #pragma mark - instance private method
-- (NSMutableArray *)_observerWappersForName:(NSString *)name {
+- (NSMutableArray *)_observerWappersForNotificationName:(NSString *)name {
     static char const observersMapKey;
     NSMutableDictionary* observersMap = objc_getAssociatedObject(self, &observersMapKey);
     if (!observersMap) {

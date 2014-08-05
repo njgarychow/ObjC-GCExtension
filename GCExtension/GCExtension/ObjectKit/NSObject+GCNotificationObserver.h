@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^GCObserverBlock)(NSNotification* notification);
+typedef void (^GCNotificationObserverBlock)(NSNotification* notification);
 
 /**
  *  This Extension is used for add a observe of notificationcenter using Block.
@@ -25,13 +25,13 @@ typedef void (^GCObserverBlock)(NSNotification* notification);
  *  @param name     the name of the notification which want to be observed. |name| can't be nil.
  *  @param block    |block| is the callback when the notification is posted. |block| can't be nil.
  */
-- (void)addObserverForName:(NSString *)name usingBlock:(GCObserverBlock)block;
+- (void)addObserverForNotificationName:(NSString *)name usingBlock:(GCNotificationObserverBlock)block;
 
 /**
  *  remove |self| to observe the notifications those named |name|.
  *
  *  @param name     the name of the notification which want to stop observing. |name| can't be nil.
  */
-- (void)removeObserverForName:(NSString *)name;
+- (void)removeObserverForNotificationName:(NSString *)name;
 
 @end
