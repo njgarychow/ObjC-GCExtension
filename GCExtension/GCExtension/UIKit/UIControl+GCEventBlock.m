@@ -39,7 +39,11 @@
 }
 
 - (void)_executeActionBlockByControl:(UIControl *)control touches:(id/*UITouchesEvent*/)touches {
-    _eventActionBlock(control, [touches allTouches]);
+    id allTouches = nil;
+    if ([touches respondsToSelector:@selector(allTouches)]) {
+        allTouches = [touches allTouches];
+    }
+    _eventActionBlock(control, allTouches);
 }
 
 @end
