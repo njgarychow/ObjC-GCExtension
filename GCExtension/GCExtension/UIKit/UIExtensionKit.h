@@ -10,5 +10,6 @@
 #define GCExtension_UIExtensionKit_h
 
 #import "UIControl+GCEventBlock.h"
+#import "UITableView+GCBlock.h"
 
 #endif
