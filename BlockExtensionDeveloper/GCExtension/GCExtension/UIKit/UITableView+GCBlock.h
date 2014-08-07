@@ -15,29 +15,67 @@
  */
 @interface UITableView (GCBlock) 
 
-//  tableview datasource block
-
-/**
- *  equal to -> |tableView:numberOfRowsInSection:|
- */
-typedef int (^RowNumberBlock)(int section);
-@property (nonatomic, strong) RowNumberBlock rowNumberBlock;
-
+#pragma mark - datasource property
+typedef UITableViewCell* (^CellProviderBlock)(NSIndexPath* indexPath);
 /**
  *  equal to -> |tableView:cellForRowAtIndexPath:|
  */
-typedef UITableViewCell* (^CellProviderBlock)(NSIndexPath* indexPath);
 @property (nonatomic, strong) CellProviderBlock cellProviderBlock;
 
 
+typedef int (^SectionNumberBlock)();
+/**
+ *  equal to -> |numberOfSectionsInTableView:|
+ */
+@property (nonatomic, assign) SectionNumberBlock sectionNumberBlock;
 
 
-//  tableview delegate block
+typedef int (^RowNumberBlock)(int section);
+/**
+ *  equal to -> |tableView:numberOfRowsInSection:|
+ */
+@property (nonatomic, strong) RowNumberBlock rowNumberBlock;
 
+
+typedef NSArray* (^SectionIndexTitlesBlock)();
+/**
+ *  equal to -> |sectionIndexTitlesForTableView:|
+ */
+@property (nonatomic, strong) SectionIndexTitlesBlock sectionIndexTitlesBlock;
+
+
+typedef int (^SectionIndex)(NSString* title, int index);
+/**
+ *  equal to -> |tableView:sectionForSectionIndexTitle:atIndex:|
+ */
+@property (nonatomic, strong) SectionIndex sectionIndex;
+
+
+
+
+
+
+#pragma mark - delegate property
+
+typedef float (^RowHeightBlock)(NSIndexPath* indexPath);
 /**
  *  equal to -> |tableView:heightForRowAtIndexPath:|
  */
-typedef float (^RowHeightBlock)(NSIndexPath* indexPath);
 @property (nonatomic, strong) RowHeightBlock rowHeightBlock;
+
+
+typedef void (^RowDidSelectBlock)(NSIndexPath* indexPath);
+/**
+ *  equal to -> |tableView:didSelectRowAtIndexPath:|
+ */
+@property (nonatomic, strong) RowDidSelectBlock rowDidSelectBlock;
+
+
+typedef void (^CellWillDisplayBlock)(UITableViewCell* cell, NSIndexPath* indexPath);
+/**
+ *  equal to -> |tableView:willDisplayCell:forRowAtIndexPath:|
+ */
+@property (nonatomic, strong) CellWillDisplayBlock cellWillDisplayBlock;
+
 
 @end

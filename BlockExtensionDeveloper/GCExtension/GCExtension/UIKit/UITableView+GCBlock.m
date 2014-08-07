@@ -20,17 +20,64 @@
 
 #pragma mark - UITableView Datasource method
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSAssert(_owner.cellProviderBlock, @"the tableview's |cellProviderBlock| can't be nil.");
+    return _owner.cellProviderBlock(indexPath);
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (!_owner.sectionNumberBlock) {
+        return 1;
+    }
+    return _owner.sectionNumberBlock();
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSAssert(_owner.rowNumberBlock, @"the tableview's |rowNumberBlock| can't be nil.");
     return _owner.rowNumberBlock((int)section);
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return _owner.cellProviderBlock(indexPath);
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    if (!_owner.sectionIndexTitlesBlock) {
+        return nil;
+    }
+    return _owner.sectionIndexTitlesBlock();
+}
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    if (!_owner.sectionIndex) {
+        return 0;
+    }
+    return _owner.sectionIndex(title, index);
 }
 
 #pragma mark - UITableView Delegate method
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!_owner.rowHeightBlock) {
+        return 44.0f;
+    }
     return _owner.rowHeightBlock(indexPath);
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!_owner.rowDidSelectBlock) {
+        return;
+    }
+    _owner.rowDidSelectBlock(indexPath);
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!_owner.cellWillDisplayBlock) {
+        return;
+    }
+    _owner.cellWillDisplayBlock(cell, indexPath);
+}
+
+#pragma mark - dealloc
+
+
+- (void)dealloc {
+    if (self == _owner.delegate) {
+        _owner.delegate = nil;
+    }
+    if (self == _owner.dataSource) {
+        _owner.dataSource = nil;
+    }
 }
 
 @end
@@ -94,34 +141,39 @@ static char const BlockDictionaryKey;
 
 #pragma mark - properties getter and setter methods
 
-
-#define getter_code_macro()                 return [self _getBlockThroughoutSelector:_cmd];
-#define setter_code_macro(blockParam)       [self _checkDelegateAndDataSource];     \
-                                            [self _setBlockThroughoutSelector:_cmd block:blockParam];
-@dynamic rowHeightBlock;
-- (void)setRowHeightBlock:(RowHeightBlock)rowHeightBlock {
-    setter_code_macro(rowHeightBlock);
+void setter(id self, SEL _cmd, id block) {
+    [self _checkDelegateAndDataSource];
+    [self _setBlockThroughoutSelector:_cmd block:block];
 }
-- (RowHeightBlock)rowHeightBlock {
-    getter_code_macro();
+id getter(id self, SEL _cmd) {
+    return [self _getBlockThroughoutSelector:_cmd];
 }
 
-@dynamic rowNumberBlock;
-- (void)setRowNumberBlock:(RowNumberBlock)rowNumberBlock {
-    setter_code_macro(rowNumberBlock);
-}
-- (RowNumberBlock)rowNumberBlock {
-    getter_code_macro();
-}
+#pragma mark - datasource property
 
-@dynamic cellProviderBlock;
-- (void)setCellProviderBlock:(CellProviderBlock)cellProviderBlock {
-    setter_code_macro(cellProviderBlock);
++ (void)load {
+    SEL (^propertyGetterSelector)(NSString*) = ^(NSString* propertyString) {
+        return NSSelectorFromString(propertyString);
+    };
+    SEL (^propertySetterSelector)(NSString*) = ^(NSString* propertyString) {
+        NSString* head = [propertyString substringToIndex:1];
+        NSString* rest = [propertyString substringFromIndex:1];
+        return NSSelectorFromString([NSString stringWithFormat:@"set%@%@:", [head uppercaseString], rest]);
+    };
+    unsigned int propertyCount;
+    objc_property_t *propertyList = class_copyPropertyList(self, &propertyCount);
+    for (int i = 0; i < propertyCount; i++) {
+        objc_property_t *thisProperty = propertyList + i;
+        const char* propertyName = property_getName(*thisProperty);
+        NSString* propertyString = [NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding];
+        SEL getterSEL = propertyGetterSelector(propertyString);
+        SEL setterSEL = propertySetterSelector(propertyString);
+        //  other property has no getter and setter????? I don't think so!!!!!
+        if (!class_respondsToSelector(self, getterSEL) && !class_respondsToSelector(self, setterSEL)) {
+            class_addMethod(self, setterSEL, (IMP)setter, "v@:@");
+            class_addMethod(self, getterSEL, (IMP)getter, "@@:");
+        }
+    }
 }
-- (CellProviderBlock)cellProviderBlock {
-    getter_code_macro();
-}
-
-
 
 @end
