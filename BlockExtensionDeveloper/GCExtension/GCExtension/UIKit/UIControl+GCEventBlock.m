@@ -15,21 +15,16 @@
 
 @property (nonatomic, weak) UIControl* control;
 @property (nonatomic, assign) UIControlEvents events;
-@property (nonatomic, strong) GCControlEventActionBlock eventActionBlock;
+@property (nonatomic, copy) GCControlEventActionBlock eventActionBlock;
 
-+ (instancetype)createWrapperWithControl:(UIControl *)control
-                           controlEvents:(UIControlEvents)event
-                        eventActionBlock:(GCControlEventActionBlock)eventActionBlock;
+- (instancetype)initWithControl:(UIControl *)control
+                  controlEvents:(UIControlEvents)event
+               eventActionBlock:(GCControlEventActionBlock)eventActionBlock;
 
 @end
 
 @implementation UIControlEventBlockWrapper
 
-+ (instancetype)createWrapperWithControl:(UIControl *)control
-                           controlEvents:(UIControlEvents)event
-                        eventActionBlock:(GCControlEventActionBlock)eventActionBlock {
-    return [[self alloc] initWithControl:control controlEvents:event eventActionBlock:eventActionBlock];
-}
 - (instancetype)initWithControl:(UIControl *)control
                   controlEvents:(UIControlEvents)event
                eventActionBlock:(GCControlEventActionBlock)eventActionBlock {
@@ -68,8 +63,12 @@
 - (void)addControlEvents:(UIControlEvents)event action:(GCControlEventActionBlock)action {
     NSParameterAssert(action);
     
-    UIControlEventBlockWrapper* wrapper = [UIControlEventBlockWrapper
-                                           createWrapperWithControl:self
+    /**
+     *  |wrapper| created by using class method will release delay at the end of the
+     *  method which invoke the |removeAllControlEventsAction:|. why??
+     */
+    UIControlEventBlockWrapper* wrapper = [[UIControlEventBlockWrapper alloc]
+                                           initWithControl:self
                                            controlEvents:event
                                            eventActionBlock:action];
     

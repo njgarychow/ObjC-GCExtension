@@ -14,12 +14,19 @@
 
 SPEC_BEGIN(GC_UIControl_GCEventBlock_Test)
 
-describe(@"UIControl GCEventBlock Test", ^{
+describe(@"UIControl GCEventBlock", ^{
     
-    context(@"block testing", ^{
+    context(@"when using blocks", ^{
         
         let(button, ^id{
-            return [[UIButton alloc] init];
+            return [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 1000, 1000)];
+        });
+        let(window, ^id{
+            return [[[UIApplication sharedApplication] delegate] window];
+        });
+        
+        beforeEach(^{
+            [window addSubview:button];
         });
         
         it(@"does button add control event working ...", ^{

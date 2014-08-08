@@ -21,51 +21,51 @@
 #pragma mark - UITableView Datasource method
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSAssert(_owner.cellProviderBlock, @"the tableview's |cellProviderBlock| can't be nil.");
-    return _owner.cellProviderBlock(indexPath);
+    NSAssert(_owner.blockForCellProvider, @"the tableview's |cellProviderBlock| can't be nil.");
+    return _owner.blockForCellProvider(indexPath);
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (!_owner.sectionNumberBlock) {
+    if (!_owner.blockForSectionNumber) {
         return 1;
     }
-    return _owner.sectionNumberBlock();
+    return _owner.blockForSectionNumber();
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSAssert(_owner.rowNumberBlock, @"the tableview's |rowNumberBlock| can't be nil.");
-    return _owner.rowNumberBlock((int)section);
+    NSAssert(_owner.blockForRowNumber, @"the tableview's |rowNumberBlock| can't be nil.");
+    return _owner.blockForRowNumber((int)section);
 }
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    if (!_owner.sectionIndexTitlesBlock) {
+    if (!_owner.blockForSectionIndexTitles) {
         return nil;
     }
-    return _owner.sectionIndexTitlesBlock();
+    return _owner.blockForSectionIndexTitles();
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    if (!_owner.sectionIndex) {
+    if (!_owner.blockForSectionIndex) {
         return 0;
     }
-    return _owner.sectionIndex(title, index);
+    return _owner.blockForSectionIndex(title, index);
 }
 
 #pragma mark - UITableView Delegate method
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!_owner.rowHeightBlock) {
+    if (!_owner.blockForRowHeight) {
         return 44.0f;
     }
-    return _owner.rowHeightBlock(indexPath);
+    return _owner.blockForRowHeight(indexPath);
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!_owner.rowDidSelectBlock) {
+    if (!_owner.blockForRowDidSelect) {
         return;
     }
-    _owner.rowDidSelectBlock(indexPath);
+    _owner.blockForRowDidSelect(indexPath);
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!_owner.cellWillDisplayBlock) {
+    if (!_owner.blockForCellWillDisplay) {
         return;
     }
-    _owner.cellWillDisplayBlock(cell, indexPath);
+    _owner.blockForCellWillDisplay(cell, indexPath);
 }
 
 #pragma mark - dealloc
@@ -112,7 +112,7 @@ static char const BlockDictionaryKey;
 - (void)_setBlockThroughoutSelector:(SEL)selector block:(id)block {
     NSString* blockKey = [self _getBlockKeyStringWithGetOrSetSelector:selector];
     if (block) {
-        [[self blocks] setObject:block forKey:blockKey];
+        [[self blocks] setObject:[block copy] forKey:blockKey];
     }
     else {
         [[self blocks] removeObjectForKey:blockKey];

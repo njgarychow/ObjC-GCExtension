@@ -21,6 +21,7 @@
 		61139E1E198E8F220079DFA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61139E00198E8F210079DFA9 /* UIKit.framework */; };
 		61139E26198E8F220079DFA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61139E24198E8F220079DFA9 /* InfoPlist.strings */; };
 		61139E28198E8F220079DFA9 /* UIControlGCEventBlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */; };
+		618C3ABA1995275300F6EB90 /* UITableViewGCBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */; };
 		61CAD4521992A89500941D0D /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
 		61CAD4531992A89A00941D0D /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
 		92638887A5324C4BB7570542 /* libPods-BlockExtensionDeveloperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */; };
@@ -70,6 +71,7 @@
 		61139E23198E8F220079DFA9 /* BlockExtensionDeveloperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockExtensionDeveloperTests-Info.plist"; sourceTree = "<group>"; };
 		61139E25198E8F220079DFA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIControlGCEventBlockTest.m; sourceTree = "<group>"; };
+		618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewGCBlockTests.m; sourceTree = "<group>"; };
 		61CAD4491992A88100941D0D /* GCExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCExtension.xcodeproj; path = GCExtension/GCExtension.xcodeproj; sourceTree = "<group>"; };
 		AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlockExtensionDeveloperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3B7F8FFD4E43C39DE68D4F /* Pods-BlockExtensionDeveloperTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockExtensionDeveloperTests.xcconfig"; path = "Pods/Pods-BlockExtensionDeveloperTests.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */,
+				618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */,
 				61139E22198E8F220079DFA9 /* Supporting Files */,
 			);
 			path = BlockExtensionDeveloperTests;
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61139E28198E8F220079DFA9 /* UIControlGCEventBlockTest.m in Sources */,
+				618C3ABA1995275300F6EB90 /* UITableViewGCBlockTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
