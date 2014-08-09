@@ -56,6 +56,31 @@ describe(@"UIControl GCEventBlock", ^{
             [button removeAllControlEventsAction:UIControlEventTouchUpInside];
             [button sendActionsForControlEvents:UIControlEventTouchUpInside];
         });
+        
+        it(@"does button work fine when add control event multiple times ...", ^{
+            int times = arc4random() % 10000;
+            __block int actionInvokeTime = 0;
+            for (int i = 0; i < times; i++) {
+                [button addControlEvents:UIControlEventTouchUpInside
+                                  action:^(UIControl *control, NSSet *touches) {
+                                      actionInvokeTime++;
+                                  }];
+            }
+            [button sendActionsForControlEvents:UIControlEventTouchUpInside];
+            [[theValue(actionInvokeTime) should] equal:theValue(times)];
+        });
+        
+        it(@"does button remove block working fine when add control event multiple times ...", ^{
+            int times = arc4random() % 10000;
+            for (int i = 0; i < times; i++) {
+                [button addControlEvents:UIControlEventTouchUpInside
+                                  action:^(UIControl *control, NSSet *touches) {
+                                      fail(@"the remove method is not working fine.");
+                                  }];
+            }
+            [button removeAllControlEventsAction:UIControlEventTouchUpInside];
+            [button sendActionsForControlEvents:UIControlEventTouchUpInside];
+        });
     });
 });
 

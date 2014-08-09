@@ -21,9 +21,9 @@
 		61139E1E198E8F220079DFA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61139E00198E8F210079DFA9 /* UIKit.framework */; };
 		61139E26198E8F220079DFA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61139E24198E8F220079DFA9 /* InfoPlist.strings */; };
 		61139E28198E8F220079DFA9 /* UIControlGCEventBlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */; };
+		615A5CA51996657800D84578 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
 		618C3ABA1995275300F6EB90 /* UITableViewGCBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */; };
 		61CAD4521992A89500941D0D /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
-		61CAD4531992A89A00941D0D /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
 		92638887A5324C4BB7570542 /* libPods-BlockExtensionDeveloperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CAD4531992A89A00941D0D /* libGCExtension.a in Frameworks */,
+				615A5CA51996657800D84578 /* libGCExtension.a in Frameworks */,
 				61139E1C198E8F220079DFA9 /* XCTest.framework in Frameworks */,
 				61139E1E198E8F220079DFA9 /* UIKit.framework in Frameworks */,
 				61139E1D198E8F220079DFA9 /* Foundation.framework in Frameworks */,
