@@ -47,6 +47,48 @@
     return _owner.blockForSectionIndex(title, index);
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (!_owner.blockForFooterTitle) {
+        return nil;
+    }
+    return _owner.blockForFooterTitle(section);
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (!_owner.blockForHeaderTitle) {
+        return nil;
+    }
+    return _owner.blockForHeaderTitle(section);
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!_owner.blockForCommitEditStyleForRow) {
+        return;
+    }
+    _owner.blockForCommitEditStyleForRow(editingStyle, indexPath);
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!_owner.blockForCanEditRow) {
+        return NO;
+    }
+    return _owner.blockForCanEditRow(indexPath);
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!_owner.blockForCanMoveRow) {
+        return NO;
+    }
+    return _owner.blockForCanMoveRow(indexPath);
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    if (!_owner.blockForMoveRow) {
+        return;
+    }
+    _owner.blockForMoveRow(sourceIndexPath, destinationIndexPath);
+}
+
 #pragma mark - UITableView Delegate method
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,6 +108,20 @@
         return;
     }
     _owner.blockForCellWillDisplay(cell, indexPath);
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (!_owner.blockForHeaderView) {
+        return nil;
+    }
+    return _owner.blockForHeaderView(section);
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (!_owner.blockForHeaderHeight) {
+        return 0;
+    }
+    return _owner.blockForHeaderHeight(section);
 }
 
 #pragma mark - dealloc

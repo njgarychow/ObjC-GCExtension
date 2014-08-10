@@ -20,35 +20,31 @@
 {
     [super viewDidLoad];
     
-    
-    UIButton* button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [button addControlEvents:UIControlEventTouchUpInside
-                      action:^(UIControl *control, NSSet *touches) {
-                          NSLog(@"touch up inside %@ %@", control, touches);
-                      }];
-    [button removeAllControlEventsAction:UIControlEventTouchUpInside];
-    
-    [button sendActionsForControlEvents:UIControlEventTouchUpInside];
-
-    [self.view addSubview:button];
-//
-//    UIGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^{
-//        NSLog(@"tesfd");
-//    }];
-//    [self.view addGestureRecognizer:tap];
-//    
-//    UITableView* ta = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-//    ta.rowNumberBlock = ^(int section) {
-//        return 4;
-//    };
-//    ta.rowHeightBlock = ^(NSIndexPath* indexPath) {
-//        return 100.0f;
-//    };
-//    ta.cellProviderBlock = ^(NSIndexPath* indexPath) {
-//        UITableViewCell* cell = [[UITableViewCell alloc] init];
-//        return cell;
-//    };
-//    [self.view addSubview:ta];
+    UITableView* tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [tb registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
+    __weak typeof(tb) weaktb = tb;
+    tb.blockForSectionNumber = ^ {
+        return 2;
+    };
+    tb.blockForHeaderTitle = ^(int section) {
+        return @"test";
+    };
+    tb.blockForHeaderHeight = ^(int section) {
+        return 44.0f;
+    };
+    tb.blockForRowNumber = ^(int section) {
+        return 10;
+    };
+    tb.blockForCellProvider = ^(NSIndexPath* indexPath) {
+        UITableViewCell* cell = [weaktb dequeueReusableCellWithIdentifier:@"test" forIndexPath:indexPath];
+        return cell;
+    };
+    tb.blockForHeaderView = ^(int section) {
+        UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+        view.backgroundColor = [UIColor redColor];
+        return view;
+    };
+    [self.view addSubview:tb];
 }
     
 
@@ -57,13 +53,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-}
-
-- (void)_tap1:(id)sender {
-    NSLog(@"tap1 %@", sender);
-}
-- (void)_tap2:(id)sender {
-    NSLog(@"tap2 %@", sender);
 }
 
 @end
