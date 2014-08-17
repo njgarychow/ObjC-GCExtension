@@ -8,3 +8,4 @@
 
 #import "UIExtensionKit.h"
 #import "ObjectExtensionKit.h"
+#import "GCMacro.h"

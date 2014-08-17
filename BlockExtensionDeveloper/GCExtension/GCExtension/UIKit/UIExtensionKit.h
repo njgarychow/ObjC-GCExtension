@@ -11,5 +11,8 @@
 
 #import "UIControl+GCEventBlock.h"
 #import "UITableView+GCBlock.h"
+#import "UIGestureRecognizer+GCActionBlock.h"
+
+#import "GCAlertView.h"
 
 #endif
