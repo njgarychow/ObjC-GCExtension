@@ -99,7 +99,10 @@
         GCBlockInvoke(_cancelWrapper.actionBlock);
     }
     else {
-        GCAlertViewActionBlockWrapper* actionWrapper = _otherWrappers[buttonIndex-1];
+        if ([alertView cancelButtonIndex] != -1) {
+            buttonIndex -= 1;
+        }
+        GCAlertViewActionBlockWrapper* actionWrapper = _otherWrappers[buttonIndex];
         GCBlockInvoke(actionWrapper.actionBlock);
     }
     
