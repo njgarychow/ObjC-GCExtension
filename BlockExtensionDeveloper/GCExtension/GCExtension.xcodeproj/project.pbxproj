@@ -12,6 +12,8 @@
 		612701B819A116C800F34C1B /* GCAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701B619A116C800F34C1B /* GCAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		612701B919A116C800F34C1B /* GCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 612701B719A116C800F34C1B /* GCAlertView.m */; };
 		612701C919A11E3D00F34C1B /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701C819A11E3D00F34C1B /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 618FFA4019A24A9D002FC58F /* GCActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 618FFA4119A24A9D002FC58F /* GCActionSheet.m */; };
 		61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CAD4351992808500941D0D /* UITableView+GCBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CAD4361992808500941D0D /* UITableView+GCBlock.m */; };
 		61F29884198E93F600461164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29883198E93F600461164 /* Foundation.framework */; };
@@ -60,6 +62,8 @@
 		612701B619A116C800F34C1B /* GCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAlertView.h; sourceTree = "<group>"; };
 		612701B719A116C800F34C1B /* GCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAlertView.m; sourceTree = "<group>"; };
 		612701C819A11E3D00F34C1B /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
+		618FFA4019A24A9D002FC58F /* GCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCActionSheet.h; sourceTree = "<group>"; };
+		618FFA4119A24A9D002FC58F /* GCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCActionSheet.m; sourceTree = "<group>"; };
 		61CAD4351992808500941D0D /* UITableView+GCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCBlock.h"; sourceTree = "<group>"; };
 		61CAD4361992808500941D0D /* UITableView+GCBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GCBlock.m"; sourceTree = "<group>"; };
 		61F29880198E93F600461164 /* libGCExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +185,8 @@
 		B745FB3C1990B0E100B6EA49 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				618FFA4019A24A9D002FC58F /* GCActionSheet.h */,
+				618FFA4119A24A9D002FC58F /* GCActionSheet.m */,
 				612701B619A116C800F34C1B /* GCAlertView.h */,
 				612701B719A116C800F34C1B /* GCAlertView.m */,
 				612701B219A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h */,
@@ -209,6 +215,7 @@
 				612701C919A11E3D00F34C1B /* GCMacro.h in Headers */,
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
 				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
+				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
 				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
 			);
@@ -297,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */,
+				618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */,
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
 				B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */,

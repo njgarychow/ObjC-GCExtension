@@ -8,8 +8,6 @@
 
 #import "GCAlertView.h"
 
-#import "GCMacro.h"
-
 
 
 @interface GCAlertViewActionBlockWrapper : NSObject
@@ -77,37 +75,39 @@
 }
 
 - (void)show {
+    NSParameterAssert(_alertView.isVisible == NO);
     
-    CFTypeRef cf_self = (__bridge CFTypeRef)(self);
-    CFRetain(cf_self);
+    GCRetain(self);
     
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:_title
-                                                    message:_message
-                                                   delegate:self
-                                          cancelButtonTitle:_cancelWrapper.title
-                                          otherButtonTitles:nil];
+    _alertView = [[UIAlertView alloc] init];
+    _alertView.delegate = self;
+    _alertView.title = _title;
+    _alertView.message = _message;
+    
     for (GCAlertViewActionBlockWrapper* action in _otherWrappers) {
-        [alert addButtonWithTitle:action.title];
+        [_alertView addButtonWithTitle:action.title];
     }
-    [alert show];
+    
+    if (_cancelWrapper) {
+        [_alertView addButtonWithTitle:_cancelWrapper.title];
+        _alertView.cancelButtonIndex = _alertView.numberOfButtons - 1;
+    }
+    
+    [_alertView show];
 }
 
 #pragma mark - UIAlertView delegate methods
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if ([alertView cancelButtonIndex] == buttonIndex) {
+    if (buttonIndex == alertView.cancelButtonIndex) {
         GCBlockInvoke(_cancelWrapper.actionBlock);
     }
     else {
-        if ([alertView cancelButtonIndex] != -1) {
-            buttonIndex -= 1;
-        }
         GCAlertViewActionBlockWrapper* actionWrapper = _otherWrappers[buttonIndex];
         GCBlockInvoke(actionWrapper.actionBlock);
     }
     
-    CFTypeRef cf_self = (__bridge CFTypeRef)(self);
-    CFRelease(cf_self);
+    GCRelease(self);
 }
 
 @end

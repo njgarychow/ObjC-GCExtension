@@ -10,17 +10,19 @@
 #define GCExtension_GCMacro_h
 
 
-#define GCBlockInvoke(block)            do {                            \
-                                            if (block) {                \
-                                                block();    \
-                                            }                           \
+#define GCBlockInvoke(block, ...)               do {                            \
+                                                    if (block) {                \
+                                                        block(__VA_ARGS__);    \
+                                                    }                           \
+                                                } while(0)
+
+#define GCRetain(object)                do {            \
+                                            CFTypeRef retainTarget = (__bridge CFTypeRef)(object);    \
+                                            CFRetain(retainTarget);             \
                                         } while(0)
-
-
-#define GCBlockInvoke1(block, p1)       do {                            \
-                                            if (block) {                \
-                                                block();    \
-                                            }                           \
+#define GCRelease(object)               do {            \
+                                            CFTypeRef releaseTarget = (__bridge CFTypeRef)(object);       \
+                                            CFRelease(releaseTarget);            \
                                         } while(0)
 
 

@@ -14,5 +14,6 @@
 #import "UIGestureRecognizer+GCActionBlock.h"
 
 #import "GCAlertView.h"
+#import "GCActionSheet.h"
 
 #endif

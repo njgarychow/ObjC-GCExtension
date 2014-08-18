@@ -46,20 +46,40 @@
     };
     [self.view addSubview:tb];
     
-    GCAlertView* alert = [[GCAlertView alloc] initWithTitle:@"title" andMessage:@"message"];
-    [alert setCancelButtonWithTitle:@"cancel" actionBlock:^{
-        NSLog(@"cancel");
+//    GCAlertView* alert = [[GCAlertView alloc] initWithTitle:@"title" andMessage:@"message"];
+//    [alert setCancelButtonWithTitle:@"cancel" actionBlock:^{
+//        NSLog(@"cancel");
+//    }];
+//    [alert addOtherButtonWithTitle:@"other1" actionBlock:^{
+//        NSLog(@"other1");
+//    }];
+//    [alert addOtherButtonWithTitle:@"other2" actionBlock:^{
+//        NSLog(@"other2");
+//    }];
+//    [alert addOtherButtonWithTitle:@"other2" actionBlock:^{
+//        NSLog(@"other3");
+//    }];
+//    [alert show];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+    GCActionSheet* action = [[GCActionSheet alloc] initWithTitle:@"title"];
+    [action setCancelButtonTitle:@"cancel" actionBlock:^{
+        NSLog(@"cacnel");
     }];
-    [alert addOtherButtonWithTitle:@"other1" actionBlock:^{
+    [action setDestructiveButtonTitle:@"destructive" actionBlock:^{
+        NSLog(@"destructive");
+    }];
+    [action addOtherButtonTitle:@"other1" actionBlock:^{
         NSLog(@"other1");
     }];
-    [alert addOtherButtonWithTitle:@"other2" actionBlock:^{
+    [action addOtherButtonTitle:@"other2" actionBlock:^{
         NSLog(@"other2");
     }];
-    [alert addOtherButtonWithTitle:@"other2" actionBlock:^{
-        NSLog(@"other3");
-    }];
-    [alert show];
+    [action showInView:window];
 }
     
 
