@@ -8,6 +8,7 @@
 
 #import "GCAlertView.h"
 
+#import "GCMacro.h"
 
 
 @interface GCAlertViewActionBlockWrapper : NSObject

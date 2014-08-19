@@ -8,6 +8,8 @@
 
 #import "GCActionSheet.h"
 
+#import "GCMacro.h"
+
 
 @interface GCActionSheetButtonWrapper : NSObject
 
