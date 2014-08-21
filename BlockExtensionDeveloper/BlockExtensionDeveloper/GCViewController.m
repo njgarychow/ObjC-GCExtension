@@ -12,6 +12,8 @@
 
 @interface GCViewController ()
 
+@property (nonatomic, strong) UITableView* tb;
+
 @end
 
 @implementation GCViewController
@@ -20,31 +22,33 @@
 {
     [super viewDidLoad];
     
-    UITableView* tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [tb registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
-    __weak typeof(tb) weaktb = tb;
-    tb.blockForSectionNumber = ^ {
+    self.tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [self.tb registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
+    __weak typeof(self.tb) weaktb = self.tb;
+    self.tb.blockForSectionNumber = ^ {
         return 2;
     };
-    tb.blockForHeaderTitle = ^(int section) {
+    self.tb.blockForHeaderTitle = ^(int section) {
         return @"test";
     };
-    tb.blockForHeaderHeight = ^(int section) {
+    self.tb.blockForHeaderHeight = ^(int section) {
         return 44.0f;
     };
-    tb.blockForRowNumber = ^(int section) {
+    self.tb.blockForRowNumber = ^(int section) {
         return 10;
     };
-    tb.blockForCellProvider = ^(NSIndexPath* indexPath) {
+    self.tb.blockForCellProvider = ^(NSIndexPath* indexPath) {
         UITableViewCell* cell = [weaktb dequeueReusableCellWithIdentifier:@"test" forIndexPath:indexPath];
         return cell;
     };
-    tb.blockForHeaderView = ^(int section) {
+    self.tb.blockForHeaderView = ^(int section) {
         UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
         view.backgroundColor = [UIColor redColor];
         return view;
     };
-    [self.view addSubview:tb];
+    [self.tb usingBlocks];
+    
+    [self.view addSubview:self.tb];
     
 //    GCAlertView* alert = [[GCAlertView alloc] initWithTitle:@"title" andMessage:@"message"];
 //    [alert setCancelButtonWithTitle:@"cancel" actionBlock:^{

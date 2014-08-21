@@ -12,6 +12,7 @@
 		612701B819A116C800F34C1B /* GCAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701B619A116C800F34C1B /* GCAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		612701B919A116C800F34C1B /* GCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 612701B719A116C800F34C1B /* GCAlertView.m */; };
 		612701C919A11E3D00F34C1B /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701C819A11E3D00F34C1B /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		612ED55619A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612ED55519A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 618FFA4019A24A9D002FC58F /* GCActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 618FFA4119A24A9D002FC58F /* GCActionSheet.m */; };
 		61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CAD4351992808500941D0D /* UITableView+GCBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +63,7 @@
 		612701B619A116C800F34C1B /* GCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAlertView.h; sourceTree = "<group>"; };
 		612701B719A116C800F34C1B /* GCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAlertView.m; sourceTree = "<group>"; };
 		612701C819A11E3D00F34C1B /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
+		612ED55519A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCExtensionAccessorGeneratorMacro.h; sourceTree = "<group>"; };
 		618FFA4019A24A9D002FC58F /* GCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCActionSheet.h; sourceTree = "<group>"; };
 		618FFA4119A24A9D002FC58F /* GCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCActionSheet.m; sourceTree = "<group>"; };
 		61CAD4351992808500941D0D /* UITableView+GCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCBlock.h"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				61F29888198E93F600461164 /* GCExtension.h */,
 				612701C819A11E3D00F34C1B /* GCMacro.h */,
+				612ED55519A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h */,
 				B745FB381990B0E100B6EA49 /* ObjectKit */,
 				B745FB3C1990B0E100B6EA49 /* UIKit */,
 				61F29886198E93F600461164 /* Supporting Files */,
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */,
+				612ED55619A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h in Headers */,
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
 				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
 				61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */,

@@ -13,7 +13,9 @@
  *  This extension uses the catagory of the UITableView to implement using block instead of
  *  the delegate and the dataSource.
  */
-@interface UITableView (GCBlock) 
+@interface UITableView (GCBlock)
+
+- (void)usingBlocks;
 
 #pragma mark - datasource property
 /**

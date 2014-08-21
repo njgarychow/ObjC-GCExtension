@@ -10,21 +10,38 @@
 #define GCExtension_GCMacro_h
 
 
-#define GCBlockInvoke(block, ...)               do {                            \
-                                                    if (block) {                \
-                                                        block(__VA_ARGS__);    \
-                                                    }                           \
-                                                } while(0)
+//  invoke the block with parameters. it will check if the block is nil.
+#define GCBlockInvoke(block, ...)   \
+do {                            \
+    if (block) {                \
+        block(__VA_ARGS__);    \
+    }                           \
+} while(0)
 
-#define GCRetain(object)                do {            \
-                                            CFTypeRef retainTarget = (__bridge CFTypeRef)(object);    \
-                                            CFRetain(retainTarget);             \
-                                        } while(0)
-#define GCRelease(object)               do {            \
-                                            CFTypeRef releaseTarget = (__bridge CFTypeRef)(object);       \
-                                            CFRelease(releaseTarget);            \
-                                        } while(0)
 
+
+//  retain the object when using arc.
+#define GCRetain(object)    \
+do {                \
+    if (!object) {   \
+        break;      \
+    }               \
+    CFTypeRef retainTarget = (__bridge CFTypeRef)(object);    \
+    CFRetain(retainTarget);             \
+} while(0)
+
+
+
+
+//  release the object when using arc.
+#define GCRelease(object)   \
+do {                \
+    if (!object) {   \
+        break;      \
+    }               \
+    CFTypeRef releaseTarget = (__bridge CFTypeRef)(object);       \
+    CFRelease(releaseTarget);            \
+} while(0)
 
 
 #endif
