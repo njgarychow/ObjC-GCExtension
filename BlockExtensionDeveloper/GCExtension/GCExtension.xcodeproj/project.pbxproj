@@ -17,6 +17,10 @@
 		618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 618FFA4119A24A9D002FC58F /* GCActionSheet.m */; };
 		61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CAD4351992808500941D0D /* UITableView+GCBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CAD4361992808500941D0D /* UITableView+GCBlock.m */; };
+		61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */; };
+		61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DD5BF719BE13960049AC11 /* NSObject+GCAOP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61DD5BFA19BE13960049AC11 /* NSObject+GCAOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DD5BF819BE13960049AC11 /* NSObject+GCAOP.m */; };
 		61F29884198E93F600461164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29883198E93F600461164 /* Foundation.framework */; };
 		61F29889198E93F600461164 /* GCExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 61F29888198E93F600461164 /* GCExtension.h */; };
 		61F29892198E93F600461164 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29891198E93F600461164 /* XCTest.framework */; };
@@ -68,6 +72,10 @@
 		618FFA4119A24A9D002FC58F /* GCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCActionSheet.m; sourceTree = "<group>"; };
 		61CAD4351992808500941D0D /* UITableView+GCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCBlock.h"; sourceTree = "<group>"; };
 		61CAD4361992808500941D0D /* UITableView+GCBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GCBlock.m"; sourceTree = "<group>"; };
+		61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAOPProxy.h; sourceTree = "<group>"; };
+		61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAOPProxy.m; sourceTree = "<group>"; };
+		61DD5BF719BE13960049AC11 /* NSObject+GCAOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAOP.h"; sourceTree = "<group>"; };
+		61DD5BF819BE13960049AC11 /* NSObject+GCAOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAOP.m"; sourceTree = "<group>"; };
 		61F29880198E93F600461164 /* libGCExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F29883198E93F600461164 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61F29888198E93F600461164 /* GCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCExtension.h; sourceTree = "<group>"; };
@@ -180,6 +188,10 @@
 			children = (
 				B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */,
 				B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */,
+				61DD5BF719BE13960049AC11 /* NSObject+GCAOP.h */,
+				61DD5BF819BE13960049AC11 /* NSObject+GCAOP.m */,
+				61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */,
+				61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */,
 				B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */,
 			);
 			path = ObjectKit;
@@ -219,6 +231,8 @@
 				612701C919A11E3D00F34C1B /* GCMacro.h in Headers */,
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
 				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
+				61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */,
+				61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */,
 				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
 				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
@@ -307,11 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DD5BFA19BE13960049AC11 /* NSObject+GCAOP.m in Sources */,
 				61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */,
 				618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */,
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
 				B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */,
+				61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */,
 				B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
