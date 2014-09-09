@@ -10,6 +10,7 @@
 #define GCExtension_ObjectExtensionKit_h
 
 #import "NSObject+GCNotificationObserver.h"
+#import "NSObject+GCJSONExtension.h"
 
 #import "GCAOPProxy.h"
 #import "NSObject+GCAOP.h"

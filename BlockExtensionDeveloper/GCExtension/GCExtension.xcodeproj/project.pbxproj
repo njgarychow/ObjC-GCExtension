@@ -13,6 +13,8 @@
 		612701B919A116C800F34C1B /* GCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 612701B719A116C800F34C1B /* GCAlertView.m */; };
 		612701C919A11E3D00F34C1B /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701C819A11E3D00F34C1B /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		612ED55619A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612ED55519A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 612ED55719AB854500CC3CF2 /* NSObject+GCJSONExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 612ED55819AB854500CC3CF2 /* NSObject+GCJSONExtension.m */; };
 		618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 618FFA4019A24A9D002FC58F /* GCActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 618FFA4119A24A9D002FC58F /* GCActionSheet.m */; };
 		61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CAD4351992808500941D0D /* UITableView+GCBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +70,8 @@
 		612701B719A116C800F34C1B /* GCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAlertView.m; sourceTree = "<group>"; };
 		612701C819A11E3D00F34C1B /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
 		612ED55519A6501B00CC3CF2 /* GCExtensionAccessorGeneratorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCExtensionAccessorGeneratorMacro.h; sourceTree = "<group>"; };
+		612ED55719AB854500CC3CF2 /* NSObject+GCJSONExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCJSONExtension.h"; sourceTree = "<group>"; };
+		612ED55819AB854500CC3CF2 /* NSObject+GCJSONExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCJSONExtension.m"; sourceTree = "<group>"; };
 		618FFA4019A24A9D002FC58F /* GCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCActionSheet.h; sourceTree = "<group>"; };
 		618FFA4119A24A9D002FC58F /* GCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCActionSheet.m; sourceTree = "<group>"; };
 		61CAD4351992808500941D0D /* UITableView+GCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCBlock.h"; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		B745FB381990B0E100B6EA49 /* ObjectKit */ = {
 			isa = PBXGroup;
 			children = (
+				612ED55719AB854500CC3CF2 /* NSObject+GCJSONExtension.h */,
+				612ED55819AB854500CC3CF2 /* NSObject+GCJSONExtension.m */,
 				B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */,
 				B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */,
 				61DD5BF719BE13960049AC11 /* NSObject+GCAOP.h */,
@@ -234,6 +240,7 @@
 				61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */,
 				61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */,
 				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
+				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
 				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
 			);
@@ -324,6 +331,7 @@
 				61DD5BFA19BE13960049AC11 /* NSObject+GCAOP.m in Sources */,
 				61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */,
 				618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */,
+				612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */,
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
 				B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */,

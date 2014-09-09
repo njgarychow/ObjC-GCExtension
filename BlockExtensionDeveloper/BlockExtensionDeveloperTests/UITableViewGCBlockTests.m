@@ -44,6 +44,7 @@ describe(@"UITableView Block", ^{
                 cell.tag = indexPath.row;
                 return cell;
             }];
+            [tableview usingBlocks];
             [tableview reloadData];
         });
         

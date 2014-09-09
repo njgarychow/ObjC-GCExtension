@@ -21,9 +21,11 @@
 		61139E1E198E8F220079DFA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61139E00198E8F210079DFA9 /* UIKit.framework */; };
 		61139E26198E8F220079DFA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61139E24198E8F220079DFA9 /* InfoPlist.strings */; };
 		61139E28198E8F220079DFA9 /* UIControlGCEventBlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */; };
+		612ED55C19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612ED55B19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m */; };
 		615A5CA51996657800D84578 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
 		618C3ABA1995275300F6EB90 /* UITableViewGCBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */; };
 		61CAD4521992A89500941D0D /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
+		61DD5BF019ACF2520049AC11 /* JSONTestString.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 61DD5BEC19ACEF250049AC11 /* JSONTestString.geojson */; };
 		92638887A5324C4BB7570542 /* libPods-BlockExtensionDeveloperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +73,10 @@
 		61139E23198E8F220079DFA9 /* BlockExtensionDeveloperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockExtensionDeveloperTests-Info.plist"; sourceTree = "<group>"; };
 		61139E25198E8F220079DFA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIControlGCEventBlockTest.m; sourceTree = "<group>"; };
+		612ED55B19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectGCJSONExtensionTests.m; sourceTree = "<group>"; };
 		618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewGCBlockTests.m; sourceTree = "<group>"; };
 		61CAD4491992A88100941D0D /* GCExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCExtension.xcodeproj; path = GCExtension/GCExtension.xcodeproj; sourceTree = "<group>"; };
+		61DD5BEC19ACEF250049AC11 /* JSONTestString.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JSONTestString.geojson; sourceTree = "<group>"; };
 		AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlockExtensionDeveloperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3B7F8FFD4E43C39DE68D4F /* Pods-BlockExtensionDeveloperTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockExtensionDeveloperTests.xcconfig"; path = "Pods/Pods-BlockExtensionDeveloperTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,7 @@
 		61139E03198E8F220079DFA9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61DD5BEC19ACEF250049AC11 /* JSONTestString.geojson */,
 				61139E04198E8F220079DFA9 /* BlockExtensionDeveloper-Info.plist */,
 				61139E05198E8F220079DFA9 /* InfoPlist.strings */,
 				61139E08198E8F220079DFA9 /* main.m */,
@@ -167,6 +172,7 @@
 			children = (
 				61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */,
 				618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */,
+				612ED55B19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m */,
 				61139E22198E8F220079DFA9 /* Supporting Files */,
 			);
 			path = BlockExtensionDeveloperTests;
@@ -294,6 +300,7 @@
 			files = (
 				61139E15198E8F220079DFA9 /* Images.xcassets in Resources */,
 				61139E07198E8F220079DFA9 /* InfoPlist.strings in Resources */,
+				61DD5BF019ACF2520049AC11 /* JSONTestString.geojson in Resources */,
 				61139E10198E8F220079DFA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612ED55C19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m in Sources */,
 				61139E28198E8F220079DFA9 /* UIControlGCEventBlockTest.m in Sources */,
 				618C3ABA1995275300F6EB90 /* UITableViewGCBlockTests.m in Sources */,
 			);
