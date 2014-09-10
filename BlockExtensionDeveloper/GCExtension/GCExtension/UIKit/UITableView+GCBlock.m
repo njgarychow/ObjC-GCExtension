@@ -178,6 +178,7 @@
 
 @end
 
+#pragma clang diagnostic ignored "-Wunused-function"
 GCExtensionClassAccessorGenerator(UITableView)
 GCExtensionClassNonatomicCopyAccessorGenerator(UITableView,
                                                blockForCanEditRow,
@@ -195,4 +196,4 @@ GCExtensionClassNonatomicCopyAccessorGenerator(UITableView,
                                                blockForSectionIndex,
                                                blockForSectionIndexTitles,
                                                blockForSectionNumber,
-                                               blockForRowNumber);
+                                               blockForRowNumber)
