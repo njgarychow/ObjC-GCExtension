@@ -48,6 +48,22 @@
     };
     [self.tb usingBlocks];
     
+    @autoreleasepool {
+        NSObject* object = [[NSObject alloc] init];
+        [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSDictionary *change) {
+            NSLog(@"%@", change);
+        }];
+        object = nil;
+    }
+    
+    NSObject* object = [[NSObject alloc] init];
+    [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSDictionary *change) {
+        NSLog(@"%@", change);
+    }];
+    object = nil;
+    
+    self.tb.rowHeight = 10.0f;
+    
     [self.view addSubview:self.tb];
     
     GCAlertView* alert = [[GCAlertView alloc] initWithTitle:@"title" andMessage:@"message"];
@@ -92,6 +108,8 @@
         NSLog(@"other2");
     }];
     [action showInView:window];
+    
+    self.tb.rowHeight = 20.0f;
 }
     
 
