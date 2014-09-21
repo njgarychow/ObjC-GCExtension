@@ -12,6 +12,7 @@
 #import "NSObject+GCNotificationObserver.h"
 #import "NSObject+GCJSONExtension.h"
 #import "NSObject+GCKVO.h"
+#import "NSObject+GCAccessor.h"
 
 #import "GCAOPProxy.h"
 #import "NSObject+GCAOP.h"

@@ -10,7 +10,7 @@
 
 #import <objc/runtime.h>
 #import "GCMacro.h"
-#import "GCExtensionAccessorGeneratorMacro.h"
+#import "NSObject+GCAccessor.h"
 
 @interface BlockTableViewDelegateAndDataSourceImplementation : NSObject <UITableViewDelegate, UITableViewDataSource>
 
@@ -176,24 +176,28 @@
 @dynamic blockForHeaderView;
 @dynamic blockForHeaderHeight;
 
++ (void)load {
+    [self extensionAccessorGenerator];
+}
+
++ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
+    return @[@"blockForCellProvider",
+             @"blockForSectionNumber",
+             @"blockForRowNumber",
+             @"blockForSectionIndexTitles",
+             @"blockForSectionIndex",
+             @"blockForFooterTitle",
+             @"blockForHeaderTitle",
+             @"blockForCommitEditStyleForRow",
+             @"blockForCanEditRow",
+             @"blockForCanMoveRow",
+             @"blockForMoveRow",
+             @"blockForRowHeight",
+             @"blockForRowDidSelect",
+             @"blockForCellWillDisplay",
+             @"blockForHeaderView",
+             @"blockForHeaderHeight"];
+}
+
 @end
 
-#pragma clang diagnostic ignored "-Wunused-function"
-GCExtensionClassAccessorGenerator(UITableView)
-GCExtensionClassNonatomicCopyAccessorGenerator(UITableView,
-                                               blockForCanEditRow,
-                                               blockForCanMoveRow,
-                                               blockForCellProvider,
-                                               blockForCellWillDisplay,
-                                               blockForCommitEditStyleForRow,
-                                               blockForFooterTitle,
-                                               blockForHeaderHeight,
-                                               blockForHeaderTitle,
-                                               blockForHeaderView,
-                                               blockForMoveRow,
-                                               blockForRowDidSelect,
-                                               blockForRowHeight,
-                                               blockForSectionIndex,
-                                               blockForSectionIndexTitles,
-                                               blockForSectionNumber,
-                                               blockForRowNumber)

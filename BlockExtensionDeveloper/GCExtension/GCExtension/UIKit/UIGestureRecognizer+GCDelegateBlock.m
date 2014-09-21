@@ -9,7 +9,7 @@
 #import "UIGestureRecognizer+GCDelegateBlock.h"
 
 #import "GCMacro.h"
-#import "GCExtensionAccessorGeneratorMacro.h"
+#import "NSObject+GCAccessor.h"
 
 
 
@@ -98,9 +98,21 @@
 @dynamic blockForShouldRequireFailureOf;
 @dynamic blockForShouldBeRequireToFailureBy;
 
-@end
 
-#pragma clang diagnostic ignored "-Wunused-function"
-GCExtensionClassAccessorGenerator(UIGestureRecognizer)
-GCExtensionClassNonatomicCopyAccessorGenerator(UIGestureRecognizer, blockForShouldBegin, blockForShouldReceiveTouch, blockForShouldSimultaneous, blockForShouldRequireFailureOf, blockForShouldBeRequireToFailureBy)
-GCExtensionClassNonatomicStrongAccessorGenerator(UIGestureRecognizer, implement)
++ (void)load {
+    [self extensionAccessorGenerator];
+}
+
++ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
+    return @[@"blockForShouldBegin",
+             @"blockForShouldReceiveTouch",
+             @"blockForShouldSimultaneous",
+             @"blockForShouldRequireFailureOf",
+             @"blockForShouldBeRequireToFailureBy"];
+}
+
++ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
+    return @[@"implement"];
+}
+
+@end

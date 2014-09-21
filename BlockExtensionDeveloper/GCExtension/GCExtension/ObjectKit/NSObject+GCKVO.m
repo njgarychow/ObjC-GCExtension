@@ -8,8 +8,8 @@
 
 #import "NSObject+GCKVO.h"
 
-#import "GCExtensionAccessorGeneratorMacro.h"
 #import "GCMacro.h"
+#import "NSObject+GCAccessor.h"
 
 @class GCKVOObserver;
 @class GCKVOObserverDeallocationHanlder;
@@ -176,11 +176,18 @@ typedef void(^GCObserverDeallocationHandler)();
     return self.deallocationHandler;
 }
 
+
++ (void)load {
+    [self extensionAccessorGenerator];
+}
+
++ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
+    return @[@"observer",
+             @"deallocationHandler"];
+}
+
 @end
 
-#pragma clang diagnostic ignored "-Wunused-function"
-GCExtensionClassAccessorGenerator(NSObject);
-GCExtensionClassNonatomicStrongAccessorGenerator(NSObject, observer, deallocationHandler);
 
 
 
