@@ -10,4 +10,3 @@
 #import "ObjectExtensionKit.h"
 
 #import "GCMacro.h"
-#import "GCExtensionAccessorGeneratorMacro.h"
