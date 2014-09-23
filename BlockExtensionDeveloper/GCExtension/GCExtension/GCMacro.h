@@ -44,4 +44,18 @@ do {                \
 } while(0)
 
 
+
+
+//  return the os version
+#define GCIOSVersion()      \
+    ([[[UIDevice currentDevice] systemVersion] floatValue])
+
+
+
+
+//  return if the ios's version is above the |version|
+#define GCIsOSAboveVersion(version)     \
+    ((version) >= GCIOSVersion())
+
+
 #endif
