@@ -9,7 +9,7 @@
 #import "NSObject+GCKVO.h"
 
 #import "GCMacro.h"
-#import "NSObject+GCAccessor.h"
+#import <objc/runtime.h>
 
 @class GCKVOObserver;
 @class GCKVOObserverDeallocationHanlder;
@@ -177,13 +177,20 @@ typedef void(^GCObserverDeallocationHandler)();
 }
 
 
-+ (void)load {
-    [self extensionAccessorGenerator];
+static char ObserverKey;
+- (GCKVOObserver *)observer {
+    return objc_getAssociatedObject(self, &ObserverKey);
+}
+- (void)setObserver:(GCKVOObserver *)observer {
+    objc_setAssociatedObject(self, &ObserverKey, observer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-+ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
-    return @[@"observer",
-             @"deallocationHandler"];
+static char DeallocationHandlerKey;
+- (GCKVOObserverDeallocationHanlder *)deallocationHandler {
+    return objc_getAssociatedObject(self, &DeallocationHandlerKey);
+}
+- (void)setDeallocationHandler:(GCKVOObserverDeallocationHanlder *)deallocationHandler {
+    objc_setAssociatedObject(self, &DeallocationHandlerKey, deallocationHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
