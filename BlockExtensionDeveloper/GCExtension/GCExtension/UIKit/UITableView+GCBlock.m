@@ -46,21 +46,21 @@
     if (!_owner.blockForSectionIndex) {
         return 0;
     }
-    return _owner.blockForSectionIndex(title, index);
+    return _owner.blockForSectionIndex(title, (int)index);
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (!_owner.blockForFooterTitle) {
         return nil;
     }
-    return _owner.blockForFooterTitle(section);
+    return _owner.blockForFooterTitle((int)section);
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (!_owner.blockForHeaderTitle) {
         return nil;
     }
-    return _owner.blockForHeaderTitle(section);
+    return _owner.blockForHeaderTitle((int)section);
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -116,14 +116,14 @@
     if (!_owner.blockForHeaderView) {
         return nil;
     }
-    return _owner.blockForHeaderView(section);
+    return _owner.blockForHeaderView((int)section);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (!_owner.blockForHeaderHeight) {
         return 0;
     }
-    return _owner.blockForHeaderHeight(section);
+    return _owner.blockForHeaderHeight((int)section);
 }
 
 #pragma mark - dealloc

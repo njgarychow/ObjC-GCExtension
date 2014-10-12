@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^GCGestureActionBlock)();
+typedef void (^GCGestureActionBlock)(UIGestureRecognizer* gesture);
 
 /**
  *  This extension use a block instead of Gesture's target and action's selector.

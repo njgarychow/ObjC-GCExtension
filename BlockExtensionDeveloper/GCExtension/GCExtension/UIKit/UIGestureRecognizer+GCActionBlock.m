@@ -33,7 +33,7 @@
 }
 
 - (void)_gestureSelector:(id)sender {
-    _actionBlock();
+    _actionBlock(sender);
 }
 
 @end

@@ -50,14 +50,14 @@
     
     @autoreleasepool {
         NSObject* object = [[NSObject alloc] init];
-        [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSDictionary *change) {
+        [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSObject *terget, NSString *keyPath, NSDictionary *change) {
             NSLog(@"%@", change);
         }];
         object = nil;
     }
     
     NSObject* object = [[NSObject alloc] init];
-    [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSDictionary *change) {
+    [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSObject *terget, NSString *keyPath, NSDictionary *change) {
         NSLog(@"%@", change);
     }];
     object = nil;

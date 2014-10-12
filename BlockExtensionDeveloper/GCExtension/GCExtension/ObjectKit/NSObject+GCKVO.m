@@ -131,7 +131,7 @@ typedef void(^GCObserverDeallocationHandler)();
                        context:(void *)context {
     
     GCKVOObserverWrapper* wrapper = [self _wrapperForObserveTarget:object keyPath:keyPath];
-    wrapper.handlerBlock(change);
+    wrapper.handlerBlock(object, keyPath, change);
 }
 
 - (void)dealloc {

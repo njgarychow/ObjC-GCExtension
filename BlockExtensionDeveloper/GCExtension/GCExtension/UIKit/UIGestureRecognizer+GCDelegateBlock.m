@@ -24,7 +24,7 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     BOOL should = YES;
     if (self.owner.blockForShouldBegin) {
-        should = self.owner.blockForShouldBegin();
+        should = self.owner.blockForShouldBegin(gestureRecognizer);
     }
     return should;
 }
@@ -32,7 +32,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     BOOL should = YES;
     if (self.owner.blockForShouldReceiveTouch) {
-        should = self.owner.blockForShouldReceiveTouch(touch);
+        should = self.owner.blockForShouldReceiveTouch(gestureRecognizer, touch);
     }
     return should;
 }
@@ -40,7 +40,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     BOOL should = NO;
     if (self.owner.blockForShouldSimultaneous) {
-        should = self.owner.blockForShouldSimultaneous(otherGestureRecognizer);
+        should = self.owner.blockForShouldSimultaneous(gestureRecognizer, otherGestureRecognizer);
     }
     return should;
 }
@@ -48,7 +48,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     BOOL should = NO;
     if (self.owner.blockForShouldBeRequireToFailureBy) {
-        should = self.owner.blockForShouldBeRequireToFailureBy(otherGestureRecognizer);
+        should = self.owner.blockForShouldBeRequireToFailureBy(gestureRecognizer, otherGestureRecognizer);
     }
     return should;
 }
@@ -56,7 +56,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     BOOL should = NO;
     if (self.owner.blockForShouldRequireFailureOf) {
-        should = self.owner.blockForShouldRequireFailureOf(otherGestureRecognizer);
+        should = self.owner.blockForShouldRequireFailureOf(gestureRecognizer, otherGestureRecognizer);
     }
     return should;
 }

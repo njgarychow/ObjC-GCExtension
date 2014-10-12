@@ -10,12 +10,12 @@
 
 @interface UIGestureRecognizer (GCDelegateBlock)
 
-@property (nonatomic, copy) BOOL (^blockForShouldBegin)();
-@property (nonatomic, copy) BOOL (^blockForShouldReceiveTouch)(UITouch* touch);
-@property (nonatomic, copy) BOOL (^blockForShouldSimultaneous)(UIGestureRecognizer* otherGesture);
+@property (nonatomic, copy) BOOL (^blockForShouldBegin)(UIGestureRecognizer* gesture);
+@property (nonatomic, copy) BOOL (^blockForShouldReceiveTouch)(UIGestureRecognizer* gesture, UITouch* touch);
+@property (nonatomic, copy) BOOL (^blockForShouldSimultaneous)(UIGestureRecognizer* gesture, UIGestureRecognizer* otherGesture);
 
-@property (nonatomic, copy) BOOL (^blockForShouldRequireFailureOf)(UIGestureRecognizer* otherGesture);
-@property (nonatomic, copy) BOOL (^blockForShouldBeRequireToFailureBy)(UIGestureRecognizer* otherGesture);
+@property (nonatomic, copy) BOOL (^blockForShouldRequireFailureOf)(UIGestureRecognizer* gesture, UIGestureRecognizer* otherGesture);
+@property (nonatomic, copy) BOOL (^blockForShouldBeRequireToFailureBy)(UIGestureRecognizer* gesture, UIGestureRecognizer* otherGesture);
 
 - (void)usingDelegateBlocks;
 
