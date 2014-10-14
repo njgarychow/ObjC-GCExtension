@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+@interface UIScrollViewDelegateImplementation : NSObject <UIScrollViewDelegate>
+
+@end
+
+
+
+
+
+
+
 @interface UIScrollViewDelegateImplementationProxy : NSProxy
 
 @property (nonatomic, weak) UIScrollView* owner;

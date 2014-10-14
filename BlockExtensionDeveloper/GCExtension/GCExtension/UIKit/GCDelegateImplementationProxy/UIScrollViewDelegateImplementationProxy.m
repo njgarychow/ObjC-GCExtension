@@ -9,13 +9,6 @@
 #import "UIScrollViewDelegateImplementationProxy.h"
 #import "UIScrollView+GCDelegateBlock.h"
 
-@interface UIScrollViewDelegateImplementation : NSObject <UIScrollViewDelegate>
-
-@end
-
-
-
-
 @implementation UIScrollViewDelegateImplementation
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
