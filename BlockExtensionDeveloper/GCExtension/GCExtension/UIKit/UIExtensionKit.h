@@ -13,6 +13,7 @@
 #import "UITableView+GCBlock.h"
 #import "UIGestureRecognizer+GCActionBlock.h"
 #import "UIGestureRecognizer+GCDelegateBlock.h"
+#import "UITextField+GCDelegateBlock.h"
 
 #import "GCAlertView.h"
 #import "GCActionSheet.h"

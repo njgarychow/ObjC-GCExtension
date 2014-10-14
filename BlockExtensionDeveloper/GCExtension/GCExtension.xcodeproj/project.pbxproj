@@ -45,7 +45,7 @@
 		B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */; };
 		B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; };
-		B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */; };
+		B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */; };
 /* End PBXBuildFile section */
 
@@ -264,12 +264,12 @@
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
 				61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */,
 				61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */,
-				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				B742E1FB19C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
 				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
 				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
 				61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */,
 				6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */,
+				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				617AF40219D1B5910039D30A /* NSTimer+GCBlock.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
 				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
