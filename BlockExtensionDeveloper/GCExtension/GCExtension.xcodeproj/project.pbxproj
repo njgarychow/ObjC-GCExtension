@@ -49,6 +49,10 @@
 		B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */; };
 		B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */; };
 		B7B4CC8119ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */; };
+		B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC8219ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h */; };
+		B7B4CC8519ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */; };
+		B7B4CC8819ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC8619ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7B4CC8919ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,10 @@
 		B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDelegateImplementationProxy.h; sourceTree = "<group>"; };
 		B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		B7B4CC8219ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		B7B4CC8619ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GCDelegateBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +252,8 @@
 				B742E1FA19C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.m */,
 				B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */,
 				B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */,
+				B7B4CC8619ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h */,
+				B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */,
 				61CAD4351992808500941D0D /* UITableView+GCBlock.h */,
 				61CAD4361992808500941D0D /* UITableView+GCBlock.m */,
 				B745FB3D1990B0E100B6EA49 /* UIControl+GCEventBlock.h */,
@@ -258,6 +268,8 @@
 			children = (
 				B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */,
 				B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */,
+				B7B4CC8219ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h */,
+				B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -274,6 +286,7 @@
 				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
 				61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */,
 				B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */,
+				B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */,
 				612701B819A116C800F34C1B /* GCAlertView.h in Headers */,
 				612701C919A11E3D00F34C1B /* GCMacro.h in Headers */,
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
@@ -283,6 +296,7 @@
 				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
 				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
 				61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */,
+				B7B4CC8819ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h in Headers */,
 				6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */,
 				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				617AF40219D1B5910039D30A /* NSTimer+GCBlock.h in Headers */,
@@ -376,6 +390,7 @@
 			files = (
 				61936B2319CF0BA300D97B25 /* NSObject+GCAccessor.m in Sources */,
 				B742E1FC19C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.m in Sources */,
+				B7B4CC8919ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m in Sources */,
 				61DD5BFA19BE13960049AC11 /* NSObject+GCAOP.m in Sources */,
 				61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */,
 				618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */,
@@ -389,6 +404,7 @@
 				61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */,
 				617AF40319D1B5910039D30A /* NSTimer+GCBlock.m in Sources */,
 				B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */,
+				B7B4CC8519ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,32 +11,30 @@
 
 @interface UITextFieldDelegateImplementation : NSObject <UITextFieldDelegate>
 
-@property (nonatomic, weak) UITextField* owner;
-
 @end
 
 @implementation UITextFieldDelegateImplementation
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return self.owner.blockForShouldBeginEditing(textField);
+    return textField.blockForShouldBeginEditing(textField);
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    self.owner.blockForDidBeginEditing(textField);
+    textField.blockForDidBeginEditing(textField);
 }
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    return self.owner.blockForShouldEndEditing(textField);
+    return textField.blockForShouldEndEditing(textField);
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    self.owner.blockForDidEndEditing(textField);
+    textField.blockForDidEndEditing(textField);
 }
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    return self.owner.blockForShouldReplacementString(textField, range, string);
+    return textField.blockForShouldReplacementString(textField, range, string);
 }
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
-    return self.owner.blockForShouldClear(textField);
+    return textField.blockForShouldClear(textField);
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    return self.owner.blockForShouldReturn(textField);
+    return textField.blockForShouldReturn(textField);
 }
 
 @end
@@ -58,6 +56,7 @@
 @implementation UITextFieldDelegateImplementationProxy
 
 - (id)init {
+    self.realObject = [[UITextFieldDelegateImplementation alloc] init];
     return self;
 }
 

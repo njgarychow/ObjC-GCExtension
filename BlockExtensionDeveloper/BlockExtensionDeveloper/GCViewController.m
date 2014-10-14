@@ -12,8 +12,6 @@
 
 @interface GCViewController ()
 
-@property (nonatomic, strong) UITableView* tb;
-
 @end
 
 @implementation GCViewController
@@ -22,94 +20,17 @@
 {
     [super viewDidLoad];
     
-    self.tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [self.tb registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
-    __weak typeof(self.tb) weaktb = self.tb;
-    self.tb.blockForSectionNumber = ^ {
-        return 2;
+    UIScrollView* sv = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    sv.contentSize = CGSizeMake(CGRectGetWidth(sv.frame) * 2, CGRectGetHeight(sv.frame) * 3);
+    sv.blockForDidScroll = ^(UIScrollView* sv) {
+        NSLog(@"sv");
     };
-    self.tb.blockForHeaderTitle = ^(int section) {
-        return @"test";
-    };
-    self.tb.blockForHeaderHeight = ^(int section) {
-        return 44.0f;
-    };
-    self.tb.blockForRowNumber = ^(int section) {
-        return 10;
-    };
-    self.tb.blockForCellProvider = ^(NSIndexPath* indexPath) {
-        UITableViewCell* cell = [weaktb dequeueReusableCellWithIdentifier:@"test" forIndexPath:indexPath];
-        return cell;
-    };
-    self.tb.blockForHeaderView = ^(int section) {
-        UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-        view.backgroundColor = [UIColor redColor];
-        return view;
-    };
-    [self.tb usingBlocks];
-    
-    @autoreleasepool {
-        NSObject* object = [[NSObject alloc] init];
-        [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSObject *terget, NSString *keyPath, NSDictionary *change) {
-            NSLog(@"%@", change);
-        }];
-        object = nil;
-    }
-    
-    NSObject* object = [[NSObject alloc] init];
-    [object startObserveObject:self.tb forKeyPath:@"rowHeight" usingBlock:^(NSObject *terget, NSString *keyPath, NSDictionary *change) {
-        NSLog(@"%@", change);
-    }];
-    object = nil;
-    
-    self.tb.rowHeight = 10.0f;
-    
-    [self.view addSubview:self.tb];
-    
-    GCAlertView* alert = [[GCAlertView alloc] initWithTitle:@"title" andMessage:@"message"];
-    alert = [alert AOPObject];
-    [alert interceptSelector:@selector(show) onMode:GCAOPInterceptModeBefore usingBlock:^{
-        NSLog(@"before show");
-    }];
-    [alert interceptSelector:@selector(setCancelButtonWithTitle:actionBlock:) onMode:GCAOPInterceptModeInstead usingBlock:^{
-        NSLog(@"instead cancel");
-    }];
-    
-    [alert setCancelButtonWithTitle:@"cancel" actionBlock:^{
-        NSLog(@"cancel");
-    }];
-    [alert addOtherButtonWithTitle:@"other1" actionBlock:^{
-        NSLog(@"other1");
-    }];
-    [alert addOtherButtonWithTitle:@"other2" actionBlock:^{
-        NSLog(@"other2");
-    }];
-    [alert addOtherButtonWithTitle:@"other2" actionBlock:^{
-        NSLog(@"other3");
-    }];
-    [alert show];
+    [sv usingDelegateBlock];
+    [self.view addSubview:sv];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    UIWindow* window = [[UIApplication sharedApplication] keyWindow];
-    GCActionSheet* action = [[GCActionSheet alloc] initWithTitle:@"title"];
-    [action setCancelButtonTitle:@"cancel" actionBlock:^{
-        NSLog(@"cacnel");
-    }];
-    [action setDestructiveButtonTitle:@"destructive" actionBlock:^{
-        NSLog(@"destructive");
-    }];
-    [action addOtherButtonTitle:@"other1" actionBlock:^{
-        NSLog(@"other1");
-    }];
-    [action addOtherButtonTitle:@"other2" actionBlock:^{
-        NSLog(@"other2");
-    }];
-    [action showInView:window];
-    
-    self.tb.rowHeight = 20.0f;
 }
     
 

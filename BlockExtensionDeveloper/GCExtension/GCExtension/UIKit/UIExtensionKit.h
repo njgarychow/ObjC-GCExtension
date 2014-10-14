@@ -14,6 +14,7 @@
 #import "UIGestureRecognizer+GCActionBlock.h"
 #import "UIGestureRecognizer+GCDelegateBlock.h"
 #import "UITextField+GCDelegateBlock.h"
+#import "UIScrollView+GCDelegateBlock.h"
 
 #import "GCAlertView.h"
 #import "GCActionSheet.h"
