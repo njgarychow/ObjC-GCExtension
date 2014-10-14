@@ -10,7 +10,7 @@
 #define GCExtension_UIExtensionKit_h
 
 #import "UIControl+GCEventBlock.h"
-#import "UITableView+GCBlock.h"
+#import "UITableView+GCDelegateAndDataSourceBlock.h"
 #import "UIGestureRecognizer+GCActionBlock.h"
 #import "UIGestureRecognizer+GCDelegateBlock.h"
 #import "UITextField+GCDelegateBlock.h"

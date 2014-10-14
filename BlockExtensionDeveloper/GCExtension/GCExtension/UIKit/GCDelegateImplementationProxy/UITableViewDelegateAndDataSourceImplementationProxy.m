@@ -8,7 +8,7 @@
 
 #import "UITableViewDelegateAndDataSourceImplementationProxy.h"
 
-#import "UITableView+GCBlock.h"
+#import "UITableView+GCDelegateAndDataSourceBlock.h"
 
 @interface UITableViewDelegateAndDataSourceImplementation : UIScrollViewDelegateImplementation <UITableViewDelegate, UITableViewDataSource>
 

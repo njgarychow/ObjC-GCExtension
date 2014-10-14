@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 zhoujinqiang. All rights reserved.
 //
 
-#import "UITableView+GCBlock.h"
+#import "UITableView+GCDelegateAndDataSourceBlock.h"
 
 #import <objc/runtime.h>
 #import "NSObject+GCAccessor.h"
@@ -15,7 +15,7 @@
 
 #pragma mark - UITableView+GCBlock
 
-@implementation UITableView (GCBlock)
+@implementation UITableView (GCDelegateAndDataSourceBlock)
 
 - (void)usingBlocks {
     static char const UITableViewDelegateAndDataSourceImplementationProxyKey;
