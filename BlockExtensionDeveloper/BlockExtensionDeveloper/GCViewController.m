@@ -19,14 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIScrollView* sv = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    sv.contentSize = CGSizeMake(CGRectGetWidth(sv.frame) * 2, CGRectGetHeight(sv.frame) * 3);
-    sv.blockForDidScroll = ^(UIScrollView* sv) {
-        NSLog(@"sv");
-    };
-    [sv usingDelegateBlock];
-    [self.view addSubview:sv];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -10,58 +10,11 @@
 
 #import "GCMacro.h"
 #import "NSObject+GCAccessor.h"
+#import "UIGestureRecognizerDelegateImplementProxy.h"
 
 
 
-@interface UIGestureRecognizerDelegateImplement : NSObject <UIGestureRecognizerDelegate>
 
-@property (nonatomic, weak) UIGestureRecognizer* owner;
-
-@end
-
-@implementation UIGestureRecognizerDelegateImplement
-
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    BOOL should = YES;
-    if (self.owner.blockForShouldBegin) {
-        should = self.owner.blockForShouldBegin(gestureRecognizer);
-    }
-    return should;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    BOOL should = YES;
-    if (self.owner.blockForShouldReceiveTouch) {
-        should = self.owner.blockForShouldReceiveTouch(gestureRecognizer, touch);
-    }
-    return should;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    BOOL should = NO;
-    if (self.owner.blockForShouldSimultaneous) {
-        should = self.owner.blockForShouldSimultaneous(gestureRecognizer, otherGestureRecognizer);
-    }
-    return should;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    BOOL should = NO;
-    if (self.owner.blockForShouldBeRequireToFailureBy) {
-        should = self.owner.blockForShouldBeRequireToFailureBy(gestureRecognizer, otherGestureRecognizer);
-    }
-    return should;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    BOOL should = NO;
-    if (self.owner.blockForShouldRequireFailureOf) {
-        should = self.owner.blockForShouldRequireFailureOf(gestureRecognizer, otherGestureRecognizer);
-    }
-    return should;
-}
-
-@end
 
 
 
@@ -73,7 +26,7 @@
 
 
 @interface UIGestureRecognizer (GCDelegateBlockProperty)
-@property (nonatomic, strong) UIGestureRecognizerDelegateImplement* implement;
+@property (nonatomic, strong) UIGestureRecognizerDelegateImplementProxy* implement;
 @end
 
 @implementation UIGestureRecognizer (GCDelegateBlockProperty)
@@ -85,10 +38,10 @@
 
 - (void)usingDelegateBlocks {
     if (!self.implement) {
-        self.implement = [[UIGestureRecognizerDelegateImplement alloc] init];
+        self.implement = [[UIGestureRecognizerDelegateImplementProxy alloc] init];
         self.implement.owner = self;
     }
-    self.delegate = self.implement;
+    self.delegate = (id)self.implement;
 }
 
 

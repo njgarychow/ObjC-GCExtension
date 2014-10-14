@@ -53,6 +53,8 @@
 		B7B4CC8519ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */; };
 		B7B4CC8819ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC8619ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B4CC8919ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */; };
+		B7B4CC9A19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC9819ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h */; };
+		B7B4CC9B19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC9919ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		B7B4CC8619ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GCDelegateBlock.h"; sourceTree = "<group>"; };
 		B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		B7B4CC9819ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGestureRecognizerDelegateImplementProxy.h; sourceTree = "<group>"; };
+		B7B4CC9919ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGestureRecognizerDelegateImplementProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,8 @@
 				B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */,
 				B7B4CC8219ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h */,
 				B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */,
+				B7B4CC9819ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h */,
+				B7B4CC9919ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */,
 				B7B4CC8819ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h in Headers */,
 				6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */,
+				B7B4CC9A19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
 				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				617AF40219D1B5910039D30A /* NSTimer+GCBlock.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
@@ -395,6 +402,7 @@
 				61CAD4381992808500941D0D /* UITableView+GCBlock.m in Sources */,
 				618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */,
 				612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */,
+				B7B4CC9B19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
 				B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */,
