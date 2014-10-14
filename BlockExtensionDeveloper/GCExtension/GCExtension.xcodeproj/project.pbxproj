@@ -45,6 +45,8 @@
 		B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */; };
 		B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; };
+		B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */; };
+		B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GCEventBlock.m"; sourceTree = "<group>"; };
 		B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtensionKit.h; sourceTree = "<group>"; };
 		B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCExtension-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegateBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,8 @@
 				612701B319A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m */,
 				B742E1F919C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.h */,
 				B742E1FA19C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.m */,
+				B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */,
+				B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */,
 				61CAD4351992808500941D0D /* UITableView+GCBlock.h */,
 				61CAD4361992808500941D0D /* UITableView+GCBlock.m */,
 				B745FB3D1990B0E100B6EA49 /* UIControl+GCEventBlock.h */,
@@ -258,6 +264,7 @@
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
 				61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */,
 				61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */,
+				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				B742E1FB19C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
 				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
 				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
@@ -360,6 +367,7 @@
 				612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */,
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
+				B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */,
 				B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */,
 				6130C0F119C74C9900B1BEA9 /* NSObject+GCKVO.m in Sources */,
 				61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */,
