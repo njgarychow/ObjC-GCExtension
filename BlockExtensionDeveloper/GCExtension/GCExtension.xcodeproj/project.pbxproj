@@ -47,6 +47,8 @@
 		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; };
 		B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */; };
+		B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */; };
+		B7B4CC8119ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCExtension-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GCDelegateBlock.h"; sourceTree = "<group>"; };
 		B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDelegateImplementationProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 		B745FB3C1990B0E100B6EA49 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7B4CC7D19ED02E0007B7D1F /* GCDelegateImplementationProxy */,
 				618FFA4019A24A9D002FC58F /* GCActionSheet.h */,
 				618FFA4119A24A9D002FC58F /* GCActionSheet.m */,
 				612701B619A116C800F34C1B /* GCAlertView.h */,
@@ -248,6 +253,15 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		B7B4CC7D19ED02E0007B7D1F /* GCDelegateImplementationProxy */ = {
+			isa = PBXGroup;
+			children = (
+				B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */,
+				B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */,
+			);
+			path = GCDelegateImplementationProxy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -259,6 +273,7 @@
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
 				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
 				61CAD4371992808500941D0D /* UITableView+GCBlock.h in Headers */,
+				B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */,
 				612701B819A116C800F34C1B /* GCAlertView.h in Headers */,
 				612701C919A11E3D00F34C1B /* GCMacro.h in Headers */,
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
@@ -368,6 +383,7 @@
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
 				B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */,
+				B7B4CC8119ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m in Sources */,
 				B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */,
 				6130C0F119C74C9900B1BEA9 /* NSObject+GCKVO.m in Sources */,
 				61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */,
