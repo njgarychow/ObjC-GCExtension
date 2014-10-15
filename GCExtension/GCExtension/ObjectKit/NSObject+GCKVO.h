@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^GCKVOBlock)(NSObject* terget, NSString* keyPath, NSDictionary* change);
+typedef void (^GCKVOBlock)(NSObject* target, NSString* keyPath, NSDictionary* change);
 
 /**
  *  This class extension is for KVO.

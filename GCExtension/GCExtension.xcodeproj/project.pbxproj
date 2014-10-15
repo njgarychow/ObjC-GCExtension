@@ -22,7 +22,8 @@
 		618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 618FFA4119A24A9D002FC58F /* GCActionSheet.m */; };
 		61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 61936B2019CF0BA300D97B25 /* NSObject+GCAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61936B2319CF0BA300D97B25 /* NSObject+GCAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61936B2119CF0BA300D97B25 /* NSObject+GCAccessor.m */; };
-		61B577C519ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B577C319ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h */; };
+		61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AA62CE19EEAF46005D845A /* UIKit.framework */; };
+		61B577C519ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B577C319ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		61B577C619ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B577C419ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.m */; };
 		61CAD4371992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CAD4351992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61CAD4381992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CAD4361992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.m */; };
@@ -46,16 +47,16 @@
 		B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3D1990B0E100B6EA49 /* UIControl+GCEventBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */; };
 		B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; };
+		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; settings = {ATTRIBUTES = (Private, ); }; };
 		B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */; };
-		B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */; };
+		B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B7B4CC8119ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC7F19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.m */; };
-		B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC8219ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h */; };
+		B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC8219ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B7B4CC8519ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC8319ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.m */; };
 		B7B4CC8819ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC8619ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B4CC8919ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */; };
-		B7B4CC9A19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC9819ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h */; };
+		B7B4CC9A19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC9819ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B7B4CC9B19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC9919ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		618FFA4119A24A9D002FC58F /* GCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCActionSheet.m; sourceTree = "<group>"; };
 		61936B2019CF0BA300D97B25 /* NSObject+GCAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAccessor.h"; sourceTree = "<group>"; };
 		61936B2119CF0BA300D97B25 /* NSObject+GCAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAccessor.m"; sourceTree = "<group>"; };
+		61AA62CE19EEAF46005D845A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61B577C319ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDelegateAndDataSourceImplementationProxy.h; sourceTree = "<group>"; };
 		61B577C419ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDelegateAndDataSourceImplementationProxy.m; sourceTree = "<group>"; };
 		61CAD4351992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCDelegateAndDataSourceBlock.h"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */,
 				61F29884198E93F600461164 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +183,7 @@
 		61F29882198E93F600461164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61AA62CE19EEAF46005D845A /* UIKit.framework */,
 				61F29883198E93F600461164 /* Foundation.framework */,
 				61F29891198E93F600461164 /* XCTest.framework */,
 				61F29894198E93F600461164 /* UIKit.framework */,
@@ -297,8 +301,6 @@
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
 				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
 				61CAD4371992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
-				B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */,
-				B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */,
 				612701B819A116C800F34C1B /* GCAlertView.h in Headers */,
 				612701C919A11E3D00F34C1B /* GCMacro.h in Headers */,
 				612701B419A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.h in Headers */,
@@ -306,17 +308,19 @@
 				61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */,
 				B742E1FB19C0789F002192BF /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
 				618FFA4219A24A9D002FC58F /* GCActionSheet.h in Headers */,
-				61B577C519ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
 				61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */,
 				B7B4CC8819ED182D007B7D1F /* UIScrollView+GCDelegateBlock.h in Headers */,
 				6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */,
+				B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */,
+				B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */,
+				61B577C519ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				B7B4CC9A19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
+				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
 				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				617AF40219D1B5910039D30A /* NSTimer+GCBlock.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
 				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
-				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,9 +537,9 @@
 				GCC_PREFIX_HEADER = "GCExtension-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -547,9 +551,9 @@
 				GCC_PREFIX_HEADER = "GCExtension-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

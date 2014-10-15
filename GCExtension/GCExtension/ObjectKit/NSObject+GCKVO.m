@@ -31,12 +31,9 @@
 
 
 
-
-
-
 @interface GCKVOObserverWrapper : NSObject
 
-@property (nonatomic, weak) NSObject* observeTarget;
+@property (nonatomic, assign) NSObject* observeTarget;
 @property (nonatomic, copy) NSString* keyPath;
 @property (nonatomic, copy) GCKVOBlock handlerBlock;
 
@@ -70,13 +67,20 @@ typedef void(^GCObserverDeallocationHandler)();
     [_handlers addObject:[handler copy]];
 }
 
-- (void)dealloc {
+- (void)invokeHandlers {
     for (GCObserverDeallocationHandler handler in _handlers) {
         handler();
     }
+    [_handlers removeAllObjects];
+}
+
+- (void)dealloc {
+    [self invokeHandlers];
 }
 
 @end
+
+
 
 
 @interface GCKVOObserver : NSObject
@@ -95,9 +99,9 @@ typedef void(^GCObserverDeallocationHandler)();
 }
 
 - (void)startObserveObject:(NSObject *)observeTarger
-                forKeyPath:(NSString *)keyPath
-                   options:(NSKeyValueObservingOptions)options
-                usingBlock:(GCKVOBlock)handler {
+                 forKeyPath:(NSString *)keyPath
+                    options:(NSKeyValueObservingOptions)options
+                 usingBlock:(GCKVOBlock)handler {
     
     GCKVOObserverWrapper* wrapper = [self _wrapperForObserveTarget:observeTarger keyPath:keyPath];
     if (!wrapper) {
@@ -106,9 +110,12 @@ typedef void(^GCObserverDeallocationHandler)();
         wrapper.keyPath = keyPath;
         wrapper.handlerBlock = handler;
         [_wrappers addObject:wrapper];
+        
         __weak typeof(self) weak_self = self;
+        __weak typeof(wrapper) weak_wrapper = wrapper;
         [[observeTarger theDeallocationHandler] addHandler:^{
-            [weak_self stopObserveObject:observeTarger forKeyPath:keyPath];
+            [weak_wrapper.observeTarget removeObserver:weak_self forKeyPath:keyPath context:nil];
+            [weak_self.wrappers removeObject:wrapper];
         }];
         [observeTarger addObserver:self forKeyPath:keyPath options:options context:nil];
     }
@@ -116,12 +123,12 @@ typedef void(^GCObserverDeallocationHandler)();
 }
 
 - (void)stopObserveObject:(NSObject *)observeTarger
-               forKeyPath:(NSString *)keyPath {
+                forKeyPath:(NSString *)keyPath {
     
     GCKVOObserverWrapper* wrapper = [self _wrapperForObserveTarget:observeTarger keyPath:keyPath];
     if (wrapper) {
-        [_wrappers removeObject:wrapper];
         [observeTarger removeObserver:self forKeyPath:keyPath context:nil];
+        [_wrappers removeObject:wrapper];
     }
 }
 
@@ -202,7 +209,6 @@ static char DeallocationHandlerKey;
 
 
 @implementation NSObject (GCKVO)
-
 
 - (void)startObserveObject:(NSObject *)observeTarger
                 forKeyPath:(NSString *)keyPath

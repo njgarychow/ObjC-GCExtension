@@ -22,9 +22,9 @@
 		61139E26198E8F220079DFA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61139E24198E8F220079DFA9 /* InfoPlist.strings */; };
 		61139E28198E8F220079DFA9 /* UIControlGCEventBlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */; };
 		612ED55C19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612ED55B19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m */; };
-		615A5CA51996657800D84578 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
 		618C3ABA1995275300F6EB90 /* UITableViewGCBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */; };
-		61CAD4521992A89500941D0D /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAD44F1992A88100941D0D /* libGCExtension.a */; };
+		61B577D119EEA20E0026C6E1 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B577CE19EEA1F60026C6E1 /* libGCExtension.a */; };
+		61B577D219EEA21D0026C6E1 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B577CE19EEA1F60026C6E1 /* libGCExtension.a */; };
 		61DD5BF019ACF2520049AC11 /* JSONTestString.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 61DD5BEC19ACEF250049AC11 /* JSONTestString.geojson */; };
 		92638887A5324C4BB7570542 /* libPods-BlockExtensionDeveloperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */; };
 /* End PBXBuildFile section */
@@ -37,16 +37,16 @@
 			remoteGlobalIDString = 61139DF8198E8F210079DFA9;
 			remoteInfo = BlockExtensionDeveloper;
 		};
-		61CAD44E1992A88100941D0D /* PBXContainerItemProxy */ = {
+		61B577CD19EEA1F60026C6E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 61CAD4491992A88100941D0D /* GCExtension.xcodeproj */;
+			containerPortal = 61B577C819EEA1F60026C6E1 /* GCExtension.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61F29880198E93F600461164;
 			remoteInfo = GCExtension;
 		};
-		61CAD4501992A88100941D0D /* PBXContainerItemProxy */ = {
+		61B577CF19EEA1F60026C6E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 61CAD4491992A88100941D0D /* GCExtension.xcodeproj */;
+			containerPortal = 61B577C819EEA1F60026C6E1 /* GCExtension.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61F29890198E93F600461164;
 			remoteInfo = GCExtensionTests;
@@ -75,7 +75,7 @@
 		61139E27198E8F220079DFA9 /* UIControlGCEventBlockTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIControlGCEventBlockTest.m; sourceTree = "<group>"; };
 		612ED55B19AB9E4400CC3CF2 /* NSObjectGCJSONExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectGCJSONExtensionTests.m; sourceTree = "<group>"; };
 		618C3AB91995275300F6EB90 /* UITableViewGCBlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewGCBlockTests.m; sourceTree = "<group>"; };
-		61CAD4491992A88100941D0D /* GCExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCExtension.xcodeproj; path = GCExtension/GCExtension.xcodeproj; sourceTree = "<group>"; };
+		61B577C819EEA1F60026C6E1 /* GCExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCExtension.xcodeproj; path = ../GCExtension/GCExtension.xcodeproj; sourceTree = "<group>"; };
 		61DD5BEC19ACEF250049AC11 /* JSONTestString.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JSONTestString.geojson; sourceTree = "<group>"; };
 		AC7A59E33D494FBFA41F320B /* libPods-BlockExtensionDeveloperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlockExtensionDeveloperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3B7F8FFD4E43C39DE68D4F /* Pods-BlockExtensionDeveloperTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockExtensionDeveloperTests.xcconfig"; path = "Pods/Pods-BlockExtensionDeveloperTests.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CAD4521992A89500941D0D /* libGCExtension.a in Frameworks */,
+				61B577D219EEA21D0026C6E1 /* libGCExtension.a in Frameworks */,
 				61139DFF198E8F210079DFA9 /* CoreGraphics.framework in Frameworks */,
 				61139E01198E8F210079DFA9 /* UIKit.framework in Frameworks */,
 				61139DFD198E8F210079DFA9 /* Foundation.framework in Frameworks */,
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615A5CA51996657800D84578 /* libGCExtension.a in Frameworks */,
+				61B577D119EEA20E0026C6E1 /* libGCExtension.a in Frameworks */,
 				61139E1C198E8F220079DFA9 /* XCTest.framework in Frameworks */,
 				61139E1E198E8F220079DFA9 /* UIKit.framework in Frameworks */,
 				61139E1D198E8F220079DFA9 /* Foundation.framework in Frameworks */,
@@ -111,11 +111,11 @@
 		61139DF0198E8F210079DFA9 = {
 			isa = PBXGroup;
 			children = (
+				61B577C819EEA1F60026C6E1 /* GCExtension.xcodeproj */,
 				61139E02198E8F210079DFA9 /* BlockExtensionDeveloper */,
 				61139E21198E8F220079DFA9 /* BlockExtensionDeveloperTests */,
 				61139DFB198E8F210079DFA9 /* Frameworks */,
 				61139DFA198E8F210079DFA9 /* Products */,
-				61CAD4491992A88100941D0D /* GCExtension.xcodeproj */,
 				BE3B7F8FFD4E43C39DE68D4F /* Pods-BlockExtensionDeveloperTests.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -187,11 +187,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61CAD44A1992A88100941D0D /* Products */ = {
+		61B577C919EEA1F60026C6E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61CAD44F1992A88100941D0D /* libGCExtension.a */,
-				61CAD4511992A88100941D0D /* GCExtensionTests.xctest */,
+				61B577CE19EEA1F60026C6E1 /* libGCExtension.a */,
+				61B577D019EEA1F60026C6E1 /* GCExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,8 +264,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 61CAD44A1992A88100941D0D /* Products */;
-					ProjectRef = 61CAD4491992A88100941D0D /* GCExtension.xcodeproj */;
+					ProductGroup = 61B577C919EEA1F60026C6E1 /* Products */;
+					ProjectRef = 61B577C819EEA1F60026C6E1 /* GCExtension.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -277,18 +277,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		61CAD44F1992A88100941D0D /* libGCExtension.a */ = {
+		61B577CE19EEA1F60026C6E1 /* libGCExtension.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libGCExtension.a;
-			remoteRef = 61CAD44E1992A88100941D0D /* PBXContainerItemProxy */;
+			remoteRef = 61B577CD19EEA1F60026C6E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		61CAD4511992A88100941D0D /* GCExtensionTests.xctest */ = {
+		61B577D019EEA1F60026C6E1 /* GCExtensionTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GCExtensionTests.xctest;
-			remoteRef = 61CAD4501992A88100941D0D /* PBXContainerItemProxy */;
+			remoteRef = 61B577CF19EEA1F60026C6E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
