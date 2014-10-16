@@ -55,13 +55,15 @@ target-action模式代码：
 
 ##	关于delegate和dataSource的扩展
 
-GCExtension用block作为property的方式代替delegate和dataSource。
-
 苹果的MVC支持是很完善的，在UIKit当中大量使用了delegate和dataSource的设计，很好的做到了数据和View的分离。
 
 MVC在设计上是一种很好的设计，将Model-ViewController-View分离开来，降低耦合性。但是在实际的使用当中，因为ViewController往往承担了太多的责任，代码量大，耦合性强，可重用性和可维护性降低。由此发展出一种MVC的变体，[MVVM](http://www.objc.io/issue-13/mvvm.html)(Model-View-ViewModel)。MVVM大大的减少了ViewController中的代码，可重用性和可维护性都提高不少。
 
-MVVM虽然减轻了ViewController，但是在实际使用上也会有一些麻烦，
+MVVM虽然减轻了ViewController，但是在实际使用上也会有一些麻烦，比如UITableView的ViewModel实现了UITableView的delegate和dataSource，但是却还需要定义一个protocol与对应的ViewController进行交互。
+
+GCExtension用block作为property的方式代替delegate和dataSource。让delegate和dataSource对应方法的block赋值不局限于一个类中，不再需要protocol的定义。详见：MVVMDemo。
+
+目前实现了的delegate和dataSource的类有，UIGestureRecognizer, UIScrollView, UITableView和UITextField。
 
 ##	关于Category的属性的扩展
 
@@ -95,3 +97,7 @@ NSObject提供的KVO功能很强大，很方便的管理了Model和View之间的
 GCExtension中的NSObject+GCKVO很好的解决这两点。详见Demo：KVODemo。
 
 ##	关于Notification的扩展
+
+CocoaTouch中，NSNotification的应用也是广泛的，不过和KVO有类似的问题。
+
+使用GCExtension的NSObject+GCNotificationBlock。详见Demo：NotificationDemo。
