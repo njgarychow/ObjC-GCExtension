@@ -50,6 +50,10 @@
 
 @implementation GCAlertView
 
+- (BOOL)isVisible {
+    return _alertView.isVisible;
+}
+
 - (id)initWithFrame:(CGRect)frame {
     NSAssert(NO, @"use |initWithTitle:message:| instead.");
     return nil;

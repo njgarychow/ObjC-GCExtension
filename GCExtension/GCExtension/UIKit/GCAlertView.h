@@ -10,6 +10,8 @@
 
 @interface GCAlertView : UIView
 
+@property(nonatomic,readonly,getter=isVisible) BOOL visible;
+
 - (instancetype)initWithTitle:(NSString *)title andMessage:(NSString *)message;
 
 - (void)setCancelButtonWithTitle:(NSString *)cancelTitle actionBlock:(void(^)())cancelBlock;
