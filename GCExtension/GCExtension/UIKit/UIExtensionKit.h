@@ -11,6 +11,7 @@
 
 #import "UIControl+GCEventBlock.h"
 #import "UITableView+GCDelegateAndDataSourceBlock.h"
+#import "UICollectionView+GCDelegateAndDataSourceBlock.h"
 #import "UIGestureRecognizer+GCActionBlock.h"
 #import "UIGestureRecognizer+GCDelegateBlock.h"
 #import "UITextField+GCDelegateBlock.h"

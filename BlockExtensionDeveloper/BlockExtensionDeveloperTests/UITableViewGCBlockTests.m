@@ -8,7 +8,7 @@
 
 #import "Kiwi.h"
 
-#import "UITableView+GCBlock.h"
+#import "UITableView+GCDelegateAndDataSourceBlock.h"
 
 
 SPEC_BEGIN(UITableView_GCBlock_Tests)
@@ -34,10 +34,10 @@ describe(@"UITableView Block", ^{
             [window addSubview:tableview];
             
             __weak typeof(tableview) weakTableview = tableview;
-            [tableview setBlockForRowNumber:^int(int section) {
+            [tableview setBlockForRowNumber:^int(UITableView* tb, int section) {
                 return rowCount;
             }];
-            [tableview setBlockForCellProvider:^UITableViewCell *(NSIndexPath* indexPath) {
+            [tableview setBlockForRowCell:^UITableViewCell *(UITableView* tb, NSIndexPath* indexPath) {
                 UITableViewCell* cell = [weakTableview
                                          dequeueReusableCellWithIdentifier:@"reuse"
                                          forIndexPath:indexPath];

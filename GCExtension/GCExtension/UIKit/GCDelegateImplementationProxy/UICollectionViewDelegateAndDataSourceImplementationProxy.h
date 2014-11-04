@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 zhoujinqiang. All rights reserved.
 //
 
-#import <GCExtension/GCExtension.h>
+#import <UIKit/UIKit.h>
 
 #import "UIScrollViewDelegateImplementationProxy.h"
 
