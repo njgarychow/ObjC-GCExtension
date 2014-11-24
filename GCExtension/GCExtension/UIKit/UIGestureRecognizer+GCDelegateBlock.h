@@ -35,6 +35,6 @@
  */
 @property (nonatomic, copy) BOOL (^blockForShouldBeRequireToFailureBy)(UIGestureRecognizer* gesture, UIGestureRecognizer* otherGesture) NS_AVAILABLE_IOS(7_0);
 
-- (void)usingDelegateBlocks;
+- (void)usingBlocks;
 
 @end

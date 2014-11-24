@@ -10,7 +10,7 @@
 
 @interface UIScrollView (GCDelegateBlock)
 
-- (void)usingDelegateBlock;
+- (void)usingBlocks;
 
 /**
  *  equal to -> |scrollViewDidScroll:|

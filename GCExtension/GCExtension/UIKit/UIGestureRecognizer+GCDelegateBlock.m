@@ -36,7 +36,7 @@
 
 @implementation UIGestureRecognizer (GCDelegateBlock)
 
-- (void)usingDelegateBlocks {
+- (void)usingBlocks {
     if (!self.implement) {
         self.implement = [[UIGestureRecognizerDelegateImplementProxy alloc] init];
         self.implement.owner = self;

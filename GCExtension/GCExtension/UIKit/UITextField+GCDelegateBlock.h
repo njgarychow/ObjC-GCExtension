@@ -10,7 +10,7 @@
 
 @interface UITextField (GCDelegateBlock)
 
-- (void)usingDelegateBlocks;
+- (void)usingBlocks;
 
 /**
  *  equal to -> |textFieldShouldBeginEditing:|

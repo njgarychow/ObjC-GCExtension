@@ -14,7 +14,7 @@
 @implementation UITextField (GCDelegateBlock)
 
 static char UITextFieldDelegateImplementationProxyKey;
-- (void)usingDelegateBlocks {
+- (void)usingBlocks {
     UITextFieldDelegateImplementationProxy* proxy = objc_getAssociatedObject(self, &UITextFieldDelegateImplementationProxyKey);
     if (!proxy) {
         proxy = [[UITextFieldDelegateImplementationProxy alloc] init];

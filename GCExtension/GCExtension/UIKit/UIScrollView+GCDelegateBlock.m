@@ -18,7 +18,7 @@
 
 @implementation UIScrollView (GCDelegateBlock)
 
-- (void)usingDelegateBlock {
+- (void)usingBlocks {
     if (!self.implementation) {
         self.implementation = [[UIScrollViewDelegateImplementationProxy alloc] init];
         self.implementation.owner = self;
