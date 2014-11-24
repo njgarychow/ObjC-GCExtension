@@ -56,6 +56,10 @@
 		B745FB441990B0E100B6EA49 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */; };
 		B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */; settings = {ATTRIBUTES = (Private, ); }; };
+		B75814BA1A15AEA80029F9AB /* UITextView+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B75814B81A15AEA80029F9AB /* UITextView+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B75814BB1A15AEA80029F9AB /* UITextView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B75814B91A15AEA80029F9AB /* UITextView+GCDelegateBlock.m */; };
+		B75814BE1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B75814BC1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B75814BF1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B75814BD1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.m */; };
 		B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B4CC6F19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */; };
 		B7B4CC8019ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -141,6 +145,10 @@
 		B745FB3E1990B0E100B6EA49 /* UIControl+GCEventBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GCEventBlock.m"; sourceTree = "<group>"; };
 		B745FB3F1990B0E100B6EA49 /* UIExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtensionKit.h; sourceTree = "<group>"; };
 		B745FB461990B10C00B6EA49 /* GCExtension-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCExtension-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		B75814B81A15AEA80029F9AB /* UITextView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		B75814B91A15AEA80029F9AB /* UITextView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		B75814BC1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		B75814BD1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		B7B4CC6C19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GCDelegateBlock.h"; sourceTree = "<group>"; };
 		B7B4CC6D19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		B7B4CC7E19ED032E007B7D1F /* UITextFieldDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDelegateImplementationProxy.h; sourceTree = "<group>"; };
@@ -284,6 +292,8 @@
 				B7B4CC8719ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m */,
 				61CAD4351992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.h */,
 				61CAD4361992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.m */,
+				B75814B81A15AEA80029F9AB /* UITextView+GCDelegateBlock.h */,
+				B75814B91A15AEA80029F9AB /* UITextView+GCDelegateBlock.m */,
 				61B5BD3B1A07D946001E7CCA /* UICollectionView+GCDelegateAndDataSourceBlock.h */,
 				61B5BD3C1A07D946001E7CCA /* UICollectionView+GCDelegateAndDataSourceBlock.m */,
 				61A3CB081A0CF258004CAD54 /* UIWebView+GCDelegateBlock.h */,
@@ -310,6 +320,8 @@
 				61B5BD401A07D9B0001E7CCA /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */,
 				61A3CB0C1A0CF2B5004CAD54 /* UIWebViewDelegateImplementationProxy.h */,
 				61A3CB0D1A0CF2B5004CAD54 /* UIWebViewDelegateImplementationProxy.m */,
+				B75814BC1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.h */,
+				B75814BD1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -340,12 +352,14 @@
 				61A3CB0A1A0CF258004CAD54 /* UIWebView+GCDelegateBlock.h in Headers */,
 				B7B4CC8419ED1288007B7D1F /* UIScrollViewDelegateImplementationProxy.h in Headers */,
 				61B5BD3D1A07D946001E7CCA /* UICollectionView+GCDelegateAndDataSourceBlock.h in Headers */,
+				B75814BA1A15AEA80029F9AB /* UITextView+GCDelegateBlock.h in Headers */,
 				61B577C519ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				B7B4CC9A19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
 				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
 				B7B4CC6E19ECEFEE007B7D1F /* UITextField+GCDelegateBlock.h in Headers */,
 				61A3CB0E1A0CF2B5004CAD54 /* UIWebViewDelegateImplementationProxy.h in Headers */,
 				61B5BD411A07D9B0001E7CCA /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */,
+				B75814BE1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.h in Headers */,
 				617AF40219D1B5910039D30A /* NSTimer+GCBlock.h in Headers */,
 				B745FB451990B0E100B6EA49 /* UIExtensionKit.h in Headers */,
 				B745FB431990B0E100B6EA49 /* UIControl+GCEventBlock.h in Headers */,
@@ -439,9 +453,11 @@
 				B7B4CC8919ED182D007B7D1F /* UIScrollView+GCDelegateBlock.m in Sources */,
 				61DD5BFA19BE13960049AC11 /* NSObject+GCAOP.m in Sources */,
 				61CAD4381992808500941D0D /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */,
+				B75814BF1A15B3C10029F9AB /* UITextViewDelegateImplementationProxy.m in Sources */,
 				618FFA4319A24A9D002FC58F /* GCActionSheet.m in Sources */,
 				612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */,
 				B7B4CC9B19ED26E2007B7D1F /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
+				B75814BB1A15AEA80029F9AB /* UITextView+GCDelegateBlock.m in Sources */,
 				612701B519A1159B00F34C1B /* UIGestureRecognizer+GCActionBlock.m in Sources */,
 				612701B919A116C800F34C1B /* GCAlertView.m in Sources */,
 				61B577C619ED4A2E0026C6E1 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */,

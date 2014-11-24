@@ -17,6 +17,7 @@
 #import "UITextField+GCDelegateBlock.h"
 #import "UIScrollView+GCDelegateBlock.h"
 #import "UIWebView+GCDelegateBlock.h"
+#import "UITextView+GCDelegateBlock.h"
 
 #import "GCAlertView.h"
 #import "GCActionSheet.h"
