@@ -19,7 +19,4 @@
 #import "UIWebView+GCDelegateBlock.h"
 #import "UITextView+GCDelegateBlock.h"
 
-#import "GCAlertView.h"
-#import "GCActionSheet.h"
-
 #endif
