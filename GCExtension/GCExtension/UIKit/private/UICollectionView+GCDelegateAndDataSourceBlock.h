@@ -15,12 +15,12 @@
 /**
  *  equal to -> |collectionView:numberOfItemsInSection:|
  */
-@property (nonatomic, copy) int (^blockForItemNumber)(UICollectionView* collectionView, int section);
+@property (nonatomic, copy) NSInteger (^blockForItemNumber)(UICollectionView* collectionView, NSInteger section);
 
 /**
  *  equal to -> |numberOfSectionsInCollectionView:|
  */
-@property (nonatomic, copy) int (^blockForSectionNumber)(UICollectionView* collectionView);
+@property (nonatomic, copy) NSInteger (^blockForSectionNumber)(UICollectionView* collectionView);
 
 /**
  *  equal to -> |collectionView:cellForItemAtIndexPath:|
@@ -122,26 +122,26 @@
 /**
  *  equal to -> |collectionView:layout:insetForSectionAtIndex:|
  */
-@property (nonatomic, copy) UIEdgeInsets (^blockForFlowLayoutSectionInset)(UICollectionView* collectionView, UICollectionViewLayout* layout, int section);
+@property (nonatomic, copy) UIEdgeInsets (^blockForFlowLayoutSectionInset)(UICollectionView* collectionView, UICollectionViewLayout* layout, NSInteger section);
 
 /**
  *  equal to -> |collectionView:layout:minimumLineSpacingForSectionAtIndex:|
  */
-@property (nonatomic, copy) CGFloat (^blockForFlowLayoutSectionMinimumSpacing)(UICollectionView* collectionView, UICollectionViewLayout* layout, int section);
+@property (nonatomic, copy) CGFloat (^blockForFlowLayoutSectionMinimumSpacing)(UICollectionView* collectionView, UICollectionViewLayout* layout, NSInteger section);
 
 /**
  *  equal to -> |collectionView:layout:minimumInteritemSpacingForSectionAtIndex:|
  */
-@property (nonatomic, copy) CGFloat (^blockForFlowLayoutSectionMinimumInteritemSpacing)(UICollectionView* collectionView, UICollectionViewLayout* layout, int section);
+@property (nonatomic, copy) CGFloat (^blockForFlowLayoutSectionMinimumInteritemSpacing)(UICollectionView* collectionView, UICollectionViewLayout* layout, NSInteger section);
 
 /**
  *  equal to -> |collectionView:layout:referenceSizeForHeaderInSection:|
  */
-@property (nonatomic, copy) CGSize (^blockForFlowLayoutHeaderReferenceSize)(UICollectionView* collectionView, UICollectionViewLayout* layout, int section);
+@property (nonatomic, copy) CGSize (^blockForFlowLayoutHeaderReferenceSize)(UICollectionView* collectionView, UICollectionViewLayout* layout, NSInteger section);
 
 /**
  *  equal to -> |collectionView:layout:referenceSizeForFooterInSection:|
  */
-@property (nonatomic, copy) CGSize (^blockForFlowLayoutFooterReferenceSize)(UICollectionView* collectionView, UICollectionViewLayout* layout, int section);
+@property (nonatomic, copy) CGSize (^blockForFlowLayoutFooterReferenceSize)(UICollectionView* collectionView, UICollectionViewLayout* layout, NSInteger section);
 
 @end

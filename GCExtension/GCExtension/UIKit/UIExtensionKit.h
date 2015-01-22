@@ -9,14 +9,17 @@
 #ifndef GCExtension_UIExtensionKit_h
 #define GCExtension_UIExtensionKit_h
 
-#import "UIControl+GCEventBlock.h"
-#import "UITableView+GCDelegateAndDataSourceBlock.h"
-#import "UICollectionView+GCDelegateAndDataSourceBlock.h"
-#import "UIGestureRecognizer+GCActionBlock.h"
-#import "UIGestureRecognizer+GCDelegateBlock.h"
-#import "UITextField+GCDelegateBlock.h"
-#import "UIScrollView+GCDelegateBlock.h"
-#import "UIWebView+GCDelegateBlock.h"
-#import "UITextView+GCDelegateBlock.h"
+#import "UIControl+GCEvent.h"
+#import "UIGestureRecognizer+GCAction.h"
+
+#import "UIScrollView+GCDelegate.h"
+#import "UICollectionView+GCDelegateAndDataSource.h"
+#import "UITableView+GCDelegateAndDataSource.h"
+#import "UITextField+GCDelegate.h"
+#import "UITextView+GCDelegate.h"
+#import "UIWebView+GCDelegate.h"
+#import "UIGestureRecognizer+GCDelegate.h"
+
+//#import "UIExtension_Private.h"
 
 #endif

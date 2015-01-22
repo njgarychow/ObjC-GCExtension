@@ -25,21 +25,21 @@
     return tableView.blockForSectionNumber(tableView);
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return tableView.blockForRowNumber(tableView, (int)section);
+    return tableView.blockForRowNumber(tableView, section);
 }
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     return tableView.blockForSectionIndexTitles(tableView);
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return tableView.blockForSectionIndex(tableView, title, (int)index);
+    return tableView.blockForSectionIndex(tableView, title, index);
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return tableView.blockForFooterTitle(tableView, (int)section);
+    return tableView.blockForFooterTitle(tableView, section);
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return tableView.blockForHeaderTitle(tableView, (int)section);
+    return tableView.blockForHeaderTitle(tableView, section);
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,28 +91,28 @@
     tableView.blockForRowDidDeselecte(tableView, indexPath);
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return tableView.blockForHeaderView(tableView, (int)section);
+    return tableView.blockForHeaderView(tableView, section);
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return tableView.blockForFooterView(tableView, (int)section);
+    return tableView.blockForFooterView(tableView, section);
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return tableView.blockForHeaderHeight(tableView, (int)section);
+    return tableView.blockForHeaderHeight(tableView, section);
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
-    return tableView.blockForHeaderEstimatedHeight(tableView, (int)section);
+    return tableView.blockForHeaderEstimatedHeight(tableView, section);
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return tableView.blockForFooterHeight(tableView, (int)section);
+    return tableView.blockForFooterHeight(tableView, section);
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section {
-    return tableView.blockForFooterEstimatedHeight(tableView, (int)section);
+    return tableView.blockForFooterEstimatedHeight(tableView, section);
 }
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    tableView.blockForHeaderViewWillDisplay(tableView, view, (int)section);
+    tableView.blockForHeaderViewWillDisplay(tableView, view, section);
 }
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
-    tableView.blockForFooterViewWillDisplay(tableView, view, (int)section);
+    tableView.blockForFooterViewWillDisplay(tableView, view, section);
 }
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     tableView.blockForRowWillBeginEditing(tableView, indexPath);
@@ -136,10 +136,10 @@
     tableView.blockForRowDidEndDisplayingCell(tableView, cell, indexPath);
 }
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section {
-    tableView.blockForHeaderViewDidEndDisplaying(tableView, view, (int)section);
+    tableView.blockForHeaderViewDidEndDisplaying(tableView, view, section);
 }
 - (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section {
-    tableView.blockForFooterViewDidEndDisplaying(tableView, view, (int)section);
+    tableView.blockForFooterViewDidEndDisplaying(tableView, view, section);
 }
 - (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath {
     return tableView.blockForRowShouldShowMenu(tableView, indexPath);

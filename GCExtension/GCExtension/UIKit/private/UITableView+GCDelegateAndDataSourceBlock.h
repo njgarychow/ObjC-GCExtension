@@ -26,12 +26,12 @@
 /**
  *  equal to -> |numberOfSectionsInTableView:|
  */
-@property (nonatomic, copy) int (^blockForSectionNumber)(UITableView* tableView);
+@property (nonatomic, copy) NSInteger (^blockForSectionNumber)(UITableView* tableView);
 
 /**
  *  equal to -> |tableView:numberOfRowsInSection:|
  */
-@property (nonatomic, copy) int (^blockForRowNumber)(UITableView* tableView, int section);
+@property (nonatomic, copy) NSInteger (^blockForRowNumber)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |sectionIndexTitlesForTableView:|
@@ -41,17 +41,17 @@
 /**
  *  equal to -> |tableView:sectionForSectionIndexTitle:atIndex:|
  */
-@property (nonatomic, copy) int (^blockForSectionIndex)(UITableView* tableView, NSString* title, int index);
+@property (nonatomic, copy) NSInteger (^blockForSectionIndex)(UITableView* tableView, NSString* title, NSInteger index);
 
 /**
  *  equal to -> |tableView:titleForFooterInSection:|
  */
-@property (nonatomic, copy) NSString* (^blockForFooterTitle)(UITableView* tableView, int section);
+@property (nonatomic, copy) NSString* (^blockForFooterTitle)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:titleForHeaderInSection:|
  */
-@property (nonatomic, copy) NSString* (^blockForHeaderTitle)(UITableView* tableView, int seciton);
+@property (nonatomic, copy) NSString* (^blockForHeaderTitle)(UITableView* tableView, NSInteger seciton);
 
 /**
  *  equal to -> |tableView:commitEditingStyle:forRowAtIndexPath:|
@@ -84,17 +84,17 @@
 /**
  *  equal to -> |tableView:heightForRowAtIndexPath:|
  */
-@property (nonatomic, copy) float (^blockForRowHeight)(UITableView* tableView, NSIndexPath* indexPath);
+@property (nonatomic, copy) CGFloat (^blockForRowHeight)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:estimatedHeightForRowAtIndexPath:|
  */
-@property (nonatomic, copy) float (^blockForRowEstimatedHeight)(UITableView* tableView, NSIndexPath* indexPath);
+@property (nonatomic, copy) CGFloat (^blockForRowEstimatedHeight)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:indentationLevelForRowAtIndexPath:|
  */
-@property (nonatomic, copy) int (^blockForRowIndentationLevel)(UITableView* tableView, NSIndexPath* indexPath) NS_AVAILABLE_IOS(8_0);
+@property (nonatomic, copy) NSInteger (^blockForRowIndentationLevel)(UITableView* tableView, NSIndexPath* indexPath) NS_AVAILABLE_IOS(8_0);
 
 /**
  *  equal to -> |tableView:willDisplayCell:forRowAtIndexPath:|
@@ -134,42 +134,42 @@
 /**
  *  equal to -> |tableView:viewForHeaderInSection:|
  */
-@property (nonatomic, copy) UIView* (^blockForHeaderView)(UITableView* tableView, int section);
+@property (nonatomic, copy) UIView* (^blockForHeaderView)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:viewForFooterInSection:|
  */
-@property (nonatomic, copy) UIView* (^blockForFooterView)(UITableView* tableView, int section);
+@property (nonatomic, copy) UIView* (^blockForFooterView)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:heightForHeaderInSection:|
  */
-@property (nonatomic, copy) float (^blockForHeaderHeight)(UITableView* tableView, int section);
+@property (nonatomic, copy) CGFloat (^blockForHeaderHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:estimatedHeightForHeaderInSection:|
  */
-@property (nonatomic, copy) float (^blockForHeaderEstimatedHeight)(UITableView* tableView, int section);
+@property (nonatomic, copy) CGFloat (^blockForHeaderEstimatedHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:heightForFooterInSection:|
  */
-@property (nonatomic, copy) float (^blockForFooterHeight)(UITableView* tableView, int section);
+@property (nonatomic, copy) CGFloat (^blockForFooterHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:estimatedHeightForFooterInSection:|
  */
-@property (nonatomic, copy) float (^blockForFooterEstimatedHeight)(UITableView* tableView, int section);
+@property (nonatomic, copy) CGFloat (^blockForFooterEstimatedHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:willDisplayHeaderView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForHeaderViewWillDisplay)(UITableView* tableView, UIView* headerView, int section);
+@property (nonatomic, copy) void (^blockForHeaderViewWillDisplay)(UITableView* tableView, UIView* headerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:willDisplayFooterView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForFooterViewWillDisplay)(UITableView* tableView, UIView* footerView, int section);
+@property (nonatomic, copy) void (^blockForFooterViewWillDisplay)(UITableView* tableView, UIView* footerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:willBeginEditingRowAtIndexPath:|
@@ -209,12 +209,12 @@
 /**
  *  equal to -> |tableView:didEndDisplayingHeaderView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForHeaderViewDidEndDisplaying)(UITableView* tableView, UIView* headerView, int section);
+@property (nonatomic, copy) void (^blockForHeaderViewDidEndDisplaying)(UITableView* tableView, UIView* headerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:didEndDisplayingFooterView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForFooterViewDidEndDisplaying)(UITableView* tableView, UIView* footerView, int section);
+@property (nonatomic, copy) void (^blockForFooterViewDidEndDisplaying)(UITableView* tableView, UIView* footerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:shouldShowMenuForRowAtIndexPath:|

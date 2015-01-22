@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 zhoujinqiang. All rights reserved.
 //
 
-#import "UIGestureRecognizer+GCActionBlock.h"
+#import "UIGestureRecognizer+GCAction.h"
 
 #import <objc/runtime.h>
 
@@ -53,7 +53,7 @@
 
 
 
-@implementation UIGestureRecognizer (GCActionBlock)
+@implementation UIGestureRecognizer (GCAction)
 
 - (instancetype)initWithActionBlock:(GCGestureActionBlock)actionBlock {
     if (self = [self init]) {

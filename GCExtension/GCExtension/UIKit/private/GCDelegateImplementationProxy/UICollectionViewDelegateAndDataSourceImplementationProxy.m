@@ -20,7 +20,7 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return collectionView.blockForItemNumber(collectionView, (int)section);
+    return collectionView.blockForItemNumber(collectionView, section);
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return collectionView.blockForSectionNumber(collectionView);
@@ -88,19 +88,19 @@
     return collectionView.blockForFlowLayoutSize(collectionView, collectionViewLayout, indexPath);
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return collectionView.blockForFlowLayoutSectionInset(collectionView, collectionViewLayout, (int)section);
+    return collectionView.blockForFlowLayoutSectionInset(collectionView, collectionViewLayout, section);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return collectionView.blockForFlowLayoutSectionMinimumSpacing(collectionView, collectionViewLayout, (int)section);
+    return collectionView.blockForFlowLayoutSectionMinimumSpacing(collectionView, collectionViewLayout, section);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return collectionView.blockForFlowLayoutSectionMinimumInteritemSpacing(collectionView, collectionViewLayout, (int)section);
+    return collectionView.blockForFlowLayoutSectionMinimumInteritemSpacing(collectionView, collectionViewLayout, section);
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return collectionView.blockForFlowLayoutHeaderReferenceSize(collectionView, collectionViewLayout, (int)section);
+    return collectionView.blockForFlowLayoutHeaderReferenceSize(collectionView, collectionViewLayout, section);
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    return collectionView.blockForFlowLayoutFooterReferenceSize(collectionView, collectionViewLayout, (int)section);
+    return collectionView.blockForFlowLayoutFooterReferenceSize(collectionView, collectionViewLayout, section);
 }
 
 @end

@@ -13,7 +13,7 @@ typedef void(^GCControlEventActionBlock)(UIControl* control, NSSet* touches);
 /**
  *  This Extension is used for add UIControlEvents to the UIControls.
  */
-@interface UIControl (GCEventBlock)
+@interface UIControl (GCEvent)
 
 /**
  *  add actionBlock for paticular event. you can call this method mutiple times for a paticular event.

@@ -13,7 +13,7 @@ typedef void (^GCGestureActionBlock)(UIGestureRecognizer* gesture);
 /**
  *  This extension use a block instead of Gesture's target and action's selector.
  */
-@interface UIGestureRecognizer (GCActionBlock)
+@interface UIGestureRecognizer (GCAction)
 
 /**
  *  initializer using a |actionBlock| instead of |initWithTarget:action:|.

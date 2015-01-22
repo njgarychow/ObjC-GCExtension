@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 zhoujinqiang. All rights reserved.
 //
 
-#import "UIControl+GCEventBlock.h"
+#import "UIControl+GCEvent.h"
 
 #import <objc/runtime.h>
 
@@ -58,7 +58,7 @@
 
 
 
-@implementation UIControl (GCEventBlock)
+@implementation UIControl (GCEvent)
 
 - (void)addControlEvents:(UIControlEvents)event action:(GCControlEventActionBlock)action {
     NSParameterAssert(action);
