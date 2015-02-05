@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@interface UINavigationControllerDelegateImplementation : NSObject <UINavigationControllerDelegate>
+
+@end
+
+
+
+
+
+
 @interface UINavigationControllerDelegateImplementionProxy : NSProxy
 
 @property (nonatomic, weak) UINavigationController* owner;

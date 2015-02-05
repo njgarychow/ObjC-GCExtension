@@ -76,12 +76,18 @@
 		61F29898198E93F600461164 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29880198E93F600461164 /* libGCExtension.a */; };
 		61F2989E198E93F600461164 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61F2989C198E93F600461164 /* InfoPlist.strings */; };
 		61F298AE198E945100461164 /* GCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F29888198E93F600461164 /* GCExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B72F54391A8388520035A775 /* UINavigationController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F54371A8388520035A775 /* UINavigationController+GCDelegate.h */; };
+		B72F54391A8388520035A775 /* UINavigationController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F54371A8388520035A775 /* UINavigationController+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72F543A1A8388520035A775 /* UINavigationController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F54381A8388520035A775 /* UINavigationController+GCDelegate.m */; };
 		B72F543D1A8388670035A775 /* UINavigationController+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F543B1A8388670035A775 /* UINavigationController+GCDelegateBlock.h */; };
 		B72F543E1A8388670035A775 /* UINavigationController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F543C1A8388670035A775 /* UINavigationController+GCDelegateBlock.m */; };
 		B72F54411A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F543F1A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h */; };
 		B72F54421A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F54401A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m */; };
+		B72F54451A8392F90035A775 /* UIImagePickerController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F54431A8392F90035A775 /* UIImagePickerController+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B72F54461A8392F90035A775 /* UIImagePickerController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F54441A8392F90035A775 /* UIImagePickerController+GCDelegate.m */; };
+		B72F54491A8393450035A775 /* UIImagePickerController+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F54471A8393450035A775 /* UIImagePickerController+GCDelegateBlock.h */; };
+		B72F544A1A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F54481A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m */; };
+		B72F544D1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F544B1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.h */; };
+		B72F544E1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F544C1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.m */; };
 		B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */; };
 		B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -188,6 +194,12 @@
 		B72F543C1A8388670035A775 /* UINavigationController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		B72F543F1A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDelegateImplementionProxy.h; sourceTree = "<group>"; };
 		B72F54401A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerDelegateImplementionProxy.m; sourceTree = "<group>"; };
+		B72F54431A8392F90035A775 /* UIImagePickerController+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+GCDelegate.h"; sourceTree = "<group>"; };
+		B72F54441A8392F90035A775 /* UIImagePickerController+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+GCDelegate.m"; sourceTree = "<group>"; };
+		B72F54471A8393450035A775 /* UIImagePickerController+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		B72F54481A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		B72F544B1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImagePickerControllerDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		B72F544C1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImagePickerControllerDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
 		B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
 		B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionKit.h; sourceTree = "<group>"; };
@@ -242,6 +254,8 @@
 				6127C6571A7145C30030E114 /* UIWebView+GCDelegate.m */,
 				B72F54371A8388520035A775 /* UINavigationController+GCDelegate.h */,
 				B72F54381A8388520035A775 /* UINavigationController+GCDelegate.m */,
+				B72F54431A8392F90035A775 /* UIImagePickerController+GCDelegate.h */,
+				B72F54441A8392F90035A775 /* UIImagePickerController+GCDelegate.m */,
 				6127C5EF1A7124F40030E114 /* private */,
 			);
 			path = UIKit;
@@ -268,6 +282,8 @@
 				6127C6111A7124F40030E114 /* UIWebView+GCDelegateBlock.m */,
 				B72F543B1A8388670035A775 /* UINavigationController+GCDelegateBlock.h */,
 				B72F543C1A8388670035A775 /* UINavigationController+GCDelegateBlock.m */,
+				B72F54471A8393450035A775 /* UIImagePickerController+GCDelegateBlock.h */,
+				B72F54481A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -291,6 +307,8 @@
 				6127C5FE1A7124F40030E114 /* UIWebViewDelegateImplementationProxy.m */,
 				B72F543F1A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h */,
 				B72F54401A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m */,
+				B72F544B1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.h */,
+				B72F544C1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -396,6 +414,7 @@
 				6127C6181A7124F40030E114 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				B72F54411A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h in Headers */,
 				6127C6311A7124F40030E114 /* UIWebView+GCDelegateBlock.h in Headers */,
+				B72F54491A8393450035A775 /* UIImagePickerController+GCDelegateBlock.h in Headers */,
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
 				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
 				612701C919A11E3D00F34C1B /* GCMacro.h in Headers */,
@@ -409,6 +428,8 @@
 				6127C6481A7135560030E114 /* UIScrollView+GCDelegate.h in Headers */,
 				6127C63B1A7127470030E114 /* UIGestureRecognizer+GCAction.h in Headers */,
 				6127C6581A7145C30030E114 /* UIWebView+GCDelegate.h in Headers */,
+				B72F54391A8388520035A775 /* UINavigationController+GCDelegate.h in Headers */,
+				B72F54451A8392F90035A775 /* UIImagePickerController+GCDelegate.h in Headers */,
 				6127C6291A7124F40030E114 /* UIScrollView+GCDelegateBlock.h in Headers */,
 				6127C62F1A7124F40030E114 /* UITextView+GCDelegateBlock.h in Headers */,
 				61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */,
@@ -416,6 +437,7 @@
 				6127C6121A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				6127C62B1A7124F40030E114 /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
 				6127C61A1A7124F40030E114 /* UITextFieldDelegateImplementationProxy.h in Headers */,
+				B72F544D1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.h in Headers */,
 				6127C6271A7124F40030E114 /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
 				B72F543D1A8388670035A775 /* UINavigationController+GCDelegateBlock.h in Headers */,
 				6127C62D1A7124F40030E114 /* UITextField+GCDelegateBlock.h in Headers */,
@@ -424,7 +446,6 @@
 				6127C6141A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
 				6127C61E1A7124F40030E114 /* UIWebViewDelegateImplementationProxy.h in Headers */,
 				6127C61C1A7124F40030E114 /* UITextViewDelegateImplementationProxy.h in Headers */,
-				B72F54391A8388520035A775 /* UINavigationController+GCDelegate.h in Headers */,
 				6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */,
 				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
 				6127C6161A7124F40030E114 /* UIScrollViewDelegateImplementationProxy.h in Headers */,
@@ -515,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6127C6401A71284B0030E114 /* UICollectionView+GCDelegateAndDataSource.m in Sources */,
+				B72F544E1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */,
 				61936B2319CF0BA300D97B25 /* NSObject+GCAccessor.m in Sources */,
 				61DD5BFA19BE13960049AC11 /* NSObject+GCAOP.m in Sources */,
 				6127C6211A7124F40030E114 /* UICollectionView+GCDelegateAndDataSourceBlock.m in Sources */,
@@ -540,9 +562,11 @@
 				6127C6511A7145960030E114 /* UITextField+GCDelegate.m in Sources */,
 				6127C6151A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
 				6127C62E1A7124F40030E114 /* UITextField+GCDelegateBlock.m in Sources */,
+				B72F54461A8392F90035A775 /* UIImagePickerController+GCDelegate.m in Sources */,
 				6127C63C1A7127470030E114 /* UIGestureRecognizer+GCAction.m in Sources */,
 				6127C62A1A7124F40030E114 /* UIScrollView+GCDelegateBlock.m in Sources */,
 				6127C61B1A7124F40030E114 /* UITextFieldDelegateImplementationProxy.m in Sources */,
+				B72F544A1A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m in Sources */,
 				B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */,
 				6127C6281A7124F40030E114 /* UIGestureRecognizer+GCDelegateBlock.m in Sources */,
 				6127C63A1A7127470030E114 /* UIControl+GCEvent.m in Sources */,

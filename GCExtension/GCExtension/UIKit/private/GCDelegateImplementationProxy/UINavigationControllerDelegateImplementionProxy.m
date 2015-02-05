@@ -11,11 +11,6 @@
 #import "UINavigationController+GCDelegateBlock.h"
 
 
-@interface UINavigationControllerDelegateImplementation : NSObject <UINavigationControllerDelegate>
-
-@end
-
-
 @implementation UINavigationControllerDelegateImplementation
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
