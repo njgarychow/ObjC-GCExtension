@@ -19,6 +19,7 @@
 #import "UITextView+GCDelegate.h"
 #import "UIWebView+GCDelegate.h"
 #import "UIGestureRecognizer+GCDelegate.h"
+#import "UINavigationController+GCDelegate.h"
 
 //#import "UIExtension_Private.h"
 

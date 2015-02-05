@@ -76,6 +76,12 @@
 		61F29898198E93F600461164 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29880198E93F600461164 /* libGCExtension.a */; };
 		61F2989E198E93F600461164 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61F2989C198E93F600461164 /* InfoPlist.strings */; };
 		61F298AE198E945100461164 /* GCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F29888198E93F600461164 /* GCExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B72F54391A8388520035A775 /* UINavigationController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F54371A8388520035A775 /* UINavigationController+GCDelegate.h */; };
+		B72F543A1A8388520035A775 /* UINavigationController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F54381A8388520035A775 /* UINavigationController+GCDelegate.m */; };
+		B72F543D1A8388670035A775 /* UINavigationController+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F543B1A8388670035A775 /* UINavigationController+GCDelegateBlock.h */; };
+		B72F543E1A8388670035A775 /* UINavigationController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F543C1A8388670035A775 /* UINavigationController+GCDelegateBlock.m */; };
+		B72F54411A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F543F1A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h */; };
+		B72F54421A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F54401A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m */; };
 		B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */; };
 		B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -176,6 +182,12 @@
 		61F29894198E93F600461164 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		61F2989B198E93F600461164 /* GCExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCExtensionTests-Info.plist"; sourceTree = "<group>"; };
 		61F2989D198E93F600461164 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B72F54371A8388520035A775 /* UINavigationController+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GCDelegate.h"; sourceTree = "<group>"; };
+		B72F54381A8388520035A775 /* UINavigationController+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GCDelegate.m"; sourceTree = "<group>"; };
+		B72F543B1A8388670035A775 /* UINavigationController+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		B72F543C1A8388670035A775 /* UINavigationController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		B72F543F1A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDelegateImplementionProxy.h; sourceTree = "<group>"; };
+		B72F54401A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerDelegateImplementionProxy.m; sourceTree = "<group>"; };
 		B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
 		B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
 		B745FB3B1990B0E100B6EA49 /* ObjectExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionKit.h; sourceTree = "<group>"; };
@@ -228,6 +240,8 @@
 				6127C6531A7145AD0030E114 /* UITextView+GCDelegate.m */,
 				6127C6561A7145C30030E114 /* UIWebView+GCDelegate.h */,
 				6127C6571A7145C30030E114 /* UIWebView+GCDelegate.m */,
+				B72F54371A8388520035A775 /* UINavigationController+GCDelegate.h */,
+				B72F54381A8388520035A775 /* UINavigationController+GCDelegate.m */,
 				6127C5EF1A7124F40030E114 /* private */,
 			);
 			path = UIKit;
@@ -252,6 +266,8 @@
 				6127C60F1A7124F40030E114 /* UITextView+GCDelegateBlock.m */,
 				6127C6101A7124F40030E114 /* UIWebView+GCDelegateBlock.h */,
 				6127C6111A7124F40030E114 /* UIWebView+GCDelegateBlock.m */,
+				B72F543B1A8388670035A775 /* UINavigationController+GCDelegateBlock.h */,
+				B72F543C1A8388670035A775 /* UINavigationController+GCDelegateBlock.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -273,6 +289,8 @@
 				6127C5FC1A7124F40030E114 /* UITextViewDelegateImplementationProxy.m */,
 				6127C5FD1A7124F40030E114 /* UIWebViewDelegateImplementationProxy.h */,
 				6127C5FE1A7124F40030E114 /* UIWebViewDelegateImplementationProxy.m */,
+				B72F543F1A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h */,
+				B72F54401A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -376,6 +394,7 @@
 				6127C63F1A71284B0030E114 /* UICollectionView+GCDelegateAndDataSource.h in Headers */,
 				B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */,
 				6127C6181A7124F40030E114 /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
+				B72F54411A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.h in Headers */,
 				6127C6311A7124F40030E114 /* UIWebView+GCDelegateBlock.h in Headers */,
 				61F298AE198E945100461164 /* GCExtension.h in Headers */,
 				B745FB401990B0E100B6EA49 /* NSObject+GCNotificationObserver.h in Headers */,
@@ -398,12 +417,14 @@
 				6127C62B1A7124F40030E114 /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
 				6127C61A1A7124F40030E114 /* UITextFieldDelegateImplementationProxy.h in Headers */,
 				6127C6271A7124F40030E114 /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
+				B72F543D1A8388670035A775 /* UINavigationController+GCDelegateBlock.h in Headers */,
 				6127C62D1A7124F40030E114 /* UITextField+GCDelegateBlock.h in Headers */,
 				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
 				61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */,
 				6127C6141A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
 				6127C61E1A7124F40030E114 /* UIWebViewDelegateImplementationProxy.h in Headers */,
 				6127C61C1A7124F40030E114 /* UITextViewDelegateImplementationProxy.h in Headers */,
+				B72F54391A8388520035A775 /* UINavigationController+GCDelegate.h in Headers */,
 				6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */,
 				B745FB471990B10C00B6EA49 /* GCExtension-Prefix.pch in Headers */,
 				6127C6161A7124F40030E114 /* UIScrollViewDelegateImplementationProxy.h in Headers */,
@@ -509,9 +530,12 @@
 				61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */,
 				6127C61F1A7124F40030E114 /* UIWebViewDelegateImplementationProxy.m in Sources */,
 				6127C62C1A7124F40030E114 /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */,
+				B72F543E1A8388670035A775 /* UINavigationController+GCDelegateBlock.m in Sources */,
+				B72F54421A8389300035A775 /* UINavigationControllerDelegateImplementionProxy.m in Sources */,
 				6127C6451A71339F0030E114 /* UIGestureRecognizer+GCDelegate.m in Sources */,
 				617AF40319D1B5910039D30A /* NSTimer+GCBlock.m in Sources */,
 				6127C6591A7145C30030E114 /* UIWebView+GCDelegate.m in Sources */,
+				B72F543A1A8388520035A775 /* UINavigationController+GCDelegate.m in Sources */,
 				6127C6191A7124F40030E114 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */,
 				6127C6511A7145960030E114 /* UITextField+GCDelegate.m in Sources */,
 				6127C6151A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
