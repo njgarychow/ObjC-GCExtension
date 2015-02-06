@@ -13,7 +13,7 @@
 
 @interface NSTimer (GCBlockAccessor)
 
-@property (nonatomic, copy) GCTimerActionBlock action;
+GCBlockProperty GCTimerActionBlock action;
 
 @end
 

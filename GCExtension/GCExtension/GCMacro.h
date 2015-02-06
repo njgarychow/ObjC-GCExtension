@@ -58,4 +58,7 @@ do {                \
     ((version) >= GCIOSVersion())
 
 
+#define GCBlockProperty     @property (nonatomic, copy)
+
+
 #endif

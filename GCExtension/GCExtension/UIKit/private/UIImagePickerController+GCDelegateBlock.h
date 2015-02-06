@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCMacro.h"
 
 @interface UIImagePickerController (GCDelegateBlock)
 
@@ -15,11 +16,11 @@
 /**
  *  equal to -> |imagePickerController:didFinishPickingMediaWithInfo:|
  */
-@property (nonatomic, copy) void (^blockForDidFinishPickingMedia)(UIImagePickerController* picker, NSDictionary* info);
+GCBlockProperty void (^blockForDidFinishPickingMedia)(UIImagePickerController* picker, NSDictionary* info);
 
 /**
  *  equal to -> |imagePickerControllerDidCancel:|
  */
-@property (nonatomic, copy) void (^blockForDidCancel)(UIImagePickerController* picker);
+GCBlockProperty void (^blockForDidCancel)(UIImagePickerController* picker);
 
 @end

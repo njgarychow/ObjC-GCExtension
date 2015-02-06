@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCMacro.h"
 
 @interface UITextView (GCDelegateBlock)
 
@@ -15,46 +16,46 @@
 /**
  *  equal to -> |textViewShouldBeginEditing:|
  */
-@property (nonatomic, copy) BOOL (^blockForShouldBeginEditing)(UITextView* textView);
+GCBlockProperty BOOL (^blockForShouldBeginEditing)(UITextView* textView);
 
 /**
  *  equal to -> |textViewDidBeginEditing:|
  */
-@property (nonatomic, copy) void (^blockForDidBeginEditing)(UITextView* textView);
+GCBlockProperty void (^blockForDidBeginEditing)(UITextView* textView);
 
 /**
  *  equal to -> |textViewShouldEndEditing:|
  */
-@property (nonatomic, copy) BOOL (^blockForShouldEndEditing)(UITextView* textView);
+GCBlockProperty BOOL (^blockForShouldEndEditing)(UITextView* textView);
 
 /**
  *  equal to -> |textViewDidEndEditing:|
  */
-@property (nonatomic, copy) void (^blockForDidEndEditing)(UITextView* textView);
+GCBlockProperty void (^blockForDidEndEditing)(UITextView* textView);
 
 /**
  *  equal to -> |textView:shouldChangeTextInRange:replacementText:|
  */
-@property (nonatomic, copy) BOOL (^blockForShouldChangeText)(UITextView* textView, NSRange range, NSString* text);
+GCBlockProperty BOOL (^blockForShouldChangeText)(UITextView* textView, NSRange range, NSString* text);
 
 /**
  *  equal to -> |textViewDidChange:|
  */
-@property (nonatomic, copy) void (^blockForDidChanged)(UITextView* textView);
+GCBlockProperty void (^blockForDidChanged)(UITextView* textView);
 
 /**
  *  equal to -> |textViewDidChangeSelection:|
  */
-@property (nonatomic, copy) void (^blockForDidChangeSelection)(UITextView* textView);
+GCBlockProperty void (^blockForDidChangeSelection)(UITextView* textView);
 
 /**
  *  equal to -> |textView:shouldInteractWithTextAttachment:inRange:|
  */
-@property (nonatomic, copy) BOOL (^blockForShouldInteractAttachment)(UITextView* textView, NSTextAttachment* attachment, NSRange range);
+GCBlockProperty BOOL (^blockForShouldInteractAttachment)(UITextView* textView, NSTextAttachment* attachment, NSRange range);
 
 /**
  *  equal to -> |textView:shouldInteractWithURL:inRange:|
  */
-@property (nonatomic, copy) BOOL (^blockForShouldInteractURL)(UITextView* textView, NSURL* url, NSRange range);
+GCBlockProperty BOOL (^blockForShouldInteractURL)(UITextView* textView, NSURL* url, NSRange range);
 
 @end

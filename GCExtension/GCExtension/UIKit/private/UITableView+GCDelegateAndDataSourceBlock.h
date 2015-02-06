@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCMacro.h"
 
 
 /**
@@ -21,57 +22,57 @@
 /**
  *  equal to -> |tableView:cellForRowAtIndexPath:|
  */
-@property (nonatomic, copy) UITableViewCell* (^blockForRowCell)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty UITableViewCell* (^blockForRowCell)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |numberOfSectionsInTableView:|
  */
-@property (nonatomic, copy) NSInteger (^blockForSectionNumber)(UITableView* tableView);
+GCBlockProperty NSInteger (^blockForSectionNumber)(UITableView* tableView);
 
 /**
  *  equal to -> |tableView:numberOfRowsInSection:|
  */
-@property (nonatomic, copy) NSInteger (^blockForRowNumber)(UITableView* tableView, NSInteger section);
+GCBlockProperty NSInteger (^blockForRowNumber)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |sectionIndexTitlesForTableView:|
  */
-@property (nonatomic, copy) NSArray* (^blockForSectionIndexTitles)(UITableView* tableView);
+GCBlockProperty NSArray* (^blockForSectionIndexTitles)(UITableView* tableView);
 
 /**
  *  equal to -> |tableView:sectionForSectionIndexTitle:atIndex:|
  */
-@property (nonatomic, copy) NSInteger (^blockForSectionIndex)(UITableView* tableView, NSString* title, NSInteger index);
+GCBlockProperty NSInteger (^blockForSectionIndex)(UITableView* tableView, NSString* title, NSInteger index);
 
 /**
  *  equal to -> |tableView:titleForFooterInSection:|
  */
-@property (nonatomic, copy) NSString* (^blockForFooterTitle)(UITableView* tableView, NSInteger section);
+GCBlockProperty NSString* (^blockForFooterTitle)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:titleForHeaderInSection:|
  */
-@property (nonatomic, copy) NSString* (^blockForHeaderTitle)(UITableView* tableView, NSInteger seciton);
+GCBlockProperty NSString* (^blockForHeaderTitle)(UITableView* tableView, NSInteger seciton);
 
 /**
  *  equal to -> |tableView:commitEditingStyle:forRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowCommitEditStyleForRow)(UITableView* tableView, UITableViewCellEditingStyle style, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowCommitEditStyleForRow)(UITableView* tableView, UITableViewCellEditingStyle style, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:canEditRowAtIndexPath:|
  */
-@property (nonatomic, copy) BOOL (^blockForRowCanEditRow)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty BOOL (^blockForRowCanEditRow)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:canMoveRowAtIndexPath:|
  */
-@property (nonatomic, copy) BOOL (^blockForRowCanMoveRow)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty BOOL (^blockForRowCanMoveRow)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:moveRowAtIndexPath:toIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowMove)(UITableView* tableView, NSIndexPath* fromIndexPath, NSIndexPath* toIndexPath);
+GCBlockProperty void (^blockForRowMove)(UITableView* tableView, NSIndexPath* fromIndexPath, NSIndexPath* toIndexPath);
 
 
 
@@ -84,167 +85,167 @@
 /**
  *  equal to -> |tableView:heightForRowAtIndexPath:|
  */
-@property (nonatomic, copy) CGFloat (^blockForRowHeight)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty CGFloat (^blockForRowHeight)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:estimatedHeightForRowAtIndexPath:|
  */
-@property (nonatomic, copy) CGFloat (^blockForRowEstimatedHeight)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty CGFloat (^blockForRowEstimatedHeight)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:indentationLevelForRowAtIndexPath:|
  */
-@property (nonatomic, copy) NSInteger (^blockForRowIndentationLevel)(UITableView* tableView, NSIndexPath* indexPath) NS_AVAILABLE_IOS(8_0);
+GCBlockProperty NSInteger (^blockForRowIndentationLevel)(UITableView* tableView, NSIndexPath* indexPath) NS_AVAILABLE_IOS(8_0);
 
 /**
  *  equal to -> |tableView:willDisplayCell:forRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowCellWillDisplay)(UITableView* tableView, UITableViewCell* cell, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowCellWillDisplay)(UITableView* tableView, UITableViewCell* cell, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:editActionsForRowAtIndexPath:|
  */
-@property (nonatomic, copy) NSArray* (^blockForRowEditActions)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty NSArray* (^blockForRowEditActions)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  euqal to -> |tableView:accessoryButtonTappedForRowWithIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowAccessoryButtonTapped)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowAccessoryButtonTapped)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:willSelectRowAtIndexPath:|
  */
-@property (nonatomic, copy) NSIndexPath* (^blockForRowWillSelect)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty NSIndexPath* (^blockForRowWillSelect)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:didSelectRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowDidSelect)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowDidSelect)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:willDeselectRowAtIndexPath:|
  */
-@property (nonatomic, copy) NSIndexPath* (^blockForRowWillDeselect)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty NSIndexPath* (^blockForRowWillDeselect)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:didDeselectRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowDidDeselecte)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowDidDeselecte)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:viewForHeaderInSection:|
  */
-@property (nonatomic, copy) UIView* (^blockForHeaderView)(UITableView* tableView, NSInteger section);
+GCBlockProperty UIView* (^blockForHeaderView)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:viewForFooterInSection:|
  */
-@property (nonatomic, copy) UIView* (^blockForFooterView)(UITableView* tableView, NSInteger section);
+GCBlockProperty UIView* (^blockForFooterView)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:heightForHeaderInSection:|
  */
-@property (nonatomic, copy) CGFloat (^blockForHeaderHeight)(UITableView* tableView, NSInteger section);
+GCBlockProperty CGFloat (^blockForHeaderHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:estimatedHeightForHeaderInSection:|
  */
-@property (nonatomic, copy) CGFloat (^blockForHeaderEstimatedHeight)(UITableView* tableView, NSInteger section);
+GCBlockProperty CGFloat (^blockForHeaderEstimatedHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:heightForFooterInSection:|
  */
-@property (nonatomic, copy) CGFloat (^blockForFooterHeight)(UITableView* tableView, NSInteger section);
+GCBlockProperty CGFloat (^blockForFooterHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:estimatedHeightForFooterInSection:|
  */
-@property (nonatomic, copy) CGFloat (^blockForFooterEstimatedHeight)(UITableView* tableView, NSInteger section);
+GCBlockProperty CGFloat (^blockForFooterEstimatedHeight)(UITableView* tableView, NSInteger section);
 
 /**
  *  equal to -> |tableView:willDisplayHeaderView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForHeaderViewWillDisplay)(UITableView* tableView, UIView* headerView, NSInteger section);
+GCBlockProperty void (^blockForHeaderViewWillDisplay)(UITableView* tableView, UIView* headerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:willDisplayFooterView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForFooterViewWillDisplay)(UITableView* tableView, UIView* footerView, NSInteger section);
+GCBlockProperty void (^blockForFooterViewWillDisplay)(UITableView* tableView, UIView* footerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:willBeginEditingRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowWillBeginEditing)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowWillBeginEditing)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:didEndEditingRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowDidEndEditing)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowDidEndEditing)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:editingStyleForRowAtIndexPath:|
  */
-@property (nonatomic, copy) UITableViewCellEditingStyle (^blockForRowEditingStyle)(UITableView* tableView, NSIndexPath* indexPaht);
+GCBlockProperty UITableViewCellEditingStyle (^blockForRowEditingStyle)(UITableView* tableView, NSIndexPath* indexPaht);
 
 /**
  *  equal to -> |tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:|
  */
-@property (nonatomic, copy) NSString* (^blockForRowDeleteConfirmationButtonTitle)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty NSString* (^blockForRowDeleteConfirmationButtonTitle)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:shouldIndentWhileEditingRowAtIndexPath:|
  */
-@property (nonatomic, copy) BOOL (^blockForRowShouldIndentWhileEditing)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty BOOL (^blockForRowShouldIndentWhileEditing)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:|
  */
-@property (nonatomic, copy) NSIndexPath* (^blockForRowMoveTargetIndexPath)(UITableView* tableView, NSIndexPath* fromIndexPath, NSIndexPath* proposedIndexPath);
+GCBlockProperty NSIndexPath* (^blockForRowMoveTargetIndexPath)(UITableView* tableView, NSIndexPath* fromIndexPath, NSIndexPath* proposedIndexPath);
 
 /**
  *  equal to -> |tableView:didEndDisplayingCell:forRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowDidEndDisplayingCell)(UITableView* tableView, UITableViewCell* cell, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowDidEndDisplayingCell)(UITableView* tableView, UITableViewCell* cell, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:didEndDisplayingHeaderView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForHeaderViewDidEndDisplaying)(UITableView* tableView, UIView* headerView, NSInteger section);
+GCBlockProperty void (^blockForHeaderViewDidEndDisplaying)(UITableView* tableView, UIView* headerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:didEndDisplayingFooterView:forSection:|
  */
-@property (nonatomic, copy) void (^blockForFooterViewDidEndDisplaying)(UITableView* tableView, UIView* footerView, NSInteger section);
+GCBlockProperty void (^blockForFooterViewDidEndDisplaying)(UITableView* tableView, UIView* footerView, NSInteger section);
 
 /**
  *  equal to -> |tableView:shouldShowMenuForRowAtIndexPath:|
  */
-@property (nonatomic, copy) BOOL (^blockForRowShouldShowMenu)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty BOOL (^blockForRowShouldShowMenu)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:canPerformAction:forRowAtIndexPath:withSender:|
  */
-@property (nonatomic, copy) BOOL (^blockForRowCanPerformAction)(UITableView* tableView, SEL action, NSIndexPath* indexPath, id sender);
+GCBlockProperty BOOL (^blockForRowCanPerformAction)(UITableView* tableView, SEL action, NSIndexPath* indexPath, id sender);
 
 /**
  *  equal to -> |tableView:performAction:forRowAtIndexPath:withSender:|
  */
-@property (nonatomic, copy) void (^blockForRowPerformAction)(UITableView* tableView, SEL action, NSIndexPath* indexPath, id sender);
+GCBlockProperty void (^blockForRowPerformAction)(UITableView* tableView, SEL action, NSIndexPath* indexPath, id sender);
 
 /**
  *  equal to -> |tableView:shouldHighlightRowAtIndexPath:|
  */
-@property (nonatomic, copy) BOOL (^blockForRowShouldHighlight)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty BOOL (^blockForRowShouldHighlight)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:didHighlightRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowDidHighlight)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowDidHighlight)(UITableView* tableView, NSIndexPath* indexPath);
 
 /**
  *  equal to -> |tableView:didUnhighlightRowAtIndexPath:|
  */
-@property (nonatomic, copy) void (^blockForRowDidUnhighlight)(UITableView* tableView, NSIndexPath* indexPath);
+GCBlockProperty void (^blockForRowDidUnhighlight)(UITableView* tableView, NSIndexPath* indexPath);
 
 
 @end

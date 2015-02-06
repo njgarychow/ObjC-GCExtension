@@ -34,8 +34,8 @@
 @interface GCKVOObserverWrapper : NSObject
 
 @property (nonatomic, assign) NSObject* observeTarget;
-@property (nonatomic, copy) NSString* keyPath;
-@property (nonatomic, copy) GCKVOBlock handlerBlock;
+GCBlockProperty NSString* keyPath;
+GCBlockProperty GCKVOBlock handlerBlock;
 
 @end
 

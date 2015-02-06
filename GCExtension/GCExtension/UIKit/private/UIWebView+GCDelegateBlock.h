@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCMacro.h"
 
 @interface UIWebView (GCDelegateBlock)
 
@@ -15,21 +16,21 @@
 /**
  *  equal to -> |webView:shouldStartLoadWithRequest:navigationType:|
  */
-@property (nonatomic, copy) BOOL (^blockForShouldStartLoadRequest)(UIWebView* webView, NSURLRequest* request, UIWebViewNavigationType type);
+GCBlockProperty BOOL (^blockForShouldStartLoadRequest)(UIWebView* webView, NSURLRequest* request, UIWebViewNavigationType type);
 
 /**
  *  equal to -> |webViewDidStartLoad:|
  */
-@property (nonatomic, copy) void (^blockForDidStartLoad)(UIWebView* webView);
+GCBlockProperty void (^blockForDidStartLoad)(UIWebView* webView);
 
 /**
  *  equal to -> |webViewDidFinishLoad:|
  */
-@property (nonatomic, copy) void (^blockForDidFinishLoad)(UIWebView* webView);
+GCBlockProperty void (^blockForDidFinishLoad)(UIWebView* webView);
 
 /**
  *  equal to -> |webView:didFailLoadWithError:|
  */
-@property (nonatomic, copy) void (^blockForDidFailLoad)(UIWebView* webView, NSError* error);
+GCBlockProperty void (^blockForDidFailLoad)(UIWebView* webView, NSError* error);
 
 @end
