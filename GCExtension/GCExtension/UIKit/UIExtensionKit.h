@@ -21,6 +21,8 @@
 #import "UIGestureRecognizer+GCDelegate.h"
 #import "UINavigationController+GCDelegate.h"
 #import "UIImagePickerController+GCDelegate.h"
+#import "UITabBarController+GCDelegate.h"
+#import "UIPickerView+GCDelegateAndDataSource.h"
 
 //#import "UIExtension_Private.h"
 
