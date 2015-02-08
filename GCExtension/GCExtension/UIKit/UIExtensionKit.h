@@ -23,6 +23,7 @@
 #import "UIImagePickerController+GCDelegate.h"
 #import "UITabBarController+GCDelegate.h"
 #import "UIPickerView+GCDelegateAndDataSource.h"
+#import "UITabBar+GCDelegate.h"
 
 //#import "UIExtension_Private.h"
 

@@ -75,6 +75,12 @@
 		61A6003F1A8775E600645EA2 /* UIPickerView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A6003D1A8775E600645EA2 /* UIPickerView+GCDelegateAndDataSourceBlock.m */; };
 		61A600421A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A600401A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.h */; };
 		61A600431A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A600411A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.m */; };
+		61A600461A877EF700645EA2 /* UITabBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A600441A877EF700645EA2 /* UITabBar+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A600471A877EF700645EA2 /* UITabBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A600451A877EF700645EA2 /* UITabBar+GCDelegate.m */; };
+		61A6004A1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A600481A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h */; };
+		61A6004B1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A600491A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m */; };
+		61A6004E1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A6004C1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h */; };
+		61A6004F1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A6004D1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m */; };
 		61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AA62CE19EEAF46005D845A /* UIKit.framework */; };
 		61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */; };
@@ -199,6 +205,12 @@
 		61A6003D1A8775E600645EA2 /* UIPickerView+GCDelegateAndDataSourceBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+GCDelegateAndDataSourceBlock.m"; sourceTree = "<group>"; };
 		61A600401A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
 		61A600411A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61A600441A877EF700645EA2 /* UITabBar+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+GCDelegate.h"; sourceTree = "<group>"; };
+		61A600451A877EF700645EA2 /* UITabBar+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GCDelegate.m"; sourceTree = "<group>"; };
+		61A600481A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61A600491A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61A6004C1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabbarDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61A6004D1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabbarDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		61AA62CE19EEAF46005D845A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAOPProxy.h; sourceTree = "<group>"; };
 		61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAOPProxy.m; sourceTree = "<group>"; };
@@ -284,6 +296,8 @@
 				619E8DD81A84D5B4003889C9 /* UITabBarController+GCDelegate.m */,
 				61A600381A8775C400645EA2 /* UIPickerView+GCDelegateAndDataSource.h */,
 				61A600391A8775C400645EA2 /* UIPickerView+GCDelegateAndDataSource.m */,
+				61A600441A877EF700645EA2 /* UITabBar+GCDelegate.h */,
+				61A600451A877EF700645EA2 /* UITabBar+GCDelegate.m */,
 				6127C5EF1A7124F40030E114 /* private */,
 			);
 			path = UIKit;
@@ -316,6 +330,8 @@
 				619E8DDC1A84D5CC003889C9 /* UITabBarController+GCDelegateBlock.m */,
 				61A6003C1A8775E600645EA2 /* UIPickerView+GCDelegateAndDataSourceBlock.h */,
 				61A6003D1A8775E600645EA2 /* UIPickerView+GCDelegateAndDataSourceBlock.m */,
+				61A600481A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h */,
+				61A600491A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -345,6 +361,8 @@
 				619E8DE01A84D704003889C9 /* UITabbarControllerDelegateImplementationProxy.m */,
 				61A600401A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.h */,
 				61A600411A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.m */,
+				61A6004C1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h */,
+				61A6004D1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -446,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61A6003A1A8775C400645EA2 /* UIPickerView+GCDelegateAndDataSource.h in Headers */,
+				61A600461A877EF700645EA2 /* UITabBar+GCDelegate.h in Headers */,
 				619E8DD91A84D5B4003889C9 /* UITabBarController+GCDelegate.h in Headers */,
 				6127C63F1A71284B0030E114 /* UICollectionView+GCDelegateAndDataSource.h in Headers */,
 				B745FB421990B0E100B6EA49 /* ObjectExtensionKit.h in Headers */,
@@ -461,9 +480,11 @@
 				6127C6501A7145960030E114 /* UITextField+GCDelegate.h in Headers */,
 				6127C6441A71339F0030E114 /* UIGestureRecognizer+GCDelegate.h in Headers */,
 				6127C64C1A713AC30030E114 /* UITableView+GCDelegateAndDataSource.h in Headers */,
+				61A6004A1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h in Headers */,
 				6127C6391A7127470030E114 /* UIControl+GCEvent.h in Headers */,
 				6127C6341A7125120030E114 /* UIExtensionKit.h in Headers */,
 				619E8DDD1A84D5CC003889C9 /* UITabBarController+GCDelegateBlock.h in Headers */,
+				61A6004E1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h in Headers */,
 				6127C6481A7135560030E114 /* UIScrollView+GCDelegate.h in Headers */,
 				6127C63B1A7127470030E114 /* UIGestureRecognizer+GCAction.h in Headers */,
 				6127C6581A7145C30030E114 /* UIWebView+GCDelegate.h in Headers */,
@@ -607,6 +628,7 @@
 				6127C6511A7145960030E114 /* UITextField+GCDelegate.m in Sources */,
 				6127C6151A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
 				6127C62E1A7124F40030E114 /* UITextField+GCDelegateBlock.m in Sources */,
+				61A600471A877EF700645EA2 /* UITabBar+GCDelegate.m in Sources */,
 				619E8DDA1A84D5B4003889C9 /* UITabBarController+GCDelegate.m in Sources */,
 				B72F54461A8392F90035A775 /* UIImagePickerController+GCDelegate.m in Sources */,
 				61A600431A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.m in Sources */,
@@ -614,7 +636,9 @@
 				6127C62A1A7124F40030E114 /* UIScrollView+GCDelegateBlock.m in Sources */,
 				6127C61B1A7124F40030E114 /* UITextFieldDelegateImplementationProxy.m in Sources */,
 				B72F544A1A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m in Sources */,
+				61A6004B1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m in Sources */,
 				B745FB411990B0E100B6EA49 /* NSObject+GCNotificationObserver.m in Sources */,
+				61A6004F1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m in Sources */,
 				6127C6281A7124F40030E114 /* UIGestureRecognizer+GCDelegateBlock.m in Sources */,
 				6127C63A1A7127470030E114 /* UIControl+GCEvent.m in Sources */,
 				61A6003B1A8775C400645EA2 /* UIPickerView+GCDelegateAndDataSource.m in Sources */,
