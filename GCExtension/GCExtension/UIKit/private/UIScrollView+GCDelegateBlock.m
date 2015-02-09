@@ -23,6 +23,7 @@
         self.implementation = [[UIScrollViewDelegateImplementationProxy alloc] init];
         self.implementation.owner = self;
     }
+    self.delegate = nil;
     self.delegate = (id)self.implementation;
 }
 

@@ -21,6 +21,7 @@ static char UITextFieldDelegateImplementationProxyKey;
         proxy.owner = self;
         objc_setAssociatedObject(self, &UITextFieldDelegateImplementationProxyKey, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
     self.delegate = (id)proxy;
 }
 

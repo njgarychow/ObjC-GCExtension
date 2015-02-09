@@ -22,6 +22,8 @@
         implement.owner = self;
         objc_setAssociatedObject(self, &UICollectionViewDelegateAndDataSourceImplementationProxyKey, implement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
+    self.dataSource = nil;
     self.delegate = (id)implement;
     self.dataSource = (id)implement;
 }

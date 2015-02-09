@@ -22,6 +22,7 @@
         tabbarDelegate.owner = self;
         objc_setAssociatedObject(self, &UITabbarControllerDelegateImplementationProxyKey, tabbarDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
     self.delegate = (id)tabbarDelegate;
 }
 

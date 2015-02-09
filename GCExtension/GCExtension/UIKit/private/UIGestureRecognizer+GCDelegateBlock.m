@@ -41,6 +41,7 @@
         self.implement = [[UIGestureRecognizerDelegateImplementProxy alloc] init];
         self.implement.owner = self;
     }
+    self.delegate = nil;
     self.delegate = (id)self.implement;
 }
 

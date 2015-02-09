@@ -22,6 +22,7 @@
         pickerDelegate.owner = self;
         objc_setAssociatedObject(self, &UIPickerViewDelegateImplementationProxyKey, pickerDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
     self.delegate = (id)pickerDelegate;
 }
 

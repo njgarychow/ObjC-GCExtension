@@ -24,6 +24,7 @@
         implement.owner = self;
         objc_setAssociatedObject(self, &implementKey, implement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
     self.delegate = (id)implement;
 }
 

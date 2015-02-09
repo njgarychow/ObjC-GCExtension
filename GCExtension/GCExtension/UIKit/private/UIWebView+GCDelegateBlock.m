@@ -22,6 +22,7 @@
         webViewDelegate.owner = self;
         objc_setAssociatedObject(self, &WebViewDelegateImplementationProxyKey, webViewDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
     self.delegate = (id)webViewDelegate;
 }
 

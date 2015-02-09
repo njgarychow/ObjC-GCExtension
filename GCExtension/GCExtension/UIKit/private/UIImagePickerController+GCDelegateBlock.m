@@ -23,6 +23,7 @@
         imagePickerDelegate.owner = self;
         objc_setAssociatedObject(self, &UIImagePickerControllerDelegateImplementationProxyKey, imagePickerDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    self.delegate = nil;
     self.delegate = (id)imagePickerDelegate;
 }
 
