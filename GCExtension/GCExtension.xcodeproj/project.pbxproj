@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61225E211A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61225E1F1A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.h */; };
+		61225E221A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61225E201A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.m */; };
 		612701C919A11E3D00F34C1B /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701C819A11E3D00F34C1B /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6127C6121A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6127C5F11A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */; };
 		6127C6131A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6127C5F21A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */; };
@@ -81,6 +83,10 @@
 		61A6004B1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A600491A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m */; };
 		61A6004E1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A6004C1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h */; };
 		61A6004F1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A6004D1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m */; };
+		61A600521A87866D00645EA2 /* UISearchBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A600501A87866D00645EA2 /* UISearchBar+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A600531A87866D00645EA2 /* UISearchBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A600511A87866D00645EA2 /* UISearchBar+GCDelegate.m */; };
+		61A600561A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A600541A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.h */; };
+		61A600571A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A600551A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.m */; };
 		61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AA62CE19EEAF46005D845A /* UIKit.framework */; };
 		61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61DD5BF519BCC5390049AC11 /* GCAOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */; };
@@ -136,6 +142,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61225E1F1A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISearchBarDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61225E201A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISearchBarDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		612701C819A11E3D00F34C1B /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
 		6127C5F11A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = UICollectionViewDelegateAndDataSourceImplementationProxy.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6127C5F21A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDelegateAndDataSourceImplementationProxy.m; sourceTree = "<group>"; };
@@ -211,6 +219,10 @@
 		61A600491A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		61A6004C1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabbarDelegateImplementationProxy.h; sourceTree = "<group>"; };
 		61A6004D1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabbarDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61A600501A87866D00645EA2 /* UISearchBar+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+GCDelegate.h"; sourceTree = "<group>"; };
+		61A600511A87866D00645EA2 /* UISearchBar+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+GCDelegate.m"; sourceTree = "<group>"; };
+		61A600541A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61A600551A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		61AA62CE19EEAF46005D845A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61DD5BF219BCC5390049AC11 /* GCAOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAOPProxy.h; sourceTree = "<group>"; };
 		61DD5BF319BCC5390049AC11 /* GCAOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAOPProxy.m; sourceTree = "<group>"; };
@@ -298,6 +310,8 @@
 				61A600391A8775C400645EA2 /* UIPickerView+GCDelegateAndDataSource.m */,
 				61A600441A877EF700645EA2 /* UITabBar+GCDelegate.h */,
 				61A600451A877EF700645EA2 /* UITabBar+GCDelegate.m */,
+				61A600501A87866D00645EA2 /* UISearchBar+GCDelegate.h */,
+				61A600511A87866D00645EA2 /* UISearchBar+GCDelegate.m */,
 				6127C5EF1A7124F40030E114 /* private */,
 			);
 			path = UIKit;
@@ -332,6 +346,8 @@
 				61A6003D1A8775E600645EA2 /* UIPickerView+GCDelegateAndDataSourceBlock.m */,
 				61A600481A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h */,
 				61A600491A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m */,
+				61A600541A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.h */,
+				61A600551A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -363,6 +379,8 @@
 				61A600411A87762900645EA2 /* UIPickerViewDelegateImplementationProxy.m */,
 				61A6004C1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h */,
 				61A6004D1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.m */,
+				61225E1F1A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.h */,
+				61225E201A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -478,6 +496,7 @@
 				6127C6201A7124F40030E114 /* UICollectionView+GCDelegateAndDataSourceBlock.h in Headers */,
 				6127C6541A7145AD0030E114 /* UITextView+GCDelegate.h in Headers */,
 				6127C6501A7145960030E114 /* UITextField+GCDelegate.h in Headers */,
+				61A600561A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.h in Headers */,
 				6127C6441A71339F0030E114 /* UIGestureRecognizer+GCDelegate.h in Headers */,
 				6127C64C1A713AC30030E114 /* UITableView+GCDelegateAndDataSource.h in Headers */,
 				61A6004A1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.h in Headers */,
@@ -485,6 +504,7 @@
 				6127C6341A7125120030E114 /* UIExtensionKit.h in Headers */,
 				619E8DDD1A84D5CC003889C9 /* UITabBarController+GCDelegateBlock.h in Headers */,
 				61A6004E1A877F7B00645EA2 /* UITabbarDelegateImplementationProxy.h in Headers */,
+				61A600521A87866D00645EA2 /* UISearchBar+GCDelegate.h in Headers */,
 				6127C6481A7135560030E114 /* UIScrollView+GCDelegate.h in Headers */,
 				6127C63B1A7127470030E114 /* UIGestureRecognizer+GCAction.h in Headers */,
 				6127C6581A7145C30030E114 /* UIWebView+GCDelegate.h in Headers */,
@@ -495,6 +515,7 @@
 				6127C62F1A7124F40030E114 /* UITextView+GCDelegateBlock.h in Headers */,
 				61DD5BF419BCC5390049AC11 /* GCAOPProxy.h in Headers */,
 				619E8DE11A84D704003889C9 /* UITabbarControllerDelegateImplementationProxy.h in Headers */,
+				61225E211A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.h in Headers */,
 				61DD5BF919BE13960049AC11 /* NSObject+GCAOP.h in Headers */,
 				6127C6121A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				6127C62B1A7124F40030E114 /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
@@ -598,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A600531A87866D00645EA2 /* UISearchBar+GCDelegate.m in Sources */,
 				6127C6401A71284B0030E114 /* UICollectionView+GCDelegateAndDataSource.m in Sources */,
 				B72F544E1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */,
 				61936B2319CF0BA300D97B25 /* NSObject+GCAccessor.m in Sources */,
@@ -611,6 +633,7 @@
 				6127C6131A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m in Sources */,
 				619E8DE21A84D704003889C9 /* UITabbarControllerDelegateImplementationProxy.m in Sources */,
 				6127C6551A7145AD0030E114 /* UITextView+GCDelegate.m in Sources */,
+				61A600571A87B0F800645EA2 /* UISearchBar+GCDelegateBlock.m in Sources */,
 				6127C6491A7135560030E114 /* UIScrollView+GCDelegate.m in Sources */,
 				6127C6301A7124F40030E114 /* UITextView+GCDelegateBlock.m in Sources */,
 				6130C0F119C74C9900B1BEA9 /* NSObject+GCKVO.m in Sources */,
@@ -627,6 +650,7 @@
 				6127C6191A7124F40030E114 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */,
 				6127C6511A7145960030E114 /* UITextField+GCDelegate.m in Sources */,
 				6127C6151A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
+				61225E221A8F60DF00F5C3F2 /* UISearchBarDelegateImplementationProxy.m in Sources */,
 				6127C62E1A7124F40030E114 /* UITextField+GCDelegateBlock.m in Sources */,
 				61A600471A877EF700645EA2 /* UITabBar+GCDelegate.m in Sources */,
 				619E8DDA1A84D5B4003889C9 /* UITabBarController+GCDelegate.m in Sources */,
