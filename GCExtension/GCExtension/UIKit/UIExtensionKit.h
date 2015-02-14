@@ -25,6 +25,7 @@
 #import "UIPickerView+GCDelegateAndDataSource.h"
 #import "UITabBar+GCDelegate.h"
 #import "UISearchBar+GCDelegate.h"
+#import "UIToolbar+GCDelegate.h"
 
 //#import "UIExtension_Private.h"
 
