@@ -26,6 +26,7 @@
 #import "UITabBar+GCDelegate.h"
 #import "UISearchBar+GCDelegate.h"
 #import "UIToolbar+GCDelegate.h"
+#import "UINavigationBar+GCDelegate.h"
 
 //#import "UIExtension_Private.h"
 
