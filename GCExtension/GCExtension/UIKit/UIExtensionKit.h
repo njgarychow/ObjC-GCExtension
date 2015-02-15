@@ -27,6 +27,7 @@
 #import "UISearchBar+GCDelegate.h"
 #import "UIToolbar+GCDelegate.h"
 #import "UINavigationBar+GCDelegate.h"
+#import "UIPopoverController+GCDelegate.h"
 
 //#import "UIExtension_Private.h"
 
