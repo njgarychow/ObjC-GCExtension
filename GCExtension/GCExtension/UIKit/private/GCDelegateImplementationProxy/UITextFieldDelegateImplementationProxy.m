@@ -44,43 +44,24 @@
 
 
 
-@interface UITextFieldDelegateImplementationProxy()
-
-@property (nonatomic, strong) UITextFieldDelegateImplementation* realObject;
-
-@end
-
-
-
 
 @implementation UITextFieldDelegateImplementationProxy
 
-- (id)init {
-    self.realObject = [[UITextFieldDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UITextFieldDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(block, selectorString) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(block, selectorString))
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    BlockStatement(self.owner.blockForShouldBeginEditing, @"textFieldShouldBeginEditing:");
-    BlockStatement(self.owner.blockForDidBeginEditing, @"textFieldDidBeginEditing:");
-    BlockStatement(self.owner.blockForShouldEndEditing, @"textFieldShouldEndEditing:");
-    BlockStatement(self.owner.blockForDidEndEditing, @"textFieldDidEndEditing:");
-    BlockStatement(self.owner.blockForShouldReplacementString, @"textField:shouldChangeCharactersInRange:replacementString:");
-    BlockStatement(self.owner.blockForShouldClear, @"textFieldShouldClear:");
-    BlockStatement(self.owner.blockForShouldReturn, @"textFieldShouldReturn:");
-    
-    return NO;
-}
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [self.realObject methodSignatureForSelector:sel];
-}
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:self.realObject];
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"textFieldShouldBeginEditing:" : @"blockForShouldBeginEditing",
+                            @"textFieldDidBeginEditing:" : @"blockForDidBeginEditing",
+                            @"textFieldShouldEndEditing:" : @"blockForShouldEndEditing",
+                            @"textFieldDidEndEditing:" : @"blockForDidEndEditing",
+                            @"textField:shouldChangeCharactersInRange:replacementString:" : @"blockForShouldReplacementString",
+                            @"textFieldShouldClear:" : @"blockForShouldClear",
+                            @"textFieldShouldReturn:" : @"blockForShouldReturn",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

@@ -12,8 +12,4 @@
 
 @interface UITableViewDelegateAndDataSourceImplementationProxy : UIScrollViewDelegateImplementationProxy
 
-@property (nonatomic, weak) UITableView* owner;
-
-- (id)init;
-
 @end

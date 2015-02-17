@@ -27,6 +27,8 @@
 		61225E421A8F784000F5C3F2 /* UIPopoverController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61225E401A8F784000F5C3F2 /* UIPopoverController+GCDelegateBlock.m */; };
 		61225E451A8F785500F5C3F2 /* UIPopoverControllerImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61225E431A8F785500F5C3F2 /* UIPopoverControllerImplementationProxy.h */; };
 		61225E461A8F785500F5C3F2 /* UIPopoverControllerImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61225E441A8F785500F5C3F2 /* UIPopoverControllerImplementationProxy.m */; };
+		61225E491A92549400F5C3F2 /* GCImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61225E471A92549400F5C3F2 /* GCImplementationProxy.h */; };
+		61225E4A1A92549400F5C3F2 /* GCImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61225E481A92549400F5C3F2 /* GCImplementationProxy.m */; };
 		612701C919A11E3D00F34C1B /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 612701C819A11E3D00F34C1B /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6127C6121A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6127C5F11A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */; };
 		6127C6131A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6127C5F21A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */; };
@@ -180,6 +182,8 @@
 		61225E401A8F784000F5C3F2 /* UIPopoverController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		61225E431A8F785500F5C3F2 /* UIPopoverControllerImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverControllerImplementationProxy.h; sourceTree = "<group>"; };
 		61225E441A8F785500F5C3F2 /* UIPopoverControllerImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerImplementationProxy.m; sourceTree = "<group>"; };
+		61225E471A92549400F5C3F2 /* GCImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCImplementationProxy.h; sourceTree = "<group>"; };
+		61225E481A92549400F5C3F2 /* GCImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCImplementationProxy.m; sourceTree = "<group>"; };
 		612701C819A11E3D00F34C1B /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
 		6127C5F11A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = UICollectionViewDelegateAndDataSourceImplementationProxy.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6127C5F21A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDelegateAndDataSourceImplementationProxy.m; sourceTree = "<group>"; };
@@ -403,6 +407,8 @@
 		6127C5F01A7124F40030E114 /* GCDelegateImplementationProxy */ = {
 			isa = PBXGroup;
 			children = (
+				61225E471A92549400F5C3F2 /* GCImplementationProxy.h */,
+				61225E481A92549400F5C3F2 /* GCImplementationProxy.m */,
 				6127C5F11A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */,
 				6127C5F21A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */,
 				6127C5F31A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.h */,
@@ -581,6 +587,7 @@
 				61225E291A8F6C2D00F5C3F2 /* UIToolbar+GCDelegateBlock.h in Headers */,
 				6127C6121A7124F40030E114 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				6127C62B1A7124F40030E114 /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
+				61225E491A92549400F5C3F2 /* GCImplementationProxy.h in Headers */,
 				6127C61A1A7124F40030E114 /* UITextFieldDelegateImplementationProxy.h in Headers */,
 				B72F544D1A83939D0035A775 /* UIImagePickerControllerDelegateImplementationProxy.h in Headers */,
 				6127C6271A7124F40030E114 /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
@@ -730,6 +737,7 @@
 				6127C63C1A7127470030E114 /* UIGestureRecognizer+GCAction.m in Sources */,
 				6127C62A1A7124F40030E114 /* UIScrollView+GCDelegateBlock.m in Sources */,
 				6127C61B1A7124F40030E114 /* UITextFieldDelegateImplementationProxy.m in Sources */,
+				61225E4A1A92549400F5C3F2 /* GCImplementationProxy.m in Sources */,
 				B72F544A1A8393450035A775 /* UIImagePickerController+GCDelegateBlock.m in Sources */,
 				61225E2A1A8F6C2D00F5C3F2 /* UIToolbar+GCDelegateBlock.m in Sources */,
 				61A6004B1A877F5F00645EA2 /* UITabBar+GCDelegateBlock.m in Sources */,

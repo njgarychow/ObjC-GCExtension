@@ -10,8 +10,4 @@
 
 @interface UITextViewDelegateImplementationProxy : UIScrollViewDelegateImplementationProxy
 
-@property (nonatomic, weak) UITextView* owner;
-
-- (instancetype)init;
-
 @end

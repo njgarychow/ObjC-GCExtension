@@ -42,53 +42,21 @@
 
 
 
-@interface UITabbarDelegateImplementationProxy ()
-
-@property (nonatomic, strong) UITabbarDelegateImplementation* realObject;
-
-@end
-
 @implementation UITabbarDelegateImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UITabbarDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UITabbarDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForWillBeginCustomizingItems, @"tabBar:willBeginCustomizingItems:");
-    BlockStatement(self.owner.blockForDidBeginCustomzingItems, @"tabBar:didBeginCustomizingItems:");
-    BlockStatement(self.owner.blockForWillEndCustomizingItems, @"tabBar:willEndCustomizingItems:changed:");
-    BlockStatement(self.owner.blockForDidEndCustomzingItems, @"tabBar:didEndCustomizingItems:changed:");
-    BlockStatement(self.owner.blockForDidSelectItem, @"tabBar:didSelectItem:");
-    
-    return NO;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"tabBar:willBeginCustomizingItems:" : @"blockForWillBeginCustomizingItems",
+                            @"tabBar:didBeginCustomizingItems:" : @"blockForDidBeginCustomzingItems",
+                            @"tabBar:willEndCustomizingItems:changed:" : @"blockForWillEndCustomizingItems",
+                            @"tabBar:didEndCustomizingItems:changed:" : @"blockForDidEndCustomzingItems",
+                            @"tabBar:didSelectItem:" : @"blockForDidSelectItem",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

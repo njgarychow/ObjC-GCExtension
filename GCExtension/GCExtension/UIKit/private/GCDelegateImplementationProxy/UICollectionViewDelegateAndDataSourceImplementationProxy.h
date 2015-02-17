@@ -12,8 +12,4 @@
 
 @interface UICollectionViewDelegateAndDataSourceImplementationProxy : UIScrollViewDelegateImplementationProxy
 
-@property (nonatomic, weak) UICollectionView* owner;
-
-- (instancetype)init;
-
 @end

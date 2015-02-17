@@ -47,61 +47,22 @@
 
 
 
-
-
-
-
-
-
-
-@interface UINavigationControllerDelegateImplementionProxy ()
-
-@property (nonatomic, strong) UINavigationControllerDelegateImplementation* realObject;
-
-@end
-
 @implementation UINavigationControllerDelegateImplementionProxy
 
-- (instancetype)init {
-    _realObject = [[UINavigationControllerDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UINavigationControllerDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForWillShowViewController, @"navigationController:willShowViewController:animated:");
-    BlockStatement(self.owner.blockForDidShowViewController, @"navigationController:didShowViewController:animated:");
-    BlockStatement(self.owner.blockForAnimationForOperation, @"navigationController:animationControllerForOperation:fromViewController:toViewController:");
-    BlockStatement(self.owner.blockForInteractionController, @"navigationController:interactionControllerForAnimationController:");
-    BlockStatement(self.owner.blockForPreferedInterfaceOrientation, @"navigationControllerPreferredInterfaceOrientationForPresentation:");
-    BlockStatement(self.owner.blockForSupportedInterfaceOrientation, @"navigationControllerSupportedInterfaceOrientations:");
-    
-    return NO;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"navigationController:willShowViewController:animated:" : @"blockForWillShowViewController",
+                            @"navigationController:didShowViewController:animated:" : @"blockForDidShowViewController",
+                            @"navigationController:animationControllerForOperation:fromViewController:toViewController:" : @"blockForAnimationForOperation",
+                            @"navigationController:interactionControllerForAnimationController:" : @"blockForInteractionController",
+                            @"navigationControllerPreferredInterfaceOrientationForPresentation:" : @"blockForPreferedInterfaceOrientation",
+                            @"navigationControllerSupportedInterfaceOrientations:" : @"blockForSupportedInterfaceOrientation",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

@@ -58,58 +58,25 @@
 
 
 
-
-@interface UITextViewDelegateImplementationProxy ()
-
-@property (nonatomic, strong) UITextViewDelegateImplementation* realObject;
-
-@end
-
 @implementation UITextViewDelegateImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UITextViewDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UITextViewDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForShouldBeginEditing, @"textViewShouldBeginEditing:");
-    BlockStatement(self.owner.blockForDidBeginEditing, @"textViewDidBeginEditing:");
-    BlockStatement(self.owner.blockForShouldEndEditing, @"textViewShouldEndEditing:");
-    BlockStatement(self.owner.blockForDidEndEditing, @"textViewDidEndEditing:");
-    BlockStatement(self.owner.blockForShouldChangeText, @"textView:shouldChangeTextInRange:replacementText:");
-    BlockStatement(self.owner.blockForDidChanged, @"textViewDidChange:");
-    BlockStatement(self.owner.blockForDidChangeSelection, @"textViewDidChangeSelection:");
-    BlockStatement(self.owner.blockForShouldInteractAttachment, @"textView:shouldInteractWithTextAttachment:inRange:");
-    BlockStatement(self.owner.blockForShouldInteractURL, @"textView:shouldInteractWithURL:inRange:");
-    
-    return [super respondsToSelector:aSelector];
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"textViewShouldBeginEditing:" : @"blockForShouldBeginEditing",
+                            @"textViewDidBeginEditing:" : @"blockForDidBeginEditing",
+                            @"textViewShouldEndEditing:" : @"blockForShouldEndEditing",
+                            @"textViewDidEndEditing:" : @"blockForDidEndEditing",
+                            @"textView:shouldChangeTextInRange:replacementText:" : @"blockForShouldChangeText",
+                            @"textViewDidChange:" : @"blockForDidChanged",
+                            @"textViewDidChangeSelection:" : @"blockForDidChangeSelection",
+                            @"textView:shouldInteractWithTextAttachment:inRange:" : @"blockForShouldInteractAttachment",
+                            @"textView:shouldInteractWithURL:inRange:" : @"blockForShouldInteractURL",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

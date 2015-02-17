@@ -6,12 +6,8 @@
 //  Copyright (c) 2015 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UIToolbarDelegateImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UIToolbar* owner;
-
-- (id)init;
+@interface UIToolbarDelegateImplementationProxy : GCImplementationProxy
 
 @end

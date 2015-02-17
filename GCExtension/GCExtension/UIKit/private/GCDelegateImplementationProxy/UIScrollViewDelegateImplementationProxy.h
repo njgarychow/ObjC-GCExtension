@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
 
 
@@ -20,10 +20,6 @@
 
 
 
-@interface UIScrollViewDelegateImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UIScrollView* owner;
-
-- (id)init;
+@interface UIScrollViewDelegateImplementationProxy : GCImplementationProxy
 
 @end

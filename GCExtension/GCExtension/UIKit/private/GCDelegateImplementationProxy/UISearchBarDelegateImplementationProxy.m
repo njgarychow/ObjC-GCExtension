@@ -64,60 +64,28 @@
 
 
 
-@interface UISearchBarDelegateImplementationProxy ()
-
-@property (nonatomic, strong) UISearchBarDelegateImplementation* realObject;
-
-@end
-
 @implementation UISearchBarDelegateImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UISearchBarDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UISearchBarDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForTextDidChange, @"searchBar:textDidChange:");
-    BlockStatement(self.owner.blockForShouldChangeText, @"searchBar:shouldChangeTextInRange:replacementText:");
-    BlockStatement(self.owner.blockForShouldBeginEditing, @"searchBarShouldBeginEditing:");
-    BlockStatement(self.owner.blockForTextDidBeginEditing, @"searchBarTextDidBeginEditing:");
-    BlockStatement(self.owner.blockForShouldEndEditing, @"blockForShouldEndEditing:");
-    BlockStatement(self.owner.blockForTextDidEndEditing, @"searchBarTextDidEndEditing:");
-    BlockStatement(self.owner.blockForBookmarkButtonClicked, @"searchBarBookmarkButtonClicked:");
-    BlockStatement(self.owner.blockForCancelButtonClicked, @"searchBarCancelButtonClicked:");
-    BlockStatement(self.owner.blockForSearchButtonClicked, @"blockForSearchButtonClicked:");
-    BlockStatement(self.owner.blockForResultsListButtonClicked, @"searchBarResultsListButtonClicked:");
-    BlockStatement(self.owner.blockForSelectedScopeButtonIndexDidChange, @"searchBar:selectedScopeButtonIndexDidChange:");
-    BlockStatement(self.owner.blockForPosition, @"positionForBar:");
-    
-    return NO;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"searchBar:textDidChange:" : @"blockForTextDidChange",
+                            @"searchBar:shouldChangeTextInRange:replacementText:" : @"blockForShouldChangeText",
+                            @"searchBarShouldBeginEditing:" : @"blockForShouldBeginEditing",
+                            @"searchBarTextDidBeginEditing:" : @"blockForTextDidBeginEditing",
+                            @"blockForShouldEndEditing:" : @"blockForShouldEndEditing",
+                            @"searchBarTextDidEndEditing:" : @"blockForTextDidEndEditing",
+                            @"searchBarBookmarkButtonClicked:" : @"blockForBookmarkButtonClicked",
+                            @"searchBarCancelButtonClicked:" : @"blockForCancelButtonClicked",
+                            @"blockForSearchButtonClicked:" : @"blockForSearchButtonClicked",
+                            @"searchBarResultsListButtonClicked:" : @"blockForResultsListButtonClicked",
+                            @"searchBar:selectedScopeButtonIndexDidChange:" : @"blockForSelectedScopeButtonIndexDidChange",
+                            @"positionForBar:" : @"blockForPosition",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

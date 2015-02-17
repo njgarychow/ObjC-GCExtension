@@ -58,47 +58,28 @@
 
 
 
-@interface UIScrollViewDelegateImplementationProxy ()
-
-@property (nonatomic, strong) UIScrollViewDelegateImplementation* realObject;
-
-@end
-
-
 @implementation UIScrollViewDelegateImplementationProxy
 
-- (id)init {
-    self.realObject = [[UIScrollViewDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UIScrollViewDelegateImplementation class];
 }
-
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(block, selectorString) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(block, selectorString))
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    BlockStatement(self.owner.blockForDidScroll, @"scrollViewDidScroll:");
-    BlockStatement(self.owner.blockForWillBeginDragging, @"scrollViewWillBeginDragging:");
-    BlockStatement(self.owner.blockForWillEndDragging, @"scrollViewWillEndDragging:withVelocity:targetContentOffset:");
-    BlockStatement(self.owner.blockForDidEndDragging, @"scrollViewDidEndDragging:willDecelerate:");
-    BlockStatement(self.owner.blockForShouldScrollToTop, @"scrollViewShouldScrollToTop:");
-    BlockStatement(self.owner.blockForDidScrollToTop, @"scrollViewDidScrollToTop:");
-    BlockStatement(self.owner.blockForWillBeginDecelerating, @"scrollViewWillBeginDecelerating:");
-    BlockStatement(self.owner.blockForDidEndDecelerating, @"scrollViewDidEndDecelerating:");
-    BlockStatement(self.owner.blockForViewForZooming, @"viewForZoomingInScrollView:");
-    BlockStatement(self.owner.blockForWillBeginZooming, @"scrollViewWillBeginZooming:withView:");
-    BlockStatement(self.owner.blockForDidEndZooming, @"scrollViewDidEndZooming:withView:atScale:");
-    BlockStatement(self.owner.blockForDidZoom, @"scrollViewDidZoom:");
-    BlockStatement(self.owner.blockForDidEndScrollingAnimation, @"scrollViewDidEndScrollingAnimation:");
-    
-    return NO;
-}
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [self.realObject methodSignatureForSelector:sel];
-}
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:self.realObject];
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"scrollViewDidScroll:" : @"blockForDidScroll",
+                            @"scrollViewWillBeginDragging:" : @"blockForWillBeginDragging",
+                            @"scrollViewWillEndDragging:withVelocity:targetContentOffset:" : @"blockForWillEndDragging",
+                            @"scrollViewDidEndDragging:willDecelerate:" : @"blockForDidEndDragging",
+                            @"scrollViewShouldScrollToTop:" : @"blockForShouldScrollToTop",
+                            @"scrollViewDidScrollToTop:" : @"blockForDidScrollToTop",
+                            @"scrollViewWillBeginDecelerating:" : @"blockForWillBeginDecelerating",
+                            @"scrollViewDidEndDecelerating:" : @"blockForDidEndDecelerating",
+                            @"viewForZoomingInScrollView:" : @"blockForViewForZooming",
+                            @"scrollViewWillBeginZooming:withView:" : @"blockForWillBeginZooming",
+                            @"scrollViewDidEndZooming:withView:atScale:" : @"blockForDidEndZooming",
+                            @"scrollViewDidZoom:" : @"blockForDidZoom",
+                            @"scrollViewDidEndScrollingAnimation:" : @"blockForDidEndScrollingAnimation",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

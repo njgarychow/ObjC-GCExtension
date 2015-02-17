@@ -6,12 +6,8 @@
 //  Copyright (c) 2015 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UIPickerViewDelegateImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UIPickerView* owner;
-
-- (id)init;
+@interface UIPickerViewDelegateImplementationProxy : GCImplementationProxy
 
 @end

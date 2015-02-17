@@ -165,96 +165,60 @@
 
 
 
-@interface UITableViewDelegateAndDataSourceImplementationProxy ()
-
-@property (nonatomic, strong) UITableViewDelegateAndDataSourceImplementation* realObject;
-
-@end
-
 @implementation UITableViewDelegateAndDataSourceImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UITableViewDelegateAndDataSourceImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UITableViewDelegateAndDataSourceImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForRowCell, @"tableView:cellForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForSectionNumber, @"numberOfSectionsInTableView:");
-    BlockStatement(self.owner.blockForRowNumber, @"tableView:numberOfRowsInSection:");
-    BlockStatement(self.owner.blockForSectionIndexTitles, @"sectionIndexTitlesForTableView:");
-    BlockStatement(self.owner.blockForSectionIndex, @"tableView:sectionForSectionIndexTitle:atIndex:");
-    BlockStatement(self.owner.blockForFooterTitle, @"tableView:titleForFooterInSection:");
-    BlockStatement(self.owner.blockForHeaderHeight, @"tableView:titleForHeaderInSection:");
-    BlockStatement(self.owner.blockForRowCommitEditStyleForRow, @"tableView:commitEditingStyle:forRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowCanEditRow, @"tableView:canEditRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowCanMoveRow, @"tableView:canMoveRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowMove, @"tableView:moveRowAtIndexPath:toIndexPath:");
-    
-    BlockStatement(self.owner.blockForRowHeight, @"tableView:heightForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowEstimatedHeight, @"tableView:estimatedHeightForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowIndentationLevel, @"tableView:indentationLevelForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowCellWillDisplay, @"tableView:willDisplayCell:forRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowEditActions, @"tableView:editActionsForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowAccessoryButtonTapped, @"tableView:accessoryButtonTappedForRowWithIndexPath:");
-    BlockStatement(self.owner.blockForRowWillSelect, @"tableView:willSelectRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowDidSelect, @"tableView:didSelectRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowWillDeselect, @"tableView:willDeselectRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowDidDeselecte, @"tableView:didDeselectRowAtIndexPath:");
-    BlockStatement(self.owner.blockForHeaderView, @"tableView:viewForHeaderInSection:");
-    BlockStatement(self.owner.blockForFooterView, @"tableView:viewForFooterInSection:");
-    BlockStatement(self.owner.blockForHeaderHeight, @"tableView:heightForHeaderInSection:");
-    BlockStatement(self.owner.blockForHeaderEstimatedHeight, @"tableView:estimatedHeightForHeaderInSection:");
-    BlockStatement(self.owner.blockForFooterHeight, @"tableView:heightForFooterInSection:");
-    BlockStatement(self.owner.blockForFooterEstimatedHeight, @"tableView:estimatedHeightForFooterInSection:");
-    BlockStatement(self.owner.blockForHeaderViewWillDisplay, @"tableView:willDisplayHeaderView:forSection:");
-    BlockStatement(self.owner.blockForFooterViewWillDisplay, @"tableView:willDisplayFooterView:forSection:");
-    BlockStatement(self.owner.blockForRowWillBeginEditing, @"tableView:willBeginEditingRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowDidEndEditing, @"tableView:didEndEditingRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowEditingStyle, @"tableView:editingStyleForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowDeleteConfirmationButtonTitle, @"tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowShouldIndentWhileEditing, @"tableView:shouldIndentWhileEditingRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowMoveTargetIndexPath, @"tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:");
-    BlockStatement(self.owner.blockForRowDidEndDisplayingCell, @"tableView:didEndDisplayingCell:forRowAtIndexPath:");
-    BlockStatement(self.owner.blockForHeaderViewDidEndDisplaying, @"tableView:didEndDisplayingHeaderView:forSection:");
-    BlockStatement(self.owner.blockForFooterViewDidEndDisplaying, @"tableView:didEndDisplayingFooterView:forSection:");
-    BlockStatement(self.owner.blockForRowShouldShowMenu, @"tableView:shouldShowMenuForRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowCanPerformAction, @"tableView:canPerformAction:forRowAtIndexPath:withSender:");
-    BlockStatement(self.owner.blockForRowPerformAction, @"tableView:performAction:forRowAtIndexPath:withSender:");
-    BlockStatement(self.owner.blockForRowShouldHighlight, @"tableView:shouldHighlightRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowDidHighlight, @"tableView:didHighlightRowAtIndexPath:");
-    BlockStatement(self.owner.blockForRowDidUnhighlight, @"tableView:didUnhighlightRowAtIndexPath:");
-    
-    return [super respondsToSelector:aSelector];
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
-    if (self == self.owner.dataSource) {
-        self.owner.dataSource = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"tableView:cellForRowAtIndexPath:" : @"blockForRowCell",
+                            @"numberOfSectionsInTableView:" : @"blockForSectionNumber",
+                            @"tableView:numberOfRowsInSection:" : @"blockForRowNumber",
+                            @"sectionIndexTitlesForTableView:" : @"blockForSectionIndexTitles",
+                            @"tableView:sectionForSectionIndexTitle:atIndex:" : @"blockForSectionIndex",
+                            @"tableView:titleForFooterInSection:" : @"blockForFooterTitle",
+                            @"tableView:titleForHeaderInSection:" : @"blockForHeaderHeight",
+                            @"tableView:commitEditingStyle:forRowAtIndexPath:" : @"blockForRowCommitEditStyleForRow",
+                            @"tableView:canEditRowAtIndexPath:" : @"blockForRowCanEditRow",
+                            @"tableView:canMoveRowAtIndexPath:" : @"blockForRowCanMoveRow",
+                            @"tableView:moveRowAtIndexPath:toIndexPath:" : @"blockForRowMove",
+                            @"tableView:heightForRowAtIndexPath:" : @"blockForRowHeight",
+                            @"tableView:estimatedHeightForRowAtIndexPath:" : @"blockForRowEstimatedHeight",
+                            @"tableView:indentationLevelForRowAtIndexPath:" : @"blockForRowIndentationLevel",
+                            @"tableView:willDisplayCell:forRowAtIndexPath:" : @"blockForRowCellWillDisplay",
+                            @"tableView:editActionsForRowAtIndexPath:" : @"blockForRowEditActions",
+                            @"tableView:accessoryButtonTappedForRowWithIndexPath:" : @"blockForRowAccessoryButtonTapped",
+                            @"tableView:willSelectRowAtIndexPath:" : @"blockForRowWillSelect",
+                            @"tableView:didSelectRowAtIndexPath:" : @"blockForRowDidSelect",
+                            @"tableView:willDeselectRowAtIndexPath:" : @"blockForRowWillDeselect",
+                            @"tableView:didDeselectRowAtIndexPath:" : @"blockForRowDidDeselecte",
+                            @"tableView:viewForHeaderInSection:" : @"blockForHeaderView",
+                            @"tableView:viewForFooterInSection:" : @"blockForFooterView",
+                            @"tableView:heightForHeaderInSection:" : @"blockForHeaderHeight",
+                            @"tableView:estimatedHeightForHeaderInSection:" : @"blockForHeaderEstimatedHeight",
+                            @"tableView:heightForFooterInSection:" : @"blockForFooterHeight",
+                            @"tableView:estimatedHeightForFooterInSection:" : @"blockForFooterEstimatedHeight",
+                            @"tableView:willDisplayHeaderView:forSection:" : @"blockForHeaderViewWillDisplay",
+                            @"tableView:willDisplayFooterView:forSection:" : @"blockForFooterViewWillDisplay",
+                            @"tableView:willBeginEditingRowAtIndexPath:" : @"blockForRowWillBeginEditing",
+                            @"tableView:didEndEditingRowAtIndexPath:" : @"blockForRowDidEndEditing",
+                            @"tableView:editingStyleForRowAtIndexPath:" : @"blockForRowEditingStyle",
+                            @"tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:" : @"blockForRowDeleteConfirmationButtonTitle",
+                            @"tableView:shouldIndentWhileEditingRowAtIndexPath:" : @"blockForRowShouldIndentWhileEditing",
+                            @"tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:" : @"blockForRowMoveTargetIndexPath",
+                            @"tableView:didEndDisplayingCell:forRowAtIndexPath:" : @"blockForRowDidEndDisplayingCell",
+                            @"tableView:didEndDisplayingHeaderView:forSection:" : @"blockForHeaderViewDidEndDisplaying",
+                            @"tableView:didEndDisplayingFooterView:forSection:" : @"blockForFooterViewDidEndDisplaying",
+                            @"tableView:shouldShowMenuForRowAtIndexPath:" : @"blockForRowShouldShowMenu",
+                            @"tableView:canPerformAction:forRowAtIndexPath:withSender:" : @"blockForRowCanPerformAction",
+                            @"tableView:performAction:forRowAtIndexPath:withSender:" : @"blockForRowPerformAction",
+                            @"tableView:shouldHighlightRowAtIndexPath:" : @"blockForRowShouldHighlight",
+                            @"tableView:didHighlightRowAtIndexPath:" : @"blockForRowDidHighlight",
+                            @"tableView:didUnhighlightRowAtIndexPath:" : @"blockForRowDidUnhighlight",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

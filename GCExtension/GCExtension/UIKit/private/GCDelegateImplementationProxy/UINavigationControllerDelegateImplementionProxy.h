@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GCImplementationProxy.h"
+
 @interface UINavigationControllerDelegateImplementation : NSObject <UINavigationControllerDelegate>
 
 @end
@@ -17,10 +19,6 @@
 
 
 
-@interface UINavigationControllerDelegateImplementionProxy : NSProxy
-
-@property (nonatomic, weak) UINavigationController* owner;
-
-- (id)init;
+@interface UINavigationControllerDelegateImplementionProxy : GCImplementationProxy
 
 @end

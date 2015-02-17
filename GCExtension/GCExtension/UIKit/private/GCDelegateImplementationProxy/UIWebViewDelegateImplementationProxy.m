@@ -38,52 +38,20 @@
 
 
 
-@interface UIWebViewDelegateImplementationProxy ()
-
-@property (nonatomic, strong) UIWebViewDelegateImplementation* realObject;
-
-@end
-
 @implementation UIWebViewDelegateImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UIWebViewDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UIWebViewDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForShouldStartLoadRequest, @"webView:shouldStartLoadWithRequest:navigationType:");
-    BlockStatement(self.owner.blockForDidStartLoad, @"webViewDidStartLoad:");
-    BlockStatement(self.owner.blockForDidFinishLoad, @"webViewDidFinishLoad:");
-    BlockStatement(self.owner.blockForDidFailLoad, @"webView:didFailLoadWithError:");
-    
-    return NO;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"webView:shouldStartLoadWithRequest:navigationType:" : @"blockForShouldStartLoadRequest",
+                            @"webViewDidStartLoad:" : @"blockForDidStartLoad",
+                            @"webViewDidFinishLoad:" : @"blockForDidFinishLoad",
+                            @"webView:didFailLoadWithError" : @"blockForDidFailLoad",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

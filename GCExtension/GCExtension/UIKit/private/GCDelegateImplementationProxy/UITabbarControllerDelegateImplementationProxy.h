@@ -6,12 +6,8 @@
 //  Copyright (c) 2015 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UITabbarControllerDelegateImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UITabBarController* owner;
-
-- (id)init;
+@interface UITabbarControllerDelegateImplementationProxy : GCImplementationProxy
 
 @end

@@ -111,79 +111,42 @@
 
 
 
-@interface UICollectionViewDelegateAndDataSourceImplementationProxy ()
-
-@property (nonatomic, strong) UICollectionViewDelegateAndDataSourceImplementation* realObject;
-
-@end
-
 @implementation UICollectionViewDelegateAndDataSourceImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UICollectionViewDelegateAndDataSourceImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UICollectionViewDelegateAndDataSourceImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForItemNumber, @"collectionView:numberOfItemsInSection:");
-    BlockStatement(self.owner.blockForSectionNumber, @"numberOfSectionsInCollectionView:");
-    BlockStatement(self.owner.blockForItemCell, @"collectionView:cellForItemAtIndexPath:");
-    BlockStatement(self.owner.blockForSupplementaryElement, @"collectionView:viewForSupplementaryElementOfKind:atIndexPath:");
-    
-    BlockStatement(self.owner.blockForItemShouldSelect, @"collectionView:shouldSelectItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemDidSelect, @"collectionView:didSelectItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemShouldDeselect, @"collectionView:shouldDeselectItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemDidDeselect, @"collectionView:didDeselectItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemShouldHighlight, @"collectionView:shouldHighlightItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemDidHighlight, @"collectionView:didHighlightItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemDidUnhighlight, @"collectionView:didUnhighlightItemAtIndexPath:");
-    BlockStatement(self.owner.blockForItemWillDisplay, @"collectionView:willDisplayCell:forItemAtIndexPath:");
-    BlockStatement(self.owner.blockForSupplementaryWillDisplay, @"collectionView:willDisplaySupplementaryView:forElementKind:atIndexPath:");
-    BlockStatement(self.owner.blockForItemCellDidEndDisplay, @"collectionView:didEndDisplayingCell:forItemAtIndexPath:");
-    BlockStatement(self.owner.blockForSupplementaryDidEndDisplay, @"collectionView:didEndDisplayingSupplementaryView:forElementOfKind:atIndexPath:");
-    BlockStatement(self.owner.blockForLayoutTransition, @"collectionView:transitionLayoutForOldLayout:newLayout:");
-    BlockStatement(self.owner.blockForItemMenuShouldShow, @"collectionView:shouldShowMenuForItemAtIndexPath");
-    BlockStatement(self.owner.blockForItemCanPerformAction, @"collectionView:canPerformAction:forItemAtIndexPath:withSender:");
-    BlockStatement(self.owner.blockForItemPerformAction, @"collectionView:performAction:forItemAtIndexPath:withSender:");
-    
-    BlockStatement(self.owner.blockForFlowLayoutSize, @"collectionView:layout:sizeForItemAtIndexPath:");
-    BlockStatement(self.owner.blockForFlowLayoutSectionInset, @"collectionView:layout:insetForSectionAtIndex:");
-    BlockStatement(self.owner.blockForFlowLayoutSectionMinimumSpacing, @"collectionView:layout:minimumLineSpacingForSectionAtIndex:");
-    BlockStatement(self.owner.blockForFlowLayoutSectionMinimumInteritemSpacing, @"collectionView:layout:minimumInteritemSpacingForSectionAtIndex:");
-    BlockStatement(self.owner.blockForFlowLayoutHeaderReferenceSize, @"collectionView:layout:referenceSizeForHeaderInSection:");
-    BlockStatement(self.owner.blockForFlowLayoutFooterReferenceSize, @"collectionView:layout:referenceSizeForFooterInSection:");
-    
-    
-    return [super respondsToSelector:aSelector];
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
-    if (self == self.owner.dataSource) {
-        self.owner.dataSource = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"collectionView:numberOfItemsInSection:" : @"blockForItemNumber",
+                            @"numberOfSectionsInCollectionView:" : @"blockForSectionNumber",
+                            @"collectionView:cellForItemAtIndexPath:" : @"blockForItemCell",
+                            @"collectionView:viewForSupplementaryElementOfKind:atIndexPath:" : @"blockForSupplementaryElement",
+                            @"collectionView:shouldSelectItemAtIndexPath:" : @"blockForItemShouldSelect",
+                            @"collectionView:didSelectItemAtIndexPath:" : @"blockForItemDidSelect",
+                            @"collectionView:shouldDeselectItemAtIndexPath:" : @"blockForItemShouldDeselect",
+                            @"collectionView:didDeselectItemAtIndexPath:" : @"blockForItemDidDeselect",
+                            @"collectionView:shouldHighlightItemAtIndexPath:" : @"blockForItemShouldHighlight",
+                            @"collectionView:didHighlightItemAtIndexPath:" : @"blockForItemDidHighlight",
+                            @"collectionView:didUnhighlightItemAtIndexPath:" : @"blockForItemDidUnhighlight",
+                            @"collectionView:willDisplayCell:forItemAtIndexPath:" : @"blockForItemWillDisplay",
+                            @"collectionView:willDisplaySupplementaryView:forElementKind:atIndexPath:" : @"blockForSupplementaryWillDisplay",
+                            @"collectionView:didEndDisplayingCell:forItemAtIndexPath:" : @"blockForItemCellDidEndDisplay",
+                            @"collectionView:didEndDisplayingSupplementaryView:forElementOfKind:atIndexPath:" : @"blockForSupplementaryDidEndDisplay",
+                            @"collectionView:transitionLayoutForOldLayout:newLayout:" : @"blockForLayoutTransition",
+                            @"collectionView:shouldShowMenuForItemAtIndexPath" : @"blockForItemMenuShouldShow",
+                            @"collectionView:canPerformAction:forItemAtIndexPath:withSender:" : @"blockForItemCanPerformAction",
+                            @"collectionView:performAction:forItemAtIndexPath:withSender:" : @"blockForItemPerformAction",
+                            
+                            @"collectionView:layout:sizeForItemAtIndexPath:" : @"blockForFlowLayoutSize",
+                            @"collectionView:layout:insetForSectionAtIndex:" : @"blockForFlowLayoutSectionInset",
+                            @"collectionView:layout:minimumLineSpacingForSectionAtIndex:" : @"blockForFlowLayoutSectionMinimumSpacing",
+                            @"collectionView:layout:minimumInteritemSpacingForSectionAtIndex:" : @"blockForFlowLayoutSectionMinimumInteritemSpacing",
+                            @"collectionView:layout:referenceSizeForHeaderInSection:" : @"blockForFlowLayoutHeaderReferenceSize",
+                            @"collectionView:layout:referenceSizeForFooterInSection:" : @"blockForFlowLayoutFooterReferenceSize",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

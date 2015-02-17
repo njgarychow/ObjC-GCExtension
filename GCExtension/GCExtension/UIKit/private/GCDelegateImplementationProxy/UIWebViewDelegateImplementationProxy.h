@@ -6,12 +6,8 @@
 //  Copyright (c) 2014 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UIWebViewDelegateImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UIWebView* owner;
-
-- (instancetype)init;
+@interface UIWebViewDelegateImplementationProxy : GCImplementationProxy
 
 @end

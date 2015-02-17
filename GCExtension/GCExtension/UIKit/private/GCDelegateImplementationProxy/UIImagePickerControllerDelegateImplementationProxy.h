@@ -12,8 +12,4 @@
 
 @interface UIImagePickerControllerDelegateImplementationProxy : UINavigationControllerDelegateImplementionProxy
 
-@property (nonatomic, weak) UIImagePickerController* owner;
-
-- (id)init;
-
 @end

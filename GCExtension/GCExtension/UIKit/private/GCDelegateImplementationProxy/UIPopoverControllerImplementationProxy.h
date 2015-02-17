@@ -6,12 +6,8 @@
 //  Copyright (c) 2015 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UIPopoverControllerImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UIPopoverController* owner;
-
-- (id)init;
+@interface UIPopoverControllerImplementationProxy : GCImplementationProxy
 
 @end

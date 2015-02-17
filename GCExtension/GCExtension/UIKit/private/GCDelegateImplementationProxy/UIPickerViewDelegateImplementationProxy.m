@@ -56,57 +56,24 @@
 
 
 
-
-@interface UIPickerViewDelegateImplementationProxy ()
-
-@property (nonatomic, strong) UIPickerViewDelegateImplementation* realObject;
-
-@end
-
 @implementation UIPickerViewDelegateImplementationProxy
 
-- (instancetype)init {
-    _realObject = [[UIPickerViewDelegateImplementation alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UIPickerViewDelegateImplementation class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(selectorString, block) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(selectorString, block))
-
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    /**
-     *  BlcokStatement expand:
-     *  if (|block| && [|selectorString| isEqualToString:targetSelectorString]) {
-     *      return YES;
-     *  }
-     */
-    BlockStatement(self.owner.blockForRowHeightForComponent, @"pickerView:rowHeightForComponent:");
-    BlockStatement(self.owner.blockForWidthForComponent, @"pickerView:widthForComponent:");
-    BlockStatement(self.owner.blockForTitltForRowForComponent, @"pickerView:titleForRow:forComponent:");
-    BlockStatement(self.owner.blockForAttributedTitleForRowForComponent, @"pickerView:attributedTitleForRow:forComponent:");
-    BlockStatement(self.owner.blockForViewForRowForComponentWithReusingView, @"pickerView:viewForRow:forComponent:reusingView:");
-    BlockStatement(self.owner.blockForDidSelectRowInComponent, @"pickerView:didSelectRow:inComponent:");
-    BlockStatement(self.owner.blockForNumberOfComponents, @"numberOfComponentsInPickerView:");
-    BlockStatement(self.owner.blockForNumberOfRowsInComponent, @"pickerView:numberOfRowsInComponent:");
-    
-    return NO;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [_realObject methodSignatureForSelector:sel];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:_realObject];
-}
-
-- (void)dealloc {
-    if (self == self.owner.delegate) {
-        self.owner.delegate = nil;
-    }
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"pickerView:rowHeightForComponent:" : @"blockForRowHeightForComponent",
+                            @"pickerView:widthForComponent:" : @"blockForWidthForComponent",
+                            @"pickerView:titleForRow:forComponent:" : @"blockForTitltForRowForComponent",
+                            @"pickerView:attributedTitleForRow:forComponent:" : @"blockForAttributedTitleForRowForComponent",
+                            @"pickerView:viewForRow:forComponent:reusingView:" : @"blockForViewForRowForComponentWithReusingView",
+                            @"pickerView:didSelectRow:inComponent:" : @"blockForDidSelectRowInComponent",
+                            @"numberOfComponentsInPickerView:" : @"blockForNumberOfComponents",
+                            @"pickerView:numberOfRowsInComponent:" : @"blockForNumberOfRowsInComponent",
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end

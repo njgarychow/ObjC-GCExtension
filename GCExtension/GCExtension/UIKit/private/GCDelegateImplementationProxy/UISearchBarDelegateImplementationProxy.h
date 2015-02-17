@@ -6,12 +6,8 @@
 //  Copyright (c) 2015 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UISearchBarDelegateImplementationProxy : NSProxy
-
-@property (nonatomic, weak) UISearchBar* owner;
-
-- (id)init;
+@interface UISearchBarDelegateImplementationProxy : GCImplementationProxy
 
 @end

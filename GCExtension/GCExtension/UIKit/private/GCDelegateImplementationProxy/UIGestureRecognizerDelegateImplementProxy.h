@@ -6,12 +6,8 @@
 //  Copyright (c) 2014年 zhoujinqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GCImplementationProxy.h"
 
-@interface UIGestureRecognizerDelegateImplementProxy : NSProxy
-
-@property (nonatomic, weak) UIGestureRecognizer* owner;
-
-- (id)init;
+@interface UIGestureRecognizerDelegateImplementProxy : GCImplementationProxy
 
 @end

@@ -44,38 +44,21 @@
 
 
 
-@interface UIGestureRecognizerDelegateImplementProxy ()
-
-@property (nonatomic, strong) UIGestureRecognizerDelegateImplement* realObject;
-
-@end
-
 @implementation UIGestureRecognizerDelegateImplementProxy
 
-- (id)init {
-    self.realObject = [[UIGestureRecognizerDelegateImplement alloc] init];
-    return self;
++ (Class)realObjectClass {
+    return [UIGestureRecognizerDelegateImplement class];
 }
 
-#define BlockStatementTest(statement) do { if (statement) { return YES; } } while (0)
-#define Statement(block, selectorString) (block && [selectorString isEqualToString:targetSelectorString])
-#define BlockStatement(block, selectorString) BlockStatementTest(Statement(block, selectorString))
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSString* targetSelectorString = NSStringFromSelector(aSelector);
-    
-    BlockStatement(self.owner.blockForShouldBegin, @"gestureRecognizerShouldBegin:");
-    BlockStatement(self.owner.blockForShouldReceiveTouch, @"gestureRecognizer:shouldReceiveTouch:");
-    BlockStatement(self.owner.blockForShouldSimultaneous, @"gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:");
-    BlockStatement(self.owner.blockForShouldRequireFailureOf, @"gestureRecognizer:shouldRequireFailureOfGestureRecognizer:");
-    BlockStatement(self.owner.blockForShouldBeRequireToFailureBy, @"gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer");
-    
-    return NO;
-}
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [self.realObject methodSignatureForSelector:sel];
-}
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    [invocation invokeWithTarget:self.realObject];
++ (NSString *)blockNamesForSelectorString:(NSString *)selectorString {
+    NSString* blockName = @{
+                            @"gestureRecognizerShouldBegin:" : @"blockForShouldBegin",
+                            @"gestureRecognizer:shouldReceiveTouch:" : @"blockForShouldReceiveTouch",
+                            @"gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:" : @"blockForShouldSimultaneous",
+                            @"gestureRecognizer:shouldRequireFailureOfGestureRecognizer:" : @"blockForShouldRequireFailureOf",
+                            @"gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer:" : @"blockForShouldBeRequireToFailureBy,"
+                            }[selectorString];
+    return blockName ?: [super blockNamesForSelectorString:selectorString];
 }
 
 @end
