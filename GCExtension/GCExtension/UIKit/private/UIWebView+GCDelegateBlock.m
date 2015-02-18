@@ -11,19 +11,12 @@
 #import "NSObject+GCAccessor.h"
 #import "UIWebViewDelegateImplementationProxy.h"
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UIWebView (GCDelegateBlock)
 
 - (void)usingBlocks {
-    static char WebViewDelegateImplementationProxyKey;
-    UIWebViewDelegateImplementationProxy* webViewDelegate = objc_getAssociatedObject(self, &WebViewDelegateImplementationProxyKey);
-    if (!webViewDelegate) {
-        webViewDelegate = [[UIWebViewDelegateImplementationProxy alloc] init];
-        webViewDelegate.owner = self;
-        objc_setAssociatedObject(self, &WebViewDelegateImplementationProxyKey, webViewDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)webViewDelegate;
+    [self registerBlockProxyWithClass:[UIWebViewDelegateImplementationProxy class]];
 }
 
 

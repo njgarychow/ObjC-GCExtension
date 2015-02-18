@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "NSObject+GCAccessor.h"
 #import "UITableViewDelegateAndDataSourceImplementationProxy.h"
+#import "NSObject+GCProxyRegister.h"
 
 
 #pragma mark - UITableView+GCBlock
@@ -18,18 +19,7 @@
 @implementation UITableView (GCDelegateAndDataSourceBlock)
 
 - (void)usingBlocks {
-    static char const UITableViewDelegateAndDataSourceImplementationProxyKey;
-    UITableViewDelegateAndDataSourceImplementationProxy* implement = nil;
-    implement = objc_getAssociatedObject(self, &UITableViewDelegateAndDataSourceImplementationProxyKey);
-    if (!implement) {
-        implement = [[UITableViewDelegateAndDataSourceImplementationProxy alloc] init];
-        implement.owner = self;
-        objc_setAssociatedObject(self, &UITableViewDelegateAndDataSourceImplementationProxyKey, implement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.dataSource = nil;
-    self.delegate = (id)implement;
-    self.dataSource = (id)implement;
+    [self registerBlockProxyWithClass:[UITableViewDelegateAndDataSourceImplementationProxy class]];
 }
 
 @dynamic blockForRowCell;

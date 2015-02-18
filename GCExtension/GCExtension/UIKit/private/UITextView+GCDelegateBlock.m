@@ -11,21 +11,14 @@
 #import "UITextViewDelegateImplementationProxy.h"
 
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 
 
 @implementation UITextView (GCDelegateBlock)
 
 - (void)usingBlocks {
-    static char implementKey;
-    UITextViewDelegateImplementationProxy* implement = objc_getAssociatedObject(self, &implementKey);
-    if (!implement) {
-        implement = [[UITextViewDelegateImplementationProxy alloc] init];
-        implement.owner = self;
-        objc_setAssociatedObject(self, &implementKey, implement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)implement;
+    [self registerBlockProxyWithClass:[UITextViewDelegateImplementationProxy class]];
 }
 
 + (void)load {

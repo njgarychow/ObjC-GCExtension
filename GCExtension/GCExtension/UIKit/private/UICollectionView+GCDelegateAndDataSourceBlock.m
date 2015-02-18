@@ -9,23 +9,12 @@
 #import "UICollectionView+GCDelegateAndDataSourceBlock.h"
 #import "NSObject+GCAccessor.h"
 #import "UICollectionViewDelegateAndDataSourceImplementationProxy.h"
-#import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UICollectionView (GCDelegateAndDataSourceBlock)
 
 - (void)usingBlocks {
-    static char const UICollectionViewDelegateAndDataSourceImplementationProxyKey;
-    UICollectionViewDelegateAndDataSourceImplementationProxy* implement = nil;
-    implement = objc_getAssociatedObject(self, &UICollectionViewDelegateAndDataSourceImplementationProxyKey);
-    if (!implement) {
-        implement = [[UICollectionViewDelegateAndDataSourceImplementationProxy alloc] init];
-        implement.owner = self;
-        objc_setAssociatedObject(self, &UICollectionViewDelegateAndDataSourceImplementationProxyKey, implement, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.dataSource = nil;
-    self.delegate = (id)implement;
-    self.dataSource = (id)implement;
+    [self registerBlockProxyWithClass:[UICollectionViewDelegateAndDataSourceImplementationProxy class]];
 }
 
 

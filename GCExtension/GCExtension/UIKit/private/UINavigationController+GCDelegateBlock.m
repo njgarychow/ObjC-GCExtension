@@ -10,19 +10,12 @@
 #import "UINavigationControllerDelegateImplementionProxy.h"
 #import "NSObject+GCAccessor.h"
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UINavigationController (GCDelegateBlock)
 
 - (void)usingBlocks {
-    static char UINavigationControllerDelegateImplementionProxyKey;
-    UINavigationControllerDelegateImplementionProxy* navigationDelegate = objc_getAssociatedObject(self, &UINavigationControllerDelegateImplementionProxyKey);
-    if (!navigationDelegate) {
-        navigationDelegate = [[UINavigationControllerDelegateImplementionProxy alloc] init];
-        navigationDelegate.owner = self;
-        objc_setAssociatedObject(self, &UINavigationControllerDelegateImplementionProxyKey, navigationDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)navigationDelegate;
+    [self registerBlockProxyWithClass:[UINavigationControllerDelegateImplementionProxy class]];
 }
 
 

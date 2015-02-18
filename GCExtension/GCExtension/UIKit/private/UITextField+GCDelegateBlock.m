@@ -10,19 +10,12 @@
 #import "NSObject+GCAccessor.h"
 #import "UITextFieldDelegateImplementationProxy.h"
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UITextField (GCDelegateBlock)
 
-static char UITextFieldDelegateImplementationProxyKey;
 - (void)usingBlocks {
-    UITextFieldDelegateImplementationProxy* proxy = objc_getAssociatedObject(self, &UITextFieldDelegateImplementationProxyKey);
-    if (!proxy) {
-        proxy = [[UITextFieldDelegateImplementationProxy alloc] init];
-        proxy.owner = self;
-        objc_setAssociatedObject(self, &UITextFieldDelegateImplementationProxyKey, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)proxy;
+    [self registerBlockProxyWithClass:[UITextFieldDelegateImplementationProxy class]];
 }
 
 

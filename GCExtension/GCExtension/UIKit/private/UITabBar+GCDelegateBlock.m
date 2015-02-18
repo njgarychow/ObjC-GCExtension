@@ -11,19 +11,12 @@
 #import "UITabbarDelegateImplementationProxy.h"
 #import "NSObject+GCAccessor.h"
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UITabBar (GCDelegateBlock)
 
 - (void)usingBlocks {
-    static char UITabbarDelegateImplementationProxyKey;
-    UITabbarDelegateImplementationProxy* tabbarDelegate = objc_getAssociatedObject(self, &UITabbarDelegateImplementationProxyKey);
-    if (!tabbarDelegate) {
-        tabbarDelegate = [[UITabbarDelegateImplementationProxy alloc] init];
-        tabbarDelegate.owner = self;
-        objc_setAssociatedObject(self, &UITabbarDelegateImplementationProxyKey, tabbarDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)tabbarDelegate;
+    [self registerBlockProxyWithClass:[UITabbarDelegateImplementationProxy class]];
 }
 
 

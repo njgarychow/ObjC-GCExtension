@@ -9,22 +9,12 @@
 #import "UIScrollView+GCDelegateBlock.h"
 #import "UIScrollViewDelegateImplementationProxy.h"
 #import "NSObject+GCAccessor.h"
-
-@interface UIScrollView (GCDelegateBlockProperty)
-
-@property (nonatomic, strong) UIScrollViewDelegateImplementationProxy* implementation;
-
-@end
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UIScrollView (GCDelegateBlock)
 
 - (void)usingBlocks {
-    if (!self.implementation) {
-        self.implementation = [[UIScrollViewDelegateImplementationProxy alloc] init];
-        self.implementation.owner = self;
-    }
-    self.delegate = nil;
-    self.delegate = (id)self.implementation;
+    [self registerBlockProxyWithClass:[UIScrollViewDelegateImplementationProxy class]];
 }
 
 @dynamic blockForDidScroll;
@@ -45,9 +35,6 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
-    return @[@"implementation"];
-}
 + (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
     return @[@"blockForDidScroll",
              @"blockForWillBeginDragging",

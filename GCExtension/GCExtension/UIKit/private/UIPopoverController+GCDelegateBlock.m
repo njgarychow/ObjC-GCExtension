@@ -10,19 +10,12 @@
 #import "UIPopoverControllerImplementationProxy.h"
 #import "NSObject+GCAccessor.h"
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UIPopoverController (GCDelegateBlock)
 
 - (void)usingBlocks {
-    static char UIPopoverControllerImplementationProxyKey;
-    UIPopoverControllerImplementationProxy* toolbarDelegate = objc_getAssociatedObject(self, &UIPopoverControllerImplementationProxyKey);
-    if (!toolbarDelegate) {
-        toolbarDelegate = [[UIPopoverControllerImplementationProxy alloc] init];
-        toolbarDelegate.owner = self;
-        objc_setAssociatedObject(self, &UIPopoverControllerImplementationProxyKey, toolbarDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)toolbarDelegate;
+    [self registerBlockProxyWithClass:[UIPopoverControllerImplementationProxy class]];
 }
 
 @dynamic blockForWillRepositionToRectInView;

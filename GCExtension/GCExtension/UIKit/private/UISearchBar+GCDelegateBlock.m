@@ -10,19 +10,12 @@
 #import "UISearchBarDelegateImplementationProxy.h"
 #import "NSObject+GCAccessor.h"
 #import <objc/runtime.h>
+#import "NSObject+GCProxyRegister.h"
 
 @implementation UISearchBar (GCDelegateBlock)
 
 - (void)usingBlocks {
-    static char UISearchBarDelegateImplementationProxyKey;
-    UISearchBarDelegateImplementationProxy* searchbarDelegate = objc_getAssociatedObject(self, &UISearchBarDelegateImplementationProxyKey);
-    if (!searchbarDelegate) {
-        searchbarDelegate = [[UISearchBarDelegateImplementationProxy alloc] init];
-        searchbarDelegate.owner = self;
-        objc_setAssociatedObject(self, &UISearchBarDelegateImplementationProxyKey, searchbarDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    self.delegate = nil;
-    self.delegate = (id)searchbarDelegate;
+    [self registerBlockProxyWithClass:[UISearchBarDelegateImplementationProxy class]];
 }
 
 @dynamic blockForTextDidChange;

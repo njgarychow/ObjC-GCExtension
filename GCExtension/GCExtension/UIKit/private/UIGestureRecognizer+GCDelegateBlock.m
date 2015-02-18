@@ -11,38 +11,19 @@
 #import "GCMacro.h"
 #import "NSObject+GCAccessor.h"
 #import "UIGestureRecognizerDelegateImplementProxy.h"
+#import "NSObject+GCProxyRegister.h"
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-@interface UIGestureRecognizer (GCDelegateBlockProperty)
-@property (nonatomic, strong) UIGestureRecognizerDelegateImplementProxy* implement;
-@end
-
-@implementation UIGestureRecognizer (GCDelegateBlockProperty)
-@dynamic implement;
-@end
 
 
 @implementation UIGestureRecognizer (GCDelegateBlock)
 
 - (void)usingBlocks {
-    if (!self.implement) {
-        self.implement = [[UIGestureRecognizerDelegateImplementProxy alloc] init];
-        self.implement.owner = self;
-    }
-    self.delegate = nil;
-    self.delegate = (id)self.implement;
+    [self registerBlockProxyWithClass:[UIGestureRecognizerDelegateImplementProxy class]];
 }
 
 
@@ -65,8 +46,5 @@
              @"blockForShouldBeRequireToFailureBy"];
 }
 
-+ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
-    return @[@"implement"];
-}
 
 @end
