@@ -179,7 +179,7 @@
                             @"sectionIndexTitlesForTableView:" : @"blockForSectionIndexTitles",
                             @"tableView:sectionForSectionIndexTitle:atIndex:" : @"blockForSectionIndex",
                             @"tableView:titleForFooterInSection:" : @"blockForFooterTitle",
-                            @"tableView:titleForHeaderInSection:" : @"blockForHeaderHeight",
+                            @"tableView:titleForHeaderInSection:" : @"blockForHeaderTitle",
                             @"tableView:commitEditingStyle:forRowAtIndexPath:" : @"blockForRowCommitEditStyleForRow",
                             @"tableView:canEditRowAtIndexPath:" : @"blockForRowCanEditRow",
                             @"tableView:canMoveRowAtIndexPath:" : @"blockForRowCanMoveRow",

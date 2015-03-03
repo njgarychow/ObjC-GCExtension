@@ -18,7 +18,7 @@
     static char const NSObjectImplementationProxyKey;
     GCImplementationProxy* proxy = nil;
     proxy = objc_getAssociatedObject(self, &NSObjectImplementationProxyKey);
-    if (!proxy) {
+    if (object_getClass(proxy) != proxyClass) {
         proxy = [[proxyClass alloc] init];
         objc_setAssociatedObject(self, &NSObjectImplementationProxyKey, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         proxy.owner = self;
