@@ -77,8 +77,6 @@
 		6127C6551A7145AD0030E114 /* UITextView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6127C6531A7145AD0030E114 /* UITextView+GCDelegate.m */; };
 		6127C6581A7145C30030E114 /* UIWebView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6127C6561A7145C30030E114 /* UIWebView+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6127C6591A7145C30030E114 /* UIWebView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6127C6571A7145C30030E114 /* UIWebView+GCDelegate.m */; };
-		612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 612ED55719AB854500CC3CF2 /* NSObject+GCJSONExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 612ED55819AB854500CC3CF2 /* NSObject+GCJSONExtension.m */; };
 		6130C0F019C74C9900B1BEA9 /* NSObject+GCKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 6130C0EE19C74C9900B1BEA9 /* NSObject+GCKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6130C0F119C74C9900B1BEA9 /* NSObject+GCKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130C0EF19C74C9900B1BEA9 /* NSObject+GCKVO.m */; };
 		615FDB551A947B0C006F237A /* NSObject+GCProxyRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 615FDB531A947B0C006F237A /* NSObject+GCProxyRegister.h */; };
@@ -235,8 +233,6 @@
 		6127C6531A7145AD0030E114 /* UITextView+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+GCDelegate.m"; sourceTree = "<group>"; };
 		6127C6561A7145C30030E114 /* UIWebView+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "UIWebView+GCDelegate.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6127C6571A7145C30030E114 /* UIWebView+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GCDelegate.m"; sourceTree = "<group>"; };
-		612ED55719AB854500CC3CF2 /* NSObject+GCJSONExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCJSONExtension.h"; sourceTree = "<group>"; };
-		612ED55819AB854500CC3CF2 /* NSObject+GCJSONExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCJSONExtension.m"; sourceTree = "<group>"; };
 		6130C0EE19C74C9900B1BEA9 /* NSObject+GCKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCKVO.h"; sourceTree = "<group>"; };
 		6130C0EF19C74C9900B1BEA9 /* NSObject+GCKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCKVO.m"; sourceTree = "<group>"; };
 		615FDB531A947B0C006F237A /* NSObject+GCProxyRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCProxyRegister.h"; sourceTree = "<group>"; };
@@ -523,8 +519,6 @@
 			children = (
 				6130C0EE19C74C9900B1BEA9 /* NSObject+GCKVO.h */,
 				6130C0EF19C74C9900B1BEA9 /* NSObject+GCKVO.m */,
-				612ED55719AB854500CC3CF2 /* NSObject+GCJSONExtension.h */,
-				612ED55819AB854500CC3CF2 /* NSObject+GCJSONExtension.m */,
 				B745FB391990B0E100B6EA49 /* NSObject+GCNotificationObserver.h */,
 				B745FB3A1990B0E100B6EA49 /* NSObject+GCNotificationObserver.m */,
 				61936B2019CF0BA300D97B25 /* NSObject+GCAccessor.h */,
@@ -600,7 +594,6 @@
 				6127C6271A7124F40030E114 /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
 				B72F543D1A8388670035A775 /* UINavigationController+GCDelegateBlock.h in Headers */,
 				6127C62D1A7124F40030E114 /* UITextField+GCDelegateBlock.h in Headers */,
-				612ED55919AB854500CC3CF2 /* NSObject+GCJSONExtension.h in Headers */,
 				61936B2219CF0BA300D97B25 /* NSObject+GCAccessor.h in Headers */,
 				6127C6141A7124F40030E114 /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
 				61225E2D1A8F6C4B00F5C3F2 /* UIToolbarDelegateImplementationProxy.h in Headers */,
@@ -706,7 +699,6 @@
 				6127C6211A7124F40030E114 /* UICollectionView+GCDelegateAndDataSourceBlock.m in Sources */,
 				61225E421A8F784000F5C3F2 /* UIPopoverController+GCDelegateBlock.m in Sources */,
 				6127C6321A7124F40030E114 /* UIWebView+GCDelegateBlock.m in Sources */,
-				612ED55A19AB854500CC3CF2 /* NSObject+GCJSONExtension.m in Sources */,
 				6127C61D1A7124F40030E114 /* UITextViewDelegateImplementationProxy.m in Sources */,
 				6127C64D1A713AC30030E114 /* UITableView+GCDelegateAndDataSource.m in Sources */,
 				61225E3E1A8F77CC00F5C3F2 /* UIPopoverController+GCDelegate.m in Sources */,

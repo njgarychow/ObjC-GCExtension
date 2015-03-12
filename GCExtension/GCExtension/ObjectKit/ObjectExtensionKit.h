@@ -10,7 +10,6 @@
 #define GCExtension_ObjectExtensionKit_h
 
 #import "NSObject+GCNotificationObserver.h"
-#import "NSObject+GCJSONExtension.h"
 #import "NSObject+GCKVO.h"
 #import "NSObject+GCAccessor.h"
 #import "NSTimer+GCBlock.h"
