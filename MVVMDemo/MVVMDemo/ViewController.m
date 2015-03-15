@@ -38,7 +38,7 @@
                                                                     style:UITableViewStylePlain];
         tableView.data = dataSources;
         //  seperate blocks into 2 files. less code in ViewController.
-        tableView.blockForRowDidSelect = ^(UITableView* tb, NSIndexPath* path) {
+        [tableView withBlockForRowDidSelect:^(UITableView *view, NSIndexPath *path) {
             NSString* item = dataSources[path.row];
             
             ViewController2* vc2 = [[ViewController2 alloc] initWithNibName:@"ViewController2" bundle:nil];
@@ -47,8 +47,7 @@
                 [weakSelf dismissViewControllerAnimated:YES completion:nil];
             };
             [weakSelf presentViewController:vc2 animated:YES completion:nil];
-        };
-        [tableView usingBlocks];
+        }];
         tableView;
     });
     [self.view addSubview:viewModel];

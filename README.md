@@ -1,19 +1,17 @@
-GCExtension
+# GCExtension
 ============
 
 
 
 
-GCExtension是一个针对苹果iOS的CocoaTouch框架的扩展。
-----------------
-
+# GCExtension是一个针对苹果iOS的CocoaTouch框架的扩展。  
 
 
 
 ##	关于target-action设计的扩展
 CocoaTouch框架大量的使用了[target-action](https://developer.apple.com/library/ios/documentation/general/conceptual/Devpedia-CocoaApp/TargetAction.html)的设计，这种设计很优秀，把事件的接收者(target)和事件的处理方法(action)动态的绑定起来，实现了高度的灵活性。
 
-GCExtension对常见的target-action进行了扩展，用block代替target-action，可以减少一些代码的复杂性，为沉重的ViewController的减少一些方法代码。
+GCExtension对常见的target-action进行了扩展，用block代替target-action，可以减少一些代码的复杂性，为沉重的ViewController的减少一些方法代码。并且可以让实现代码和触发条件在一起，有利于代码的阅读。
 
 target-action模式代码：
 
@@ -27,21 +25,6 @@ target-action模式代码：
 	}
 
 使用GCExtension：
-
-	- (void)setupButton {
-	    __weak typeof(self) weakSelf = self;
-	    UIButton* button = ...;
-	    [button addControlEvents:UIControlEventTouchUpInside
-	                      action:^(UIControl *control, NSSet *touches) {
-	                          [weakSelf actionForButton:control];
-	                      }];
-	}
-
-	- (void)actionForButton:(id)sender {
-	    NSLog(@"%@", sender);
-	}
-	
-或者写成：
 
 	- (void)setupButton {
 	    UIButton* button = ...;
@@ -63,7 +46,7 @@ MVVM虽然减轻了ViewController，但是在实际使用上也会有一些麻�
 
 GCExtension用block作为property的方式代替delegate和dataSource。让delegate和dataSource对应方法的block赋值不局限于一个类中，不再需要protocol的定义。详见：MVVMDemo。
 
-目前实现了的delegate和dataSource的类有，UIGestureRecognizer, UIScrollView, UITableView和UITextField。
+目前实现了大部分常用的delegate和dataSource的类。
 
 ##	关于Category的属性的扩展
 
@@ -73,16 +56,18 @@ Objective-C的Category是一个很强大的功能，可以在不继承的情况�
 
 GCExtension里的NSObject+GCAccessor较为简单的实现了存储属性的扩展。
 
-	/**
+	 /**
 	 *  This extension is for add properties when your extension an exist class.
 	 *  When you use this Class Extension. You must do some step as follows:
-	 *  1   invoke the method |extensionAccessorGenerator| in your class's method |+load|.
-	 *  2   overrid the extensionAccessor... methods. (exclusive |extensionAccessorGenerator|.
+	 *  1   Guarantee the property is an object.
+	 *  2   Use @property declare the property in the .h file and use @dynamic to the property.
+	 *  3   Invoke the method |extensionAccessorGenerator| in your class's method |+load|.
 	 */
+	 
 
-只需要重写Category的+load方法，调用+extensionAccessorGenerator方法。然后重写相关的方法即可(不需要的属性类型不用重写相应方法)。详见Demo：CategoryPropertyDemo。
+只需要重写Category的+load方法，调用+extensionAccessorGenerator方法。然后用@dynamic修饰相关属性即可。
 
-####	注意：不可以用于NSObject类的扩展
+####	注意：扩展的属性必须是对象（即不可以是基础类型）。
 
 ##	关于KVO的扩展
 

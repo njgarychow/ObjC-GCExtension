@@ -13,28 +13,67 @@
 		61C4794819F0163300CF8549 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C4794719F0163300CF8549 /* Images.xcassets */; };
 		61C4794B19F0163300CF8549 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C4794919F0163300CF8549 /* LaunchScreen.xib */; };
 		61C4795719F0163300CF8549 /* MVVMDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4795619F0163300CF8549 /* MVVMDemoTests.m */; };
-		61C4798E19F0166A00CF8549 /* GCAOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4796519F0166A00CF8549 /* GCAOPProxy.m */; };
-		61C4798F19F0166A00CF8549 /* NSObject+GCAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4796719F0166A00CF8549 /* NSObject+GCAccessor.m */; };
-		61C4799019F0166A00CF8549 /* NSObject+GCAOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4796919F0166A00CF8549 /* NSObject+GCAOP.m */; };
-		61C4799119F0166A00CF8549 /* NSObject+GCJSONExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4796B19F0166A00CF8549 /* NSObject+GCJSONExtension.m */; };
-		61C4799219F0166A00CF8549 /* NSObject+GCKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4796D19F0166A00CF8549 /* NSObject+GCKVO.m */; };
-		61C4799319F0166A00CF8549 /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4796F19F0166A00CF8549 /* NSObject+GCNotificationObserver.m */; };
-		61C4799419F0166A00CF8549 /* NSTimer+GCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4797119F0166A00CF8549 /* NSTimer+GCBlock.m */; };
-		61C4799519F0166A00CF8549 /* GCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4797519F0166A00CF8549 /* GCActionSheet.m */; };
-		61C4799619F0166A00CF8549 /* GCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4797719F0166A00CF8549 /* GCAlertView.m */; };
-		61C4799719F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4797A19F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.m */; };
-		61C4799819F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4797C19F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.m */; };
-		61C4799919F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4797E19F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.m */; };
-		61C4799A19F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798019F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.m */; };
-		61C4799B19F0166A00CF8549 /* UIControl+GCEventBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798219F0166A00CF8549 /* UIControl+GCEventBlock.m */; };
-		61C4799C19F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798519F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.m */; };
-		61C4799D19F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798719F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.m */; };
-		61C4799E19F0166A00CF8549 /* UIScrollView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798919F0166A00CF8549 /* UIScrollView+GCDelegateBlock.m */; };
-		61C4799F19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798B19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.m */; };
-		61C479A019F0166A00CF8549 /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C4798D19F0166A00CF8549 /* UITextField+GCDelegateBlock.m */; };
 		61C479A319F0167200CF8549 /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C479A219F0167200CF8549 /* TableViewModel.m */; };
 		61C479A719F0168E00CF8549 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C479A519F0168E00CF8549 /* ViewController2.m */; };
 		61C479A819F0168E00CF8549 /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C479A619F0168E00CF8549 /* ViewController2.xib */; };
+		61D6AD6C1AB5EF1300321DB9 /* GCAOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6ACF31AB5EF1300321DB9 /* GCAOPProxy.m */; };
+		61D6AD6D1AB5EF1300321DB9 /* NSObject+GCAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6ACF51AB5EF1300321DB9 /* NSObject+GCAccessor.m */; };
+		61D6AD6E1AB5EF1300321DB9 /* NSObject+GCAOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6ACF71AB5EF1300321DB9 /* NSObject+GCAOP.m */; };
+		61D6AD6F1AB5EF1300321DB9 /* NSObject+GCKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6ACF91AB5EF1300321DB9 /* NSObject+GCKVO.m */; };
+		61D6AD701AB5EF1300321DB9 /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6ACFB1AB5EF1300321DB9 /* NSObject+GCNotificationObserver.m */; };
+		61D6AD711AB5EF1300321DB9 /* NSTimer+GCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6ACFD1AB5EF1300321DB9 /* NSTimer+GCBlock.m */; };
+		61D6AD721AB5EF1300321DB9 /* GCImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD031AB5EF1300321DB9 /* GCImplementationProxy.m */; };
+		61D6AD731AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD051AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */; };
+		61D6AD741AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD071AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.m */; };
+		61D6AD751AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD091AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.m */; };
+		61D6AD761AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD0B1AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.m */; };
+		61D6AD771AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD0D1AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.m */; };
+		61D6AD781AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD0F1AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.m */; };
+		61D6AD791AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD111AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.m */; };
+		61D6AD7A1AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD131AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.m */; };
+		61D6AD7B1AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD151AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.m */; };
+		61D6AD7C1AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD171AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.m */; };
+		61D6AD7D1AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD191AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.m */; };
+		61D6AD7E1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD1B1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.m */; };
+		61D6AD7F1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD1D1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.m */; };
+		61D6AD801AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD1F1AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.m */; };
+		61D6AD811AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD211AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.m */; };
+		61D6AD821AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD231AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.m */; };
+		61D6AD831AB5EF1300321DB9 /* NSObject+GCProxyRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD251AB5EF1300321DB9 /* NSObject+GCProxyRegister.m */; };
+		61D6AD841AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD271AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.m */; };
+		61D6AD851AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD2A1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.m */; };
+		61D6AD861AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD2C1AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.m */; };
+		61D6AD871AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD2E1AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.m */; };
+		61D6AD881AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD301AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.m */; };
+		61D6AD891AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD321AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.m */; };
+		61D6AD8A1AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD341AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.m */; };
+		61D6AD8B1AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD361AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.m */; };
+		61D6AD8C1AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD381AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.m */; };
+		61D6AD8D1AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD3A1AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.m */; };
+		61D6AD8E1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD3C1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.m */; };
+		61D6AD8F1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD3E1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.m */; };
+		61D6AD901AB5EF1300321DB9 /* UITextField+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD401AB5EF1300321DB9 /* UITextField+GCDelegateBlock.m */; };
+		61D6AD911AB5EF1300321DB9 /* UITextView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD421AB5EF1300321DB9 /* UITextView+GCDelegateBlock.m */; };
+		61D6AD921AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD441AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.m */; };
+		61D6AD931AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD461AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.m */; };
+		61D6AD941AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD481AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.m */; };
+		61D6AD951AB5EF1300321DB9 /* UIControl+GCEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD4A1AB5EF1300321DB9 /* UIControl+GCEvent.m */; };
+		61D6AD961AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD4D1AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.m */; };
+		61D6AD971AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD4F1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.m */; };
+		61D6AD981AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD511AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.m */; };
+		61D6AD991AB5EF1300321DB9 /* UINavigationBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD531AB5EF1300321DB9 /* UINavigationBar+GCDelegate.m */; };
+		61D6AD9A1AB5EF1300321DB9 /* UINavigationController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD551AB5EF1300321DB9 /* UINavigationController+GCDelegate.m */; };
+		61D6AD9B1AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD571AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.m */; };
+		61D6AD9C1AB5EF1300321DB9 /* UIPopoverController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD591AB5EF1300321DB9 /* UIPopoverController+GCDelegate.m */; };
+		61D6AD9D1AB5EF1300321DB9 /* UIScrollView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD5B1AB5EF1300321DB9 /* UIScrollView+GCDelegate.m */; };
+		61D6AD9E1AB5EF1300321DB9 /* UISearchBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD5D1AB5EF1300321DB9 /* UISearchBar+GCDelegate.m */; };
+		61D6AD9F1AB5EF1300321DB9 /* UITabBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD5F1AB5EF1300321DB9 /* UITabBar+GCDelegate.m */; };
+		61D6ADA01AB5EF1300321DB9 /* UITabBarController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD611AB5EF1300321DB9 /* UITabBarController+GCDelegate.m */; };
+		61D6ADA11AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD631AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.m */; };
+		61D6ADA21AB5EF1300321DB9 /* UITextField+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD651AB5EF1300321DB9 /* UITextField+GCDelegate.m */; };
+		61D6ADA31AB5EF1300321DB9 /* UITextView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD671AB5EF1300321DB9 /* UITextView+GCDelegate.m */; };
+		61D6ADA41AB5EF1300321DB9 /* UIToolbar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD691AB5EF1300321DB9 /* UIToolbar+GCDelegate.m */; };
+		61D6ADA51AB5EF1300321DB9 /* UIWebView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6AD6B1AB5EF1300321DB9 /* UIWebView+GCDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,53 +99,132 @@
 		61C4795019F0163300CF8549 /* MVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C4795519F0163300CF8549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61C4795619F0163300CF8549 /* MVVMDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMDemoTests.m; sourceTree = "<group>"; };
-		61C4796119F0166A00CF8549 /* GCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCExtension.h; sourceTree = "<group>"; };
-		61C4796219F0166A00CF8549 /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
-		61C4796419F0166A00CF8549 /* GCAOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAOPProxy.h; sourceTree = "<group>"; };
-		61C4796519F0166A00CF8549 /* GCAOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAOPProxy.m; sourceTree = "<group>"; };
-		61C4796619F0166A00CF8549 /* NSObject+GCAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAccessor.h"; sourceTree = "<group>"; };
-		61C4796719F0166A00CF8549 /* NSObject+GCAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAccessor.m"; sourceTree = "<group>"; };
-		61C4796819F0166A00CF8549 /* NSObject+GCAOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAOP.h"; sourceTree = "<group>"; };
-		61C4796919F0166A00CF8549 /* NSObject+GCAOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAOP.m"; sourceTree = "<group>"; };
-		61C4796A19F0166A00CF8549 /* NSObject+GCJSONExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCJSONExtension.h"; sourceTree = "<group>"; };
-		61C4796B19F0166A00CF8549 /* NSObject+GCJSONExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCJSONExtension.m"; sourceTree = "<group>"; };
-		61C4796C19F0166A00CF8549 /* NSObject+GCKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCKVO.h"; sourceTree = "<group>"; };
-		61C4796D19F0166A00CF8549 /* NSObject+GCKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCKVO.m"; sourceTree = "<group>"; };
-		61C4796E19F0166A00CF8549 /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
-		61C4796F19F0166A00CF8549 /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
-		61C4797019F0166A00CF8549 /* NSTimer+GCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GCBlock.h"; sourceTree = "<group>"; };
-		61C4797119F0166A00CF8549 /* NSTimer+GCBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GCBlock.m"; sourceTree = "<group>"; };
-		61C4797219F0166A00CF8549 /* ObjectExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionKit.h; sourceTree = "<group>"; };
-		61C4797419F0166A00CF8549 /* GCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCActionSheet.h; sourceTree = "<group>"; };
-		61C4797519F0166A00CF8549 /* GCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCActionSheet.m; sourceTree = "<group>"; };
-		61C4797619F0166A00CF8549 /* GCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAlertView.h; sourceTree = "<group>"; };
-		61C4797719F0166A00CF8549 /* GCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAlertView.m; sourceTree = "<group>"; };
-		61C4797919F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGestureRecognizerDelegateImplementProxy.h; sourceTree = "<group>"; };
-		61C4797A19F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGestureRecognizerDelegateImplementProxy.m; sourceTree = "<group>"; };
-		61C4797B19F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
-		61C4797C19F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
-		61C4797D19F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDelegateAndDataSourceImplementationProxy.h; sourceTree = "<group>"; };
-		61C4797E19F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDelegateAndDataSourceImplementationProxy.m; sourceTree = "<group>"; };
-		61C4797F19F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDelegateImplementationProxy.h; sourceTree = "<group>"; };
-		61C4798019F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDelegateImplementationProxy.m; sourceTree = "<group>"; };
-		61C4798119F0166A00CF8549 /* UIControl+GCEventBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GCEventBlock.h"; sourceTree = "<group>"; };
-		61C4798219F0166A00CF8549 /* UIControl+GCEventBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GCEventBlock.m"; sourceTree = "<group>"; };
-		61C4798319F0166A00CF8549 /* UIExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtensionKit.h; sourceTree = "<group>"; };
-		61C4798419F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GCActionBlock.h"; sourceTree = "<group>"; };
-		61C4798519F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GCActionBlock.m"; sourceTree = "<group>"; };
-		61C4798619F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GCDelegateBlock.h"; sourceTree = "<group>"; };
-		61C4798719F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GCDelegateBlock.m"; sourceTree = "<group>"; };
-		61C4798819F0166A00CF8549 /* UIScrollView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GCDelegateBlock.h"; sourceTree = "<group>"; };
-		61C4798919F0166A00CF8549 /* UIScrollView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GCDelegateBlock.m"; sourceTree = "<group>"; };
-		61C4798A19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCDelegateAndDataSourceBlock.h"; sourceTree = "<group>"; };
-		61C4798B19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GCDelegateAndDataSourceBlock.m"; sourceTree = "<group>"; };
-		61C4798C19F0166A00CF8549 /* UITextField+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GCDelegateBlock.h"; sourceTree = "<group>"; };
-		61C4798D19F0166A00CF8549 /* UITextField+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegateBlock.m"; sourceTree = "<group>"; };
 		61C479A119F0167200CF8549 /* TableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewModel.h; sourceTree = "<group>"; };
 		61C479A219F0167200CF8549 /* TableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewModel.m; sourceTree = "<group>"; };
 		61C479A419F0168E00CF8549 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		61C479A519F0168E00CF8549 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		61C479A619F0168E00CF8549 /* ViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
+		61D6ACEF1AB5EF1300321DB9 /* GCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCExtension.h; sourceTree = "<group>"; };
+		61D6ACF01AB5EF1300321DB9 /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
+		61D6ACF21AB5EF1300321DB9 /* GCAOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAOPProxy.h; sourceTree = "<group>"; };
+		61D6ACF31AB5EF1300321DB9 /* GCAOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAOPProxy.m; sourceTree = "<group>"; };
+		61D6ACF41AB5EF1300321DB9 /* NSObject+GCAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAccessor.h"; sourceTree = "<group>"; };
+		61D6ACF51AB5EF1300321DB9 /* NSObject+GCAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAccessor.m"; sourceTree = "<group>"; };
+		61D6ACF61AB5EF1300321DB9 /* NSObject+GCAOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAOP.h"; sourceTree = "<group>"; };
+		61D6ACF71AB5EF1300321DB9 /* NSObject+GCAOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAOP.m"; sourceTree = "<group>"; };
+		61D6ACF81AB5EF1300321DB9 /* NSObject+GCKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCKVO.h"; sourceTree = "<group>"; };
+		61D6ACF91AB5EF1300321DB9 /* NSObject+GCKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCKVO.m"; sourceTree = "<group>"; };
+		61D6ACFA1AB5EF1300321DB9 /* NSObject+GCNotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCNotificationObserver.h"; sourceTree = "<group>"; };
+		61D6ACFB1AB5EF1300321DB9 /* NSObject+GCNotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCNotificationObserver.m"; sourceTree = "<group>"; };
+		61D6ACFC1AB5EF1300321DB9 /* NSTimer+GCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GCBlock.h"; sourceTree = "<group>"; };
+		61D6ACFD1AB5EF1300321DB9 /* NSTimer+GCBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GCBlock.m"; sourceTree = "<group>"; };
+		61D6ACFE1AB5EF1300321DB9 /* ObjectExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionKit.h; sourceTree = "<group>"; };
+		61D6AD021AB5EF1300321DB9 /* GCImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD031AB5EF1300321DB9 /* GCImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD041AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDelegateAndDataSourceImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD051AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDelegateAndDataSourceImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD061AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGestureRecognizerDelegateImplementProxy.h; sourceTree = "<group>"; };
+		61D6AD071AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGestureRecognizerDelegateImplementProxy.m; sourceTree = "<group>"; };
+		61D6AD081AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImagePickerControllerDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD091AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImagePickerControllerDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD0A1AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarDelegateImpletationProxy.h; sourceTree = "<group>"; };
+		61D6AD0B1AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarDelegateImpletationProxy.m; sourceTree = "<group>"; };
+		61D6AD0C1AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDelegateImplementionProxy.h; sourceTree = "<group>"; };
+		61D6AD0D1AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerDelegateImplementionProxy.m; sourceTree = "<group>"; };
+		61D6AD0E1AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD0F1AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD101AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverControllerImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD111AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD121AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD131AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD141AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISearchBarDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD151AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISearchBarDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD161AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabbarControllerDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD171AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabbarControllerDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD181AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabbarDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD191AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabbarDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD1A1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDelegateAndDataSourceImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD1B1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDelegateAndDataSourceImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD1C1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD1D1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD1E1AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD1F1AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD201AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIToolbarDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD211AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIToolbarDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD221AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6AD231AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDelegateImplementationProxy.m; sourceTree = "<group>"; };
+		61D6AD241AB5EF1300321DB9 /* NSObject+GCProxyRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCProxyRegister.h"; sourceTree = "<group>"; };
+		61D6AD251AB5EF1300321DB9 /* NSObject+GCProxyRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCProxyRegister.m"; sourceTree = "<group>"; };
+		61D6AD261AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+GCDelegateAndDataSourceBlock.h"; sourceTree = "<group>"; };
+		61D6AD271AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+GCDelegateAndDataSourceBlock.m"; sourceTree = "<group>"; };
+		61D6AD281AB5EF1300321DB9 /* UIExtension_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtension_Private.h; sourceTree = "<group>"; };
+		61D6AD291AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD2A1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD2B1AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD2C1AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD2D1AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD2E1AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD2F1AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD301AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD311AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+GCDelegateAndDataSourceBlock.h"; sourceTree = "<group>"; };
+		61D6AD321AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+GCDelegateAndDataSourceBlock.m"; sourceTree = "<group>"; };
+		61D6AD331AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD341AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD351AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD361AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD371AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD381AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD391AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD3A1AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD3B1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD3C1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD3D1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCDelegateAndDataSourceBlock.h"; sourceTree = "<group>"; };
+		61D6AD3E1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GCDelegateAndDataSourceBlock.m"; sourceTree = "<group>"; };
+		61D6AD3F1AB5EF1300321DB9 /* UITextField+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD401AB5EF1300321DB9 /* UITextField+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD411AB5EF1300321DB9 /* UITextView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD421AB5EF1300321DB9 /* UITextView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD431AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD441AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD451AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6AD461AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6AD471AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+GCDelegateAndDataSource.h"; sourceTree = "<group>"; };
+		61D6AD481AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+GCDelegateAndDataSource.m"; sourceTree = "<group>"; };
+		61D6AD491AB5EF1300321DB9 /* UIControl+GCEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GCEvent.h"; sourceTree = "<group>"; };
+		61D6AD4A1AB5EF1300321DB9 /* UIControl+GCEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GCEvent.m"; sourceTree = "<group>"; };
+		61D6AD4B1AB5EF1300321DB9 /* UIExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtensionKit.h; sourceTree = "<group>"; };
+		61D6AD4C1AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GCAction.h"; sourceTree = "<group>"; };
+		61D6AD4D1AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GCAction.m"; sourceTree = "<group>"; };
+		61D6AD4E1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD4F1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD501AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD511AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD521AB5EF1300321DB9 /* UINavigationBar+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD531AB5EF1300321DB9 /* UINavigationBar+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD541AB5EF1300321DB9 /* UINavigationController+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD551AB5EF1300321DB9 /* UINavigationController+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD561AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+GCDelegateAndDataSource.h"; sourceTree = "<group>"; };
+		61D6AD571AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+GCDelegateAndDataSource.m"; sourceTree = "<group>"; };
+		61D6AD581AB5EF1300321DB9 /* UIPopoverController+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD591AB5EF1300321DB9 /* UIPopoverController+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD5A1AB5EF1300321DB9 /* UIScrollView+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD5B1AB5EF1300321DB9 /* UIScrollView+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD5C1AB5EF1300321DB9 /* UISearchBar+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD5D1AB5EF1300321DB9 /* UISearchBar+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD5E1AB5EF1300321DB9 /* UITabBar+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD5F1AB5EF1300321DB9 /* UITabBar+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD601AB5EF1300321DB9 /* UITabBarController+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD611AB5EF1300321DB9 /* UITabBarController+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD621AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+GCDelegateAndDataSource.h"; sourceTree = "<group>"; };
+		61D6AD631AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GCDelegateAndDataSource.m"; sourceTree = "<group>"; };
+		61D6AD641AB5EF1300321DB9 /* UITextField+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD651AB5EF1300321DB9 /* UITextField+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD661AB5EF1300321DB9 /* UITextView+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD671AB5EF1300321DB9 /* UITextView+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD681AB5EF1300321DB9 /* UIToolbar+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD691AB5EF1300321DB9 /* UIToolbar+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6AD6A1AB5EF1300321DB9 /* UIWebView+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6AD6B1AB5EF1300321DB9 /* UIWebView+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GCDelegate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +248,7 @@
 		61C4792E19F0163300CF8549 = {
 			isa = PBXGroup;
 			children = (
-				61C4796019F0166A00CF8549 /* GCExtension */,
+				61D6ACEE1AB5EF1300321DB9 /* GCExtension */,
 				61C4793919F0163300CF8549 /* MVVMDemo */,
 				61C4795319F0163300CF8549 /* MVVMDemoTests */,
 				61C4793819F0163300CF8549 /* Products */,
@@ -191,76 +309,163 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61C4796019F0166A00CF8549 /* GCExtension */ = {
+		61D6ACEE1AB5EF1300321DB9 /* GCExtension */ = {
 			isa = PBXGroup;
 			children = (
-				61C4796119F0166A00CF8549 /* GCExtension.h */,
-				61C4796219F0166A00CF8549 /* GCMacro.h */,
-				61C4796319F0166A00CF8549 /* ObjectKit */,
-				61C4797319F0166A00CF8549 /* UIKit */,
+				61D6ACEF1AB5EF1300321DB9 /* GCExtension.h */,
+				61D6ACF01AB5EF1300321DB9 /* GCMacro.h */,
+				61D6ACF11AB5EF1300321DB9 /* ObjectKit */,
+				61D6ACFF1AB5EF1300321DB9 /* UIKit */,
 			);
 			name = GCExtension;
 			path = ../GCExtension/GCExtension;
 			sourceTree = "<group>";
 		};
-		61C4796319F0166A00CF8549 /* ObjectKit */ = {
+		61D6ACF11AB5EF1300321DB9 /* ObjectKit */ = {
 			isa = PBXGroup;
 			children = (
-				61C4796419F0166A00CF8549 /* GCAOPProxy.h */,
-				61C4796519F0166A00CF8549 /* GCAOPProxy.m */,
-				61C4796619F0166A00CF8549 /* NSObject+GCAccessor.h */,
-				61C4796719F0166A00CF8549 /* NSObject+GCAccessor.m */,
-				61C4796819F0166A00CF8549 /* NSObject+GCAOP.h */,
-				61C4796919F0166A00CF8549 /* NSObject+GCAOP.m */,
-				61C4796A19F0166A00CF8549 /* NSObject+GCJSONExtension.h */,
-				61C4796B19F0166A00CF8549 /* NSObject+GCJSONExtension.m */,
-				61C4796C19F0166A00CF8549 /* NSObject+GCKVO.h */,
-				61C4796D19F0166A00CF8549 /* NSObject+GCKVO.m */,
-				61C4796E19F0166A00CF8549 /* NSObject+GCNotificationObserver.h */,
-				61C4796F19F0166A00CF8549 /* NSObject+GCNotificationObserver.m */,
-				61C4797019F0166A00CF8549 /* NSTimer+GCBlock.h */,
-				61C4797119F0166A00CF8549 /* NSTimer+GCBlock.m */,
-				61C4797219F0166A00CF8549 /* ObjectExtensionKit.h */,
+				61D6ACF21AB5EF1300321DB9 /* GCAOPProxy.h */,
+				61D6ACF31AB5EF1300321DB9 /* GCAOPProxy.m */,
+				61D6ACF41AB5EF1300321DB9 /* NSObject+GCAccessor.h */,
+				61D6ACF51AB5EF1300321DB9 /* NSObject+GCAccessor.m */,
+				61D6ACF61AB5EF1300321DB9 /* NSObject+GCAOP.h */,
+				61D6ACF71AB5EF1300321DB9 /* NSObject+GCAOP.m */,
+				61D6ACF81AB5EF1300321DB9 /* NSObject+GCKVO.h */,
+				61D6ACF91AB5EF1300321DB9 /* NSObject+GCKVO.m */,
+				61D6ACFA1AB5EF1300321DB9 /* NSObject+GCNotificationObserver.h */,
+				61D6ACFB1AB5EF1300321DB9 /* NSObject+GCNotificationObserver.m */,
+				61D6ACFC1AB5EF1300321DB9 /* NSTimer+GCBlock.h */,
+				61D6ACFD1AB5EF1300321DB9 /* NSTimer+GCBlock.m */,
+				61D6ACFE1AB5EF1300321DB9 /* ObjectExtensionKit.h */,
 			);
 			path = ObjectKit;
 			sourceTree = "<group>";
 		};
-		61C4797319F0166A00CF8549 /* UIKit */ = {
+		61D6ACFF1AB5EF1300321DB9 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				61C4797419F0166A00CF8549 /* GCActionSheet.h */,
-				61C4797519F0166A00CF8549 /* GCActionSheet.m */,
-				61C4797619F0166A00CF8549 /* GCAlertView.h */,
-				61C4797719F0166A00CF8549 /* GCAlertView.m */,
-				61C4797819F0166A00CF8549 /* GCDelegateImplementationProxy */,
-				61C4798119F0166A00CF8549 /* UIControl+GCEventBlock.h */,
-				61C4798219F0166A00CF8549 /* UIControl+GCEventBlock.m */,
-				61C4798319F0166A00CF8549 /* UIExtensionKit.h */,
-				61C4798419F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.h */,
-				61C4798519F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.m */,
-				61C4798619F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.h */,
-				61C4798719F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.m */,
-				61C4798819F0166A00CF8549 /* UIScrollView+GCDelegateBlock.h */,
-				61C4798919F0166A00CF8549 /* UIScrollView+GCDelegateBlock.m */,
-				61C4798A19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.h */,
-				61C4798B19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.m */,
-				61C4798C19F0166A00CF8549 /* UITextField+GCDelegateBlock.h */,
-				61C4798D19F0166A00CF8549 /* UITextField+GCDelegateBlock.m */,
+				61D6AD001AB5EF1300321DB9 /* private */,
+				61D6AD471AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.h */,
+				61D6AD481AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.m */,
+				61D6AD491AB5EF1300321DB9 /* UIControl+GCEvent.h */,
+				61D6AD4A1AB5EF1300321DB9 /* UIControl+GCEvent.m */,
+				61D6AD4B1AB5EF1300321DB9 /* UIExtensionKit.h */,
+				61D6AD4C1AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.h */,
+				61D6AD4D1AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.m */,
+				61D6AD4E1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.h */,
+				61D6AD4F1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.m */,
+				61D6AD501AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.h */,
+				61D6AD511AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.m */,
+				61D6AD521AB5EF1300321DB9 /* UINavigationBar+GCDelegate.h */,
+				61D6AD531AB5EF1300321DB9 /* UINavigationBar+GCDelegate.m */,
+				61D6AD541AB5EF1300321DB9 /* UINavigationController+GCDelegate.h */,
+				61D6AD551AB5EF1300321DB9 /* UINavigationController+GCDelegate.m */,
+				61D6AD561AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.h */,
+				61D6AD571AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.m */,
+				61D6AD581AB5EF1300321DB9 /* UIPopoverController+GCDelegate.h */,
+				61D6AD591AB5EF1300321DB9 /* UIPopoverController+GCDelegate.m */,
+				61D6AD5A1AB5EF1300321DB9 /* UIScrollView+GCDelegate.h */,
+				61D6AD5B1AB5EF1300321DB9 /* UIScrollView+GCDelegate.m */,
+				61D6AD5C1AB5EF1300321DB9 /* UISearchBar+GCDelegate.h */,
+				61D6AD5D1AB5EF1300321DB9 /* UISearchBar+GCDelegate.m */,
+				61D6AD5E1AB5EF1300321DB9 /* UITabBar+GCDelegate.h */,
+				61D6AD5F1AB5EF1300321DB9 /* UITabBar+GCDelegate.m */,
+				61D6AD601AB5EF1300321DB9 /* UITabBarController+GCDelegate.h */,
+				61D6AD611AB5EF1300321DB9 /* UITabBarController+GCDelegate.m */,
+				61D6AD621AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.h */,
+				61D6AD631AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.m */,
+				61D6AD641AB5EF1300321DB9 /* UITextField+GCDelegate.h */,
+				61D6AD651AB5EF1300321DB9 /* UITextField+GCDelegate.m */,
+				61D6AD661AB5EF1300321DB9 /* UITextView+GCDelegate.h */,
+				61D6AD671AB5EF1300321DB9 /* UITextView+GCDelegate.m */,
+				61D6AD681AB5EF1300321DB9 /* UIToolbar+GCDelegate.h */,
+				61D6AD691AB5EF1300321DB9 /* UIToolbar+GCDelegate.m */,
+				61D6AD6A1AB5EF1300321DB9 /* UIWebView+GCDelegate.h */,
+				61D6AD6B1AB5EF1300321DB9 /* UIWebView+GCDelegate.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		61C4797819F0166A00CF8549 /* GCDelegateImplementationProxy */ = {
+		61D6AD001AB5EF1300321DB9 /* private */ = {
 			isa = PBXGroup;
 			children = (
-				61C4797919F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.h */,
-				61C4797A19F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.m */,
-				61C4797B19F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.h */,
-				61C4797C19F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.m */,
-				61C4797D19F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.h */,
-				61C4797E19F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.m */,
-				61C4797F19F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.h */,
-				61C4798019F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.m */,
+				61D6AD011AB5EF1300321DB9 /* GCDelegateImplementationProxy */,
+				61D6AD241AB5EF1300321DB9 /* NSObject+GCProxyRegister.h */,
+				61D6AD251AB5EF1300321DB9 /* NSObject+GCProxyRegister.m */,
+				61D6AD261AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.h */,
+				61D6AD271AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.m */,
+				61D6AD281AB5EF1300321DB9 /* UIExtension_Private.h */,
+				61D6AD291AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.h */,
+				61D6AD2A1AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.m */,
+				61D6AD2B1AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.h */,
+				61D6AD2C1AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.m */,
+				61D6AD2D1AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.h */,
+				61D6AD2E1AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.m */,
+				61D6AD2F1AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.h */,
+				61D6AD301AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.m */,
+				61D6AD311AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.h */,
+				61D6AD321AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.m */,
+				61D6AD331AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.h */,
+				61D6AD341AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.m */,
+				61D6AD351AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.h */,
+				61D6AD361AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.m */,
+				61D6AD371AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.h */,
+				61D6AD381AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.m */,
+				61D6AD391AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.h */,
+				61D6AD3A1AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.m */,
+				61D6AD3B1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.h */,
+				61D6AD3C1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.m */,
+				61D6AD3D1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.h */,
+				61D6AD3E1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.m */,
+				61D6AD3F1AB5EF1300321DB9 /* UITextField+GCDelegateBlock.h */,
+				61D6AD401AB5EF1300321DB9 /* UITextField+GCDelegateBlock.m */,
+				61D6AD411AB5EF1300321DB9 /* UITextView+GCDelegateBlock.h */,
+				61D6AD421AB5EF1300321DB9 /* UITextView+GCDelegateBlock.m */,
+				61D6AD431AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.h */,
+				61D6AD441AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.m */,
+				61D6AD451AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.h */,
+				61D6AD461AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.m */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		61D6AD011AB5EF1300321DB9 /* GCDelegateImplementationProxy */ = {
+			isa = PBXGroup;
+			children = (
+				61D6AD021AB5EF1300321DB9 /* GCImplementationProxy.h */,
+				61D6AD031AB5EF1300321DB9 /* GCImplementationProxy.m */,
+				61D6AD041AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.h */,
+				61D6AD051AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m */,
+				61D6AD061AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.h */,
+				61D6AD071AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.m */,
+				61D6AD081AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.h */,
+				61D6AD091AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.m */,
+				61D6AD0A1AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.h */,
+				61D6AD0B1AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.m */,
+				61D6AD0C1AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.h */,
+				61D6AD0D1AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.m */,
+				61D6AD0E1AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.h */,
+				61D6AD0F1AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.m */,
+				61D6AD101AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.h */,
+				61D6AD111AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.m */,
+				61D6AD121AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.h */,
+				61D6AD131AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.m */,
+				61D6AD141AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.h */,
+				61D6AD151AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.m */,
+				61D6AD161AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.h */,
+				61D6AD171AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.m */,
+				61D6AD181AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.h */,
+				61D6AD191AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.m */,
+				61D6AD1A1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.h */,
+				61D6AD1B1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.m */,
+				61D6AD1C1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.h */,
+				61D6AD1D1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.m */,
+				61D6AD1E1AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.h */,
+				61D6AD1F1AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.m */,
+				61D6AD201AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.h */,
+				61D6AD211AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.m */,
+				61D6AD221AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.h */,
+				61D6AD231AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -365,30 +570,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61C4799419F0166A00CF8549 /* NSTimer+GCBlock.m in Sources */,
-				61C4799919F0166A00CF8549 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */,
-				61C4799819F0166A00CF8549 /* UIScrollViewDelegateImplementationProxy.m in Sources */,
-				61C4799C19F0166A00CF8549 /* UIGestureRecognizer+GCActionBlock.m in Sources */,
-				61C4799D19F0166A00CF8549 /* UIGestureRecognizer+GCDelegateBlock.m in Sources */,
+				61D6AD701AB5EF1300321DB9 /* NSObject+GCNotificationObserver.m in Sources */,
+				61D6AD961AB5EF1300321DB9 /* UIGestureRecognizer+GCAction.m in Sources */,
+				61D6AD7B1AB5EF1300321DB9 /* UISearchBarDelegateImplementationProxy.m in Sources */,
+				61D6AD991AB5EF1300321DB9 /* UINavigationBar+GCDelegate.m in Sources */,
+				61D6AD861AB5EF1300321DB9 /* UIImagePickerController+GCDelegateBlock.m in Sources */,
+				61D6AD841AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSourceBlock.m in Sources */,
+				61D6AD6E1AB5EF1300321DB9 /* NSObject+GCAOP.m in Sources */,
+				61D6AD801AB5EF1300321DB9 /* UITextViewDelegateImplementationProxy.m in Sources */,
 				61C479A719F0168E00CF8549 /* ViewController2.m in Sources */,
+				61D6AD8B1AB5EF1300321DB9 /* UIScrollView+GCDelegateBlock.m in Sources */,
+				61D6AD8F1AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */,
+				61D6AD791AB5EF1300321DB9 /* UIPopoverControllerImplementationProxy.m in Sources */,
+				61D6ADA31AB5EF1300321DB9 /* UITextView+GCDelegate.m in Sources */,
+				61D6AD9E1AB5EF1300321DB9 /* UISearchBar+GCDelegate.m in Sources */,
+				61D6AD911AB5EF1300321DB9 /* UITextView+GCDelegateBlock.m in Sources */,
 				61C479A319F0167200CF8549 /* TableViewModel.m in Sources */,
-				61C4799219F0166A00CF8549 /* NSObject+GCKVO.m in Sources */,
-				61C4799519F0166A00CF8549 /* GCActionSheet.m in Sources */,
-				61C4799019F0166A00CF8549 /* NSObject+GCAOP.m in Sources */,
+				61D6AD821AB5EF1300321DB9 /* UIWebViewDelegateImplementationProxy.m in Sources */,
+				61D6AD9F1AB5EF1300321DB9 /* UITabBar+GCDelegate.m in Sources */,
+				61D6AD721AB5EF1300321DB9 /* GCImplementationProxy.m in Sources */,
+				61D6ADA21AB5EF1300321DB9 /* UITextField+GCDelegate.m in Sources */,
+				61D6AD871AB5EF1300321DB9 /* UINavigationBar+GCDelegateBlock.m in Sources */,
 				61C4794319F0163300CF8549 /* ViewController.m in Sources */,
-				61C4799619F0166A00CF8549 /* GCAlertView.m in Sources */,
-				61C479A019F0166A00CF8549 /* UITextField+GCDelegateBlock.m in Sources */,
-				61C4799119F0166A00CF8549 /* NSObject+GCJSONExtension.m in Sources */,
-				61C4798F19F0166A00CF8549 /* NSObject+GCAccessor.m in Sources */,
-				61C4799E19F0166A00CF8549 /* UIScrollView+GCDelegateBlock.m in Sources */,
-				61C4799F19F0166A00CF8549 /* UITableView+GCDelegateAndDataSourceBlock.m in Sources */,
+				61D6AD9C1AB5EF1300321DB9 /* UIPopoverController+GCDelegate.m in Sources */,
+				61D6AD9D1AB5EF1300321DB9 /* UIScrollView+GCDelegate.m in Sources */,
+				61D6AD6C1AB5EF1300321DB9 /* GCAOPProxy.m in Sources */,
+				61D6AD981AB5EF1300321DB9 /* UIImagePickerController+GCDelegate.m in Sources */,
+				61D6AD731AB5EF1300321DB9 /* UICollectionViewDelegateAndDataSourceImplementationProxy.m in Sources */,
+				61D6ADA51AB5EF1300321DB9 /* UIWebView+GCDelegate.m in Sources */,
+				61D6AD7E1AB5EF1300321DB9 /* UITableViewDelegateAndDataSourceImplementationProxy.m in Sources */,
+				61D6ADA41AB5EF1300321DB9 /* UIToolbar+GCDelegate.m in Sources */,
+				61D6AD891AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSourceBlock.m in Sources */,
+				61D6AD941AB5EF1300321DB9 /* UICollectionView+GCDelegateAndDataSource.m in Sources */,
+				61D6AD9A1AB5EF1300321DB9 /* UINavigationController+GCDelegate.m in Sources */,
+				61D6AD781AB5EF1300321DB9 /* UIPickerViewDelegateImplementationProxy.m in Sources */,
+				61D6ADA01AB5EF1300321DB9 /* UITabBarController+GCDelegate.m in Sources */,
+				61D6AD6F1AB5EF1300321DB9 /* NSObject+GCKVO.m in Sources */,
+				61D6AD921AB5EF1300321DB9 /* UIToolbar+GCDelegateBlock.m in Sources */,
+				61D6AD971AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegate.m in Sources */,
+				61D6AD771AB5EF1300321DB9 /* UINavigationControllerDelegateImplementionProxy.m in Sources */,
+				61D6AD7F1AB5EF1300321DB9 /* UITextFieldDelegateImplementationProxy.m in Sources */,
+				61D6AD741AB5EF1300321DB9 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
+				61D6AD761AB5EF1300321DB9 /* UINavigationBarDelegateImpletationProxy.m in Sources */,
+				61D6AD951AB5EF1300321DB9 /* UIControl+GCEvent.m in Sources */,
+				61D6AD8E1AB5EF1300321DB9 /* UITabBarController+GCDelegateBlock.m in Sources */,
+				61D6AD9B1AB5EF1300321DB9 /* UIPickerView+GCDelegateAndDataSource.m in Sources */,
+				61D6AD8D1AB5EF1300321DB9 /* UITabBar+GCDelegateBlock.m in Sources */,
+				61D6AD8C1AB5EF1300321DB9 /* UISearchBar+GCDelegateBlock.m in Sources */,
+				61D6AD7C1AB5EF1300321DB9 /* UITabbarControllerDelegateImplementationProxy.m in Sources */,
+				61D6AD851AB5EF1300321DB9 /* UIGestureRecognizer+GCDelegateBlock.m in Sources */,
+				61D6ADA11AB5EF1300321DB9 /* UITableView+GCDelegateAndDataSource.m in Sources */,
+				61D6AD931AB5EF1300321DB9 /* UIWebView+GCDelegateBlock.m in Sources */,
+				61D6AD881AB5EF1300321DB9 /* UINavigationController+GCDelegateBlock.m in Sources */,
+				61D6AD831AB5EF1300321DB9 /* NSObject+GCProxyRegister.m in Sources */,
+				61D6AD711AB5EF1300321DB9 /* NSTimer+GCBlock.m in Sources */,
+				61D6AD7D1AB5EF1300321DB9 /* UITabbarDelegateImplementationProxy.m in Sources */,
+				61D6AD6D1AB5EF1300321DB9 /* NSObject+GCAccessor.m in Sources */,
+				61D6AD811AB5EF1300321DB9 /* UIToolbarDelegateImplementationProxy.m in Sources */,
+				61D6AD901AB5EF1300321DB9 /* UITextField+GCDelegateBlock.m in Sources */,
 				61C4794019F0163300CF8549 /* AppDelegate.m in Sources */,
+				61D6AD8A1AB5EF1300321DB9 /* UIPopoverController+GCDelegateBlock.m in Sources */,
+				61D6AD751AB5EF1300321DB9 /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */,
 				61C4793D19F0163300CF8549 /* main.m in Sources */,
-				61C4799719F0166A00CF8549 /* UIGestureRecognizerDelegateImplementProxy.m in Sources */,
-				61C4799A19F0166A00CF8549 /* UITextFieldDelegateImplementationProxy.m in Sources */,
-				61C4798E19F0166A00CF8549 /* GCAOPProxy.m in Sources */,
-				61C4799319F0166A00CF8549 /* NSObject+GCNotificationObserver.m in Sources */,
-				61C4799B19F0166A00CF8549 /* UIControl+GCEventBlock.m in Sources */,
+				61D6AD7A1AB5EF1300321DB9 /* UIScrollViewDelegateImplementationProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +817,7 @@
 				61C4795C19F0163300CF8549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61C4795D19F0163300CF8549 /* Build configuration list for PBXNativeTarget "MVVMDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +826,7 @@
 				61C4795F19F0163300CF8549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

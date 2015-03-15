@@ -12,10 +12,6 @@
 
 @implementation GCObject (CategoryProperty)
 
-+ (void)load {
-    [self extensionAccessorGenerator];
-}
-
 @dynamic nonStrongArray;
 @dynamic nonCopyArray;
 @dynamic nonWeakArray;
@@ -23,23 +19,8 @@
 @dynamic atomicCopyArray;
 @dynamic atomicWeakArray;
 
-+ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
-    return @[@"nonStrongArray"];
-}
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"nonCopyArray"];
-}
-+ (NSArray *)extensionAccessorNonatomicWeakPropertyNames {
-    return @[@"nonWeakArray"];
-}
-+ (NSArray *)extensionAccessorAtomicStrongPropertyNames {
-    return @[@"atomicStrongArray"];
-}
-+ (NSArray *)extensionAccessorAtomicCopyPropertyNames {
-    return @[@"atomicCopyArray"];
-}
-+ (NSArray *)extensionAccessorAtomicWeakPropertyNames {
-    return @[@"atomicWeakArray"];
++ (void)load {
+    [self extensionAccessorGenerator];
 }
 
 @end

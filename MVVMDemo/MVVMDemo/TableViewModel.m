@@ -25,18 +25,18 @@
     [self registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseIdentifier];
     
     __weak typeof(self) weakSelf = self;
-    self.blockForRowNumber = ^(UITableView* tb, int section) {
-        return (int)[weakSelf.data count];
-    };
-    self.blockForRowHeight = ^(UITableView* tb, NSIndexPath* path) {
+    [self withBlockForRowNumber:^NSInteger(UITableView *view, NSInteger section) {
+        return [weakSelf.data count];
+    }];
+    [self withBlockForRowHeight:^CGFloat(UITableView *view, NSIndexPath *path) {
         return (float)(arc4random() % 100 + 50);
-    };
-    self.blockForRowCell = ^(UITableView* tb, NSIndexPath* path) {
+    }];
+    [self withBlockForRowCell:^UITableViewCell *(UITableView *view, NSIndexPath *path) {
         UITableViewCell* cell = [weakSelf dequeueReusableCellWithIdentifier:reuseIdentifier
                                                                forIndexPath:path];
         cell.textLabel.text = weakSelf.data[path.row];
         return cell;
-    };
+    }];
 }
 
 @end
