@@ -50,32 +50,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForItemNumber",
-             @"blockForSectionNumber",
-             @"blockForItemCell",
-             @"blockForSupplementaryElement",
-             @"blockForItemShouldSelect",
-             @"blockForItemDidSelect",
-             @"blockForItemShouldDeselect",
-             @"blockForItemDidDeselect",
-             @"blockForItemShouldHighlight",
-             @"blockForItemDidHighlight",
-             @"blockForItemDidUnhighlight",
-             @"blockForItemWillDisplay",
-             @"blockForSupplementaryWillDisplay",
-             @"blockForItemCellDidEndDisplay",
-             @"blockForSupplementaryDidEndDisplay",
-             @"blockForLayoutTransition",
-             @"blockForItemMenuShouldShow",
-             @"blockForItemCanPerformAction",
-             @"blockForItemPerformAction",
-             @"blockForFlowLayoutSize",
-             @"blockForFlowLayoutSectionInset",
-             @"blockForFlowLayoutSectionMinimumSpacing",
-             @"blockForFlowLayoutSectionMinimumInteritemSpacing",
-             @"blockForFlowLayoutHeaderReferenceSize",
-             @"blockForFlowLayoutFooterReferenceSize"];
-}
-
 @end

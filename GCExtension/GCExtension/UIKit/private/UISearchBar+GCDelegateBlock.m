@@ -35,19 +35,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForTextDidChange",
-             @"blockForShouldChangeText",
-             @"blockForShouldBeginEditing",
-             @"blockForTextDidBeginEditing",
-             @"blockForShouldEndEditing",
-             @"blockForTextDidEndEditing",
-             @"blockForBookmarkButtonClicked",
-             @"blockForCancelButtonClicked",
-             @"blockForSearchButtonClicked",
-             @"blockForResultsListButtonClicked",
-             @"blockForSelectedScopeButtonIndexDidChange",
-             @"blockForPosition"];
-}
-
 @end

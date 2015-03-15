@@ -28,9 +28,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForDidFinishPickingMedia",
-             @"blockForDidCancel"];
-}
-
 @end

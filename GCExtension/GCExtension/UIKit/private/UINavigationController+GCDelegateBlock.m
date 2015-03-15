@@ -31,13 +31,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForWillShowViewController",
-             @"blockForDidShowViewController",
-             @"blockForAnimationForOperation",
-             @"blockForInteractionController",
-             @"blockForPreferedInterfaceOrientation",
-             @"blockForSupportedInterfaceOrientation"];
-}
-
 @end

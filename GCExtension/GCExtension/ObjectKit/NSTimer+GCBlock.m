@@ -23,9 +23,6 @@ GCBlockProperty GCTimerActionBlock action;
 + (void)load {
     [self extensionAccessorGenerator];
 }
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"action"];
-}
 
 @end
 

@@ -35,20 +35,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForDidScroll",
-             @"blockForWillBeginDragging",
-             @"blockForWillEndDragging",
-             @"blockForDidEndDragging",
-             @"blockForShouldScrollToTop",
-             @"blockForDidScrollToTop",
-             @"blockForWillBeginDecelerating",
-             @"blockForDidEndDecelerating",
-             @"blockForViewForZooming",
-             @"blockForWillBeginZooming",
-             @"blockForDidEndZooming",
-             @"blockForDidZoom",
-             @"blockForDidEndScrollingAnimation"];
-}
-
 @end

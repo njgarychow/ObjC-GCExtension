@@ -131,18 +131,16 @@ static inline SEL propertySetterSelector(NSString* propertyString) {
     return NSSelectorFromString([NSString stringWithFormat:@"set%@%@:", [head uppercaseString], rest]);
 };
 
-+ (void)extensionAccessorGeneratorWithProperties:(NSArray *)properties
-                                          setter:(IMP)setter
-                                          getter:(IMP)getter {
-    
-    for (NSString* propertyString in properties) {
-        SEL getterSEL = propertyGetterSelector(propertyString);
-        SEL setterSEL = propertySetterSelector(propertyString);
++ (void)_extensionProperty:(NSString *)propertyName setter:(IMP)setter getter:(IMP)getter {
+    if (setter) {
+        SEL setterSEL = propertySetterSelector(propertyName);
         class_addMethod(self, setterSEL, (IMP)(setter), "v@:@");
+    }
+    if (getter) {
+        SEL getterSEL = propertyGetterSelector(propertyName);
         class_addMethod(self, getterSEL, (IMP)(getter), "@@:");
     }
 }
-
 
 
 
@@ -151,49 +149,71 @@ static inline SEL propertySetterSelector(NSString* propertyString) {
 }
 
 + (void)extensionAccessorGenerator {
-    [self extensionAccessorGeneratorWithProperties:[self extensionAccessorNonatomicStrongPropertyNames]
-                                            setter:(IMP)(nonatomic_strong_setter)
-                                            getter:(IMP)(nonatomic_strong_getter)];
-
-    [self extensionAccessorGeneratorWithProperties:[self extensionAccessorNonatomicCopyPropertyNames]
-                                            setter:(IMP)(nonatomic_copy_setter)
-                                            getter:(IMP)(nonatomic_copy_getter)];
     
-    [self extensionAccessorGeneratorWithProperties:[self extensionAccessorNonatomicWeakPropertyNames]
-                                            setter:(IMP)(nonatomic_weak_setter)
-                                            getter:(IMP)(nonatomic_weak_getter)];
-    
-    [self extensionAccessorGeneratorWithProperties:[self extensionAccessorAtomicStrongPropertyNames]
-                                            setter:(IMP)(atomic_strong_setter)
-                                            getter:(IMP)(atomic_strong_getter)];
-    
-    [self extensionAccessorGeneratorWithProperties:[self extensionAccessorAtomicCopyPropertyNames]
-                                            setter:(IMP)(atomic_copy_setter)
-                                            getter:(IMP)(atomic_copy_getter)];
-    
-    [self extensionAccessorGeneratorWithProperties:[self extensionAccessorAtomicWeakPropertyNames]
-                                            setter:(IMP)(atomic_weak_setter)
-                                            getter:(IMP)(atomic_weak_getter)];
-}
-
-+ (NSArray *)extensionAccessorNonatomicStrongPropertyNames {
-    return @[];
-}
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[];
-}
-+ (NSArray *)extensionAccessorNonatomicWeakPropertyNames {
-    return @[];
-}
-
-+ (NSArray *)extensionAccessorAtomicStrongPropertyNames {
-    return @[];
-}
-+ (NSArray *)extensionAccessorAtomicCopyPropertyNames {
-    return @[];
-}
-+ (NSArray *)extensionAccessorAtomicWeakPropertyNames {
-    return @[];
+    unsigned int propertyCount;
+    objc_property_t* propertyList = class_copyPropertyList(self, &propertyCount);
+    for (int i = 0; i < propertyCount; i++) {
+        objc_property_t p = propertyList[i];
+        NSString* propertyName = [NSString stringWithCString:property_getName(p)
+                                                    encoding:NSUTF8StringEncoding];
+        if (class_getInstanceMethod([self class], propertyGetterSelector(propertyName))) {
+            continue;
+        }
+        
+        NSArray* types = [[NSString stringWithCString:property_getAttributes(p)
+                                             encoding:NSUTF8StringEncoding]
+                          componentsSeparatedByString:@","];
+        BOOL (^IsTargetTypeInTheTypes)(NSString* targetType) = ^(NSString* targetType) {
+            for (NSString* type in types) {
+                if ([type hasPrefix:targetType]) {
+                    return YES;
+                }
+            }
+            return NO;
+        };
+        
+        if (IsTargetTypeInTheTypes(@"G")) continue;
+        if (IsTargetTypeInTheTypes(@"S")) continue;
+        if (!IsTargetTypeInTheTypes(@"T@")) continue;
+        if (!IsTargetTypeInTheTypes(@"D")) continue;
+        
+        BOOL isReadonly     = IsTargetTypeInTheTypes(@"R");    //  1 << 1
+        BOOL isCopy         = IsTargetTypeInTheTypes(@"C");    //  1 << 2
+        BOOL isStrong       = IsTargetTypeInTheTypes(@"&");    //  1 << 3
+        BOOL isNonatomic    = IsTargetTypeInTheTypes(@"N");    //  1 << 4
+        BOOL isWeak         = IsTargetTypeInTheTypes(@"W");    //  1 << 5
+        
+        IMP setter = nil;
+        IMP getter = nil;
+        if (isNonatomic && isCopy) {
+            getter = (IMP)nonatomic_copy_getter;
+            setter = isReadonly ? nil : (IMP)nonatomic_copy_setter;
+        }
+        else if (isNonatomic && isStrong) {
+            getter = (IMP)nonatomic_strong_getter;
+            setter = isReadonly ? nil : (IMP)nonatomic_strong_setter;
+        }
+        else if (isNonatomic && isWeak) {
+            getter = (IMP)nonatomic_weak_getter;
+            setter = isReadonly ? nil : (IMP)nonatomic_weak_setter;
+        }
+        else if (isCopy) {
+            getter = (IMP)atomic_copy_getter;
+            setter = isReadonly ? nil : (IMP)atomic_copy_setter;
+        }
+        else if (isStrong) {
+            getter = (IMP)atomic_strong_getter;
+            setter = isReadonly ? nil : (IMP)atomic_strong_setter;
+        }
+        else if (isWeak) {
+            getter = (IMP)atomic_weak_getter;
+            setter = isReadonly ? nil : (IMP)atomic_weak_setter;
+        }
+        else {
+            NSLog(@"the property |%@| did not generate accesser method", propertyName);
+        }
+        [self _extensionProperty:propertyName setter:setter getter:getter];
+    }
 }
 
 @end

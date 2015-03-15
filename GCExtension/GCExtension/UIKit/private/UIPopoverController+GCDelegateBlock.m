@@ -26,10 +26,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForWillRepositionToRectInView",
-             @"blockForShouldDismiss",
-             @"blockForDidDismiss"];
-}
-
 @end

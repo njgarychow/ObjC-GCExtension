@@ -38,13 +38,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForShouldBegin",
-             @"blockForShouldReceiveTouch",
-             @"blockForShouldSimultaneous",
-             @"blockForShouldRequireFailureOf",
-             @"blockForShouldBeRequireToFailureBy"];
-}
-
-
 @end

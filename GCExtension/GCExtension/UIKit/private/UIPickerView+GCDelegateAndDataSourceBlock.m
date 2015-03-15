@@ -34,15 +34,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForRowHeightForComponent",
-             @"blockForWidthForComponent",
-             @"blockForTitltForRowForComponent",
-             @"blockForAttributedTitleForRowForComponent",
-             @"blockForViewForRowForComponentWithReusingView",
-             @"blockForDidSelectRowInComponent",
-             @"blockForNumberOfComponents",
-             @"blockForNumberOfRowsInComponent"];
-}
-
 @end

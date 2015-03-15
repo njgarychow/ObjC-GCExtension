@@ -72,52 +72,5 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForRowCell",
-             @"blockForSectionNumber",
-             @"blockForRowNumber",
-             @"blockForSectionIndexTitles",
-             @"blockForSectionIndex",
-             @"blockForFooterTitle",
-             @"blockForHeaderTitle",
-             @"blockForRowCommitEditStyleForRow",
-             @"blockForRowCanEditRow",
-             @"blockForRowCanMoveRow",
-             @"blockForRowMove",
-             @"blockForRowHeight",
-             @"blockForRowEstimatedHeight",
-             @"blockForRowIndentationLevel",
-             @"blockForRowCellWillDisplay",
-             @"blockForRowEditActions",
-             @"blockForRowAccessoryButtonTapped",
-             @"blockForRowWillSelect",
-             @"blockForRowDidSelect",
-             @"blockForRowWillDeselect",
-             @"blockForRowDidDeselecte",
-             @"blockForHeaderView",
-             @"blockForFooterView",
-             @"blockForHeaderHeight",
-             @"blockForHeaderEstimatedHeight",
-             @"blockForFooterHeight",
-             @"blockForFooterEstimatedHeight",
-             @"blockForHeaderViewWillDisplay",
-             @"blockForFooterViewWillDisplay",
-             @"blockForRowWillBeginEditing",
-             @"blockForRowDidEndEditing",
-             @"blockForRowEditingStyle",
-             @"blockForRowDeleteConfirmationButtonTitle",
-             @"blockForRowShouldIndentWhileEditing",
-             @"blockForRowMoveTargetIndexPath",
-             @"blockForRowDidEndDisplayingCell",
-             @"blockForHeaderViewDidEndDisplaying",
-             @"blockForFooterViewDidEndDisplaying",
-             @"blockForRowShouldShowMenu",
-             @"blockForRowCanPerformAction",
-             @"blockForRowPerformAction",
-             @"blockForRowShouldHighlight",
-             @"blockForRowDidHighlight",
-             @"blockForRowDidUnhighlight"];
-}
-
 @end
 

@@ -31,14 +31,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForShouldBeginEditing",
-             @"blockForDidBeginEditing",
-             @"blockForShouldEndEditing",
-             @"blockForDidEndEditing",
-             @"blockForShouldReplacementString",
-             @"blockForShouldClear",
-             @"blockForShouldReturn"];
-}
-
 @end

@@ -29,11 +29,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForShouldStartLoadRequest",
-             @"blockForDidStartLoad",
-             @"blockForDidFinishLoad",
-             @"blockForDidFailLoad"];
-}
-
 @end

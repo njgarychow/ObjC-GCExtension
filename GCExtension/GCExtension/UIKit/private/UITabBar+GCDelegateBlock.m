@@ -30,13 +30,5 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForWillBeginCustomizingItems",
-             @"blockForDidBeginCustomzingItems",
-             @"blockForWillEndCustomizingItems",
-             @"blockForDidEndCustomzingItems",
-             @"blockForDidSelectItem"];
-}
-
 
 @end

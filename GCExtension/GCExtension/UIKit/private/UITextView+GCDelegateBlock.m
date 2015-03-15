@@ -35,16 +35,4 @@
 @dynamic blockForShouldInteractAttachment;
 @dynamic blockForShouldInteractURL;
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForShouldBeginEditing",
-             @"blockForDidBeginEditing",
-             @"blockForShouldEndEditing",
-             @"blockForDidEndEditing",
-             @"blockForShouldChangeText",
-             @"blockForDidChanged",
-             @"blockForDidChangeSelection",
-             @"blockForShouldInteractAttachment",
-             @"blockForShouldInteractURL"];
-}
-
 @end

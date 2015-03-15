@@ -34,16 +34,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForShouldSelectViewController",
-             @"blockForDidSelectViewController",
-             @"blockForWillBeginCustomizingViewControllers",
-             @"blockForWillEndCustomizingViewControllersChanged",
-             @"blockForDidEndCustomizingViewControllersChanged",
-             @"blockForSupportedInterfaceOrientations",
-             @"blockForPreferredInterfaceOrientation",
-             @"blockForAnimationForTransitionController",
-             @"blockForInteractiveForAnimationController"];
-}
-
 @end

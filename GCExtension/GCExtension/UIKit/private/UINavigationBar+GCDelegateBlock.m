@@ -29,12 +29,4 @@
     [self extensionAccessorGenerator];
 }
 
-+ (NSArray *)extensionAccessorNonatomicCopyPropertyNames {
-    return @[@"blockForShouldPushItem",
-             @"blockForDidPushItem",
-             @"blockForShouldPopItem",
-             @"blockForDidPopItem",
-             @"blockForPosition"];
-}
-
 @end
