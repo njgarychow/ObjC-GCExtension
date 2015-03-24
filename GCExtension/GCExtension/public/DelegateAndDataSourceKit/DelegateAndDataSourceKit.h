@@ -26,4 +26,6 @@
 #import "UINavigationBar+GCDelegate.h"
 #import "UIPopoverController+GCDelegate.h"
 
+#import "AVAudioRecorder+GCDelegate.h"
+
 #endif

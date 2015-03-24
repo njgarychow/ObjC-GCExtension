@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AA62CE19EEAF46005D845A /* UIKit.framework */; };
-		61D6E98B1AC19E6B00A301BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D6E98A1AC19E6B00A301BD /* AVFoundation.framework */; };
-		61D6EB131AC1A2E400A301BD /* GCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA8C1AC1A2E400A301BD /* GCExtension.h */; };
-		61D6EB141AC1A2E400A301BD /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA8D1AC1A2E400A301BD /* GCMacro.h */; };
+		61D6EB131AC1A2E400A301BD /* GCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA8C1AC1A2E400A301BD /* GCExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D6EB141AC1A2E400A301BD /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA8D1AC1A2E400A301BD /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB151AC1A2E400A301BD /* GCImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA901AC1A2E400A301BD /* GCImplementationProxy.h */; };
 		61D6EB161AC1A2E400A301BD /* GCImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EA911AC1A2E400A301BD /* GCImplementationProxy.m */; };
 		61D6EB171AC1A2E400A301BD /* NSObject+GCProxyRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA921AC1A2E400A301BD /* NSObject+GCProxyRegister.h */; };
@@ -49,7 +48,7 @@
 		61D6EB381AC1A2E500A301BD /* UIWebViewDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAB61AC1A2E400A301BD /* UIWebViewDelegateImplementationProxy.m */; };
 		61D6EB391AC1A2E500A301BD /* UICollectionView+GCDelegateAndDataSourceBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAB71AC1A2E400A301BD /* UICollectionView+GCDelegateAndDataSourceBlock.h */; };
 		61D6EB3A1AC1A2E500A301BD /* UICollectionView+GCDelegateAndDataSourceBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAB81AC1A2E400A301BD /* UICollectionView+GCDelegateAndDataSourceBlock.m */; };
-		61D6EB3B1AC1A2E500A301BD /* UIExtension_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAB91AC1A2E400A301BD /* UIExtension_Private.h */; };
+		61D6EB3B1AC1A2E500A301BD /* UIExtension_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAB91AC1A2E400A301BD /* UIExtension_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB3C1AC1A2E500A301BD /* UIGestureRecognizer+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EABA1AC1A2E400A301BD /* UIGestureRecognizer+GCDelegateBlock.h */; };
 		61D6EB3D1AC1A2E500A301BD /* UIGestureRecognizer+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EABB1AC1A2E400A301BD /* UIGestureRecognizer+GCDelegateBlock.m */; };
 		61D6EB3E1AC1A2E500A301BD /* UIImagePickerController+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EABC1AC1A2E400A301BD /* UIImagePickerController+GCDelegateBlock.h */; };
@@ -80,63 +79,68 @@
 		61D6EB571AC1A2E600A301BD /* UIToolbar+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAD51AC1A2E400A301BD /* UIToolbar+GCDelegateBlock.m */; };
 		61D6EB581AC1A2E600A301BD /* UIWebView+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAD61AC1A2E400A301BD /* UIWebView+GCDelegateBlock.h */; };
 		61D6EB591AC1A2E600A301BD /* UIWebView+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAD71AC1A2E400A301BD /* UIWebView+GCDelegateBlock.m */; };
-		61D6EB5A1AC1A2E600A301BD /* DelegateAndDataSourceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EADC1AC1A2E400A301BD /* DelegateAndDataSourceKit.h */; };
-		61D6EB5B1AC1A2E600A301BD /* UICollectionView+GCDelegateAndDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EADF1AC1A2E400A301BD /* UICollectionView+GCDelegateAndDataSource.h */; };
+		61D6EB5A1AC1A2E600A301BD /* DelegateAndDataSourceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EADC1AC1A2E400A301BD /* DelegateAndDataSourceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D6EB5B1AC1A2E600A301BD /* UICollectionView+GCDelegateAndDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EADF1AC1A2E400A301BD /* UICollectionView+GCDelegateAndDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB5C1AC1A2E600A301BD /* UICollectionView+GCDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAE01AC1A2E400A301BD /* UICollectionView+GCDelegateAndDataSource.m */; };
-		61D6EB5D1AC1A2E600A301BD /* UIGestureRecognizer+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE11AC1A2E400A301BD /* UIGestureRecognizer+GCDelegate.h */; };
+		61D6EB5D1AC1A2E600A301BD /* UIGestureRecognizer+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE11AC1A2E400A301BD /* UIGestureRecognizer+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB5E1AC1A2E600A301BD /* UIGestureRecognizer+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAE21AC1A2E400A301BD /* UIGestureRecognizer+GCDelegate.m */; };
-		61D6EB5F1AC1A2E600A301BD /* UIImagePickerController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE31AC1A2E400A301BD /* UIImagePickerController+GCDelegate.h */; };
+		61D6EB5F1AC1A2E600A301BD /* UIImagePickerController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE31AC1A2E400A301BD /* UIImagePickerController+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB601AC1A2E600A301BD /* UIImagePickerController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAE41AC1A2E400A301BD /* UIImagePickerController+GCDelegate.m */; };
-		61D6EB611AC1A2E700A301BD /* UINavigationBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE51AC1A2E400A301BD /* UINavigationBar+GCDelegate.h */; };
+		61D6EB611AC1A2E700A301BD /* UINavigationBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE51AC1A2E400A301BD /* UINavigationBar+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB621AC1A2E700A301BD /* UINavigationBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAE61AC1A2E400A301BD /* UINavigationBar+GCDelegate.m */; };
-		61D6EB631AC1A2E700A301BD /* UINavigationController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE71AC1A2E400A301BD /* UINavigationController+GCDelegate.h */; };
+		61D6EB631AC1A2E700A301BD /* UINavigationController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE71AC1A2E400A301BD /* UINavigationController+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB641AC1A2E700A301BD /* UINavigationController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAE81AC1A2E400A301BD /* UINavigationController+GCDelegate.m */; };
-		61D6EB651AC1A2E700A301BD /* UIPickerView+GCDelegateAndDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE91AC1A2E400A301BD /* UIPickerView+GCDelegateAndDataSource.h */; };
+		61D6EB651AC1A2E700A301BD /* UIPickerView+GCDelegateAndDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAE91AC1A2E400A301BD /* UIPickerView+GCDelegateAndDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB661AC1A2E700A301BD /* UIPickerView+GCDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAEA1AC1A2E400A301BD /* UIPickerView+GCDelegateAndDataSource.m */; };
-		61D6EB671AC1A2E700A301BD /* UIPopoverController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAEB1AC1A2E400A301BD /* UIPopoverController+GCDelegate.h */; };
+		61D6EB671AC1A2E700A301BD /* UIPopoverController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAEB1AC1A2E400A301BD /* UIPopoverController+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB681AC1A2E700A301BD /* UIPopoverController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAEC1AC1A2E400A301BD /* UIPopoverController+GCDelegate.m */; };
-		61D6EB691AC1A2E700A301BD /* UIScrollView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAED1AC1A2E400A301BD /* UIScrollView+GCDelegate.h */; };
+		61D6EB691AC1A2E700A301BD /* UIScrollView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAED1AC1A2E400A301BD /* UIScrollView+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB6A1AC1A2E700A301BD /* UIScrollView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAEE1AC1A2E400A301BD /* UIScrollView+GCDelegate.m */; };
-		61D6EB6B1AC1A2E700A301BD /* UISearchBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAEF1AC1A2E400A301BD /* UISearchBar+GCDelegate.h */; };
+		61D6EB6B1AC1A2E700A301BD /* UISearchBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAEF1AC1A2E400A301BD /* UISearchBar+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB6C1AC1A2E700A301BD /* UISearchBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAF01AC1A2E400A301BD /* UISearchBar+GCDelegate.m */; };
-		61D6EB6D1AC1A2E700A301BD /* UITabBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF11AC1A2E400A301BD /* UITabBar+GCDelegate.h */; };
+		61D6EB6D1AC1A2E700A301BD /* UITabBar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF11AC1A2E400A301BD /* UITabBar+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB6E1AC1A2E700A301BD /* UITabBar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAF21AC1A2E400A301BD /* UITabBar+GCDelegate.m */; };
-		61D6EB6F1AC1A2E700A301BD /* UITabBarController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF31AC1A2E400A301BD /* UITabBarController+GCDelegate.h */; };
+		61D6EB6F1AC1A2E700A301BD /* UITabBarController+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF31AC1A2E400A301BD /* UITabBarController+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB701AC1A2E700A301BD /* UITabBarController+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAF41AC1A2E400A301BD /* UITabBarController+GCDelegate.m */; };
-		61D6EB711AC1A2E700A301BD /* UITableView+GCDelegateAndDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF51AC1A2E400A301BD /* UITableView+GCDelegateAndDataSource.h */; };
+		61D6EB711AC1A2E700A301BD /* UITableView+GCDelegateAndDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF51AC1A2E400A301BD /* UITableView+GCDelegateAndDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB721AC1A2E800A301BD /* UITableView+GCDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAF61AC1A2E400A301BD /* UITableView+GCDelegateAndDataSource.m */; };
-		61D6EB731AC1A2E800A301BD /* UITextField+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF71AC1A2E400A301BD /* UITextField+GCDelegate.h */; };
+		61D6EB731AC1A2E800A301BD /* UITextField+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF71AC1A2E400A301BD /* UITextField+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB741AC1A2E800A301BD /* UITextField+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAF81AC1A2E400A301BD /* UITextField+GCDelegate.m */; };
-		61D6EB751AC1A2E800A301BD /* UITextView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF91AC1A2E400A301BD /* UITextView+GCDelegate.h */; };
+		61D6EB751AC1A2E800A301BD /* UITextView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAF91AC1A2E400A301BD /* UITextView+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB761AC1A2E800A301BD /* UITextView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAFA1AC1A2E400A301BD /* UITextView+GCDelegate.m */; };
-		61D6EB771AC1A2E800A301BD /* UIToolbar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAFB1AC1A2E400A301BD /* UIToolbar+GCDelegate.h */; };
+		61D6EB771AC1A2E800A301BD /* UIToolbar+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAFB1AC1A2E400A301BD /* UIToolbar+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB781AC1A2E800A301BD /* UIToolbar+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAFC1AC1A2E400A301BD /* UIToolbar+GCDelegate.m */; };
-		61D6EB791AC1A2E800A301BD /* UIWebView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAFD1AC1A2E400A301BD /* UIWebView+GCDelegate.h */; };
+		61D6EB791AC1A2E800A301BD /* UIWebView+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EAFD1AC1A2E400A301BD /* UIWebView+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB7A1AC1A2E800A301BD /* UIWebView+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EAFE1AC1A2E400A301BD /* UIWebView+GCDelegate.m */; };
-		61D6EB7B1AC1A2E800A301BD /* GCAOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB001AC1A2E400A301BD /* GCAOPProxy.h */; };
+		61D6EB7B1AC1A2E800A301BD /* GCAOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB001AC1A2E400A301BD /* GCAOPProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB7C1AC1A2E800A301BD /* GCAOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB011AC1A2E400A301BD /* GCAOPProxy.m */; };
-		61D6EB7D1AC1A2E800A301BD /* NSObject+GCAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB021AC1A2E400A301BD /* NSObject+GCAccessor.h */; };
+		61D6EB7D1AC1A2E800A301BD /* NSObject+GCAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB021AC1A2E400A301BD /* NSObject+GCAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB7E1AC1A2E800A301BD /* NSObject+GCAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB031AC1A2E400A301BD /* NSObject+GCAccessor.m */; };
-		61D6EB7F1AC1A2E800A301BD /* NSObject+GCAOP.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB041AC1A2E400A301BD /* NSObject+GCAOP.h */; };
+		61D6EB7F1AC1A2E800A301BD /* NSObject+GCAOP.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB041AC1A2E400A301BD /* NSObject+GCAOP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB801AC1A2E800A301BD /* NSObject+GCAOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB051AC1A2E400A301BD /* NSObject+GCAOP.m */; };
-		61D6EB811AC1A2E800A301BD /* NSObject+GCKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB061AC1A2E400A301BD /* NSObject+GCKVO.h */; };
+		61D6EB811AC1A2E800A301BD /* NSObject+GCKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB061AC1A2E400A301BD /* NSObject+GCKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB821AC1A2E900A301BD /* NSObject+GCKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB071AC1A2E400A301BD /* NSObject+GCKVO.m */; };
-		61D6EB831AC1A2E900A301BD /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB081AC1A2E400A301BD /* NSObject+GCNotificationObserver.h */; };
+		61D6EB831AC1A2E900A301BD /* NSObject+GCNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB081AC1A2E400A301BD /* NSObject+GCNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB841AC1A2E900A301BD /* NSObject+GCNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB091AC1A2E400A301BD /* NSObject+GCNotificationObserver.m */; };
-		61D6EB851AC1A2E900A301BD /* NSTimer+GCBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB0A1AC1A2E400A301BD /* NSTimer+GCBlock.h */; };
+		61D6EB851AC1A2E900A301BD /* NSTimer+GCBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB0A1AC1A2E400A301BD /* NSTimer+GCBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB861AC1A2E900A301BD /* NSTimer+GCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB0B1AC1A2E400A301BD /* NSTimer+GCBlock.m */; };
-		61D6EB871AC1A2E900A301BD /* ObjectExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB0C1AC1A2E400A301BD /* ObjectExtensionKit.h */; };
-		61D6EB881AC1A2E900A301BD /* UIControl+GCEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB0E1AC1A2E400A301BD /* UIControl+GCEvent.h */; };
+		61D6EB871AC1A2E900A301BD /* ObjectExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB0C1AC1A2E400A301BD /* ObjectExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D6EB881AC1A2E900A301BD /* UIControl+GCEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB0E1AC1A2E400A301BD /* UIControl+GCEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB891AC1A2E900A301BD /* UIControl+GCEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB0F1AC1A2E400A301BD /* UIControl+GCEvent.m */; };
-		61D6EB8A1AC1A2E900A301BD /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB101AC1A2E400A301BD /* UIExtensionKit.h */; };
-		61D6EB8B1AC1A2E900A301BD /* UIGestureRecognizer+GCAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB111AC1A2E400A301BD /* UIGestureRecognizer+GCAction.h */; };
+		61D6EB8A1AC1A2E900A301BD /* UIExtensionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB101AC1A2E400A301BD /* UIExtensionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D6EB8B1AC1A2E900A301BD /* UIGestureRecognizer+GCAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB111AC1A2E400A301BD /* UIGestureRecognizer+GCAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB8C1AC1A2E900A301BD /* UIGestureRecognizer+GCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB121AC1A2E400A301BD /* UIGestureRecognizer+GCAction.m */; };
+		61D6EB8F1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB8D1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D6EB901AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB8E1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.m */; };
+		61D6EB941AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB921AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h */; };
+		61D6EB951AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB931AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.m */; };
+		61D6EB981AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EB961AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.h */; };
+		61D6EB991AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D6EB971AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.m */; };
 		61F29884198E93F600461164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29883198E93F600461164 /* Foundation.framework */; };
 		61F29892198E93F600461164 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29891198E93F600461164 /* XCTest.framework */; };
 		61F29893198E93F600461164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29883198E93F600461164 /* Foundation.framework */; };
 		61F29895198E93F600461164 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29894198E93F600461164 /* UIKit.framework */; };
 		61F29898198E93F600461164 /* libGCExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F29880198E93F600461164 /* libGCExtension.a */; };
-		61F2989E198E93F600461164 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61F2989C198E93F600461164 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,13 +290,17 @@
 		61D6EB101AC1A2E400A301BD /* UIExtensionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExtensionKit.h; sourceTree = "<group>"; };
 		61D6EB111AC1A2E400A301BD /* UIGestureRecognizer+GCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GCAction.h"; sourceTree = "<group>"; };
 		61D6EB121AC1A2E400A301BD /* UIGestureRecognizer+GCAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GCAction.m"; sourceTree = "<group>"; };
+		61D6EB8D1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioRecorder+GCDelegate.h"; sourceTree = "<group>"; };
+		61D6EB8E1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioRecorder+GCDelegate.m"; sourceTree = "<group>"; };
+		61D6EB921AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioRecorder+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61D6EB931AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioRecorder+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61D6EB961AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioRecordDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61D6EB971AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioRecordDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		61F29880198E93F600461164 /* libGCExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F29883198E93F600461164 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61F29890198E93F600461164 /* GCExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F29891198E93F600461164 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		61F29894198E93F600461164 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		61F2989B198E93F600461164 /* GCExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCExtensionTests-Info.plist"; sourceTree = "<group>"; };
-		61F2989D198E93F600461164 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,7 +308,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61D6E98B1AC19E6B00A301BD /* AVFoundation.framework in Frameworks */,
 				61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */,
 				61F29884198E93F600461164 /* Foundation.framework in Frameworks */,
 			);
@@ -357,6 +364,9 @@
 		61D6EA941AC1A2E400A301BD /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				61D6EB911AC1A47000A301BD /* GCDelegateImplementationProxy */,
+				61D6EB921AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h */,
+				61D6EB931AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -478,6 +488,8 @@
 		61D6EADD1AC1A2E400A301BD /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				61D6EB8D1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.h */,
+				61D6EB8E1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -553,11 +565,19 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		61D6EB911AC1A47000A301BD /* GCDelegateImplementationProxy */ = {
+			isa = PBXGroup;
+			children = (
+				61D6EB961AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.h */,
+				61D6EB971AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.m */,
+			);
+			path = GCDelegateImplementationProxy;
+			sourceTree = "<group>";
+		};
 		61F29877198E93F600461164 = {
 			isa = PBXGroup;
 			children = (
 				61D6EA8B1AC1A2E400A301BD /* GCExtension */,
-				61F29899198E93F600461164 /* GCExtensionTests */,
 				61F29882198E93F600461164 /* Frameworks */,
 				61F29881198E93F600461164 /* Products */,
 			);
@@ -584,23 +604,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		61F29899198E93F600461164 /* GCExtensionTests */ = {
-			isa = PBXGroup;
-			children = (
-				61F2989A198E93F600461164 /* Supporting Files */,
-			);
-			path = GCExtensionTests;
-			sourceTree = "<group>";
-		};
-		61F2989A198E93F600461164 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				61F2989B198E93F600461164 /* GCExtensionTests-Info.plist */,
-				61F2989C198E93F600461164 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -608,69 +611,72 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61D6EB171AC1A2E400A301BD /* NSObject+GCProxyRegister.h in Headers */,
 				61D6EB131AC1A2E400A301BD /* GCExtension.h in Headers */,
 				61D6EB771AC1A2E800A301BD /* UIToolbar+GCDelegate.h in Headers */,
 				61D6EB731AC1A2E800A301BD /* UITextField+GCDelegate.h in Headers */,
-				61D6EB401AC1A2E500A301BD /* UINavigationBar+GCDelegateBlock.h in Headers */,
 				61D6EB851AC1A2E900A301BD /* NSTimer+GCBlock.h in Headers */,
 				61D6EB5A1AC1A2E600A301BD /* DelegateAndDataSourceKit.h in Headers */,
-				61D6EB521AC1A2E600A301BD /* UITextField+GCDelegateBlock.h in Headers */,
-				61D6EB371AC1A2E500A301BD /* UIWebViewDelegateImplementationProxy.h in Headers */,
 				61D6EB881AC1A2E900A301BD /* UIControl+GCEvent.h in Headers */,
-				61D6EB271AC1A2E500A301BD /* UIScrollViewDelegateImplementationProxy.h in Headers */,
-				61D6EB211AC1A2E400A301BD /* UINavigationControllerDelegateImplementionProxy.h in Headers */,
-				61D6EB351AC1A2E500A301BD /* UIToolbarDelegateImplementationProxy.h in Headers */,
 				61D6EB7B1AC1A2E800A301BD /* GCAOPProxy.h in Headers */,
-				61D6EB251AC1A2E400A301BD /* UIPopoverControllerImplementationProxy.h in Headers */,
-				61D6EB151AC1A2E400A301BD /* GCImplementationProxy.h in Headers */,
 				61D6EB3B1AC1A2E500A301BD /* UIExtension_Private.h in Headers */,
-				61D6EB191AC1A2E400A301BD /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */,
-				61D6EB461AC1A2E500A301BD /* UIPopoverController+GCDelegateBlock.h in Headers */,
 				61D6EB7F1AC1A2E800A301BD /* NSObject+GCAOP.h in Headers */,
 				61D6EB631AC1A2E700A301BD /* UINavigationController+GCDelegate.h in Headers */,
 				61D6EB811AC1A2E800A301BD /* NSObject+GCKVO.h in Headers */,
-				61D6EB1B1AC1A2E400A301BD /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
 				61D6EB5F1AC1A2E600A301BD /* UIImagePickerController+GCDelegate.h in Headers */,
 				61D6EB671AC1A2E700A301BD /* UIPopoverController+GCDelegate.h in Headers */,
-				61D6EB2B1AC1A2E500A301BD /* UITabbarControllerDelegateImplementationProxy.h in Headers */,
 				61D6EB691AC1A2E700A301BD /* UIScrollView+GCDelegate.h in Headers */,
-				61D6EB3C1AC1A2E500A301BD /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
 				61D6EB8B1AC1A2E900A301BD /* UIGestureRecognizer+GCAction.h in Headers */,
 				61D6EB791AC1A2E800A301BD /* UIWebView+GCDelegate.h in Headers */,
-				61D6EB501AC1A2E600A301BD /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
-				61D6EB4A1AC1A2E500A301BD /* UISearchBar+GCDelegateBlock.h in Headers */,
-				61D6EB1F1AC1A2E400A301BD /* UINavigationBarDelegateImpletationProxy.h in Headers */,
-				61D6EB311AC1A2E500A301BD /* UITextFieldDelegateImplementationProxy.h in Headers */,
-				61D6EB2D1AC1A2E500A301BD /* UITabbarDelegateImplementationProxy.h in Headers */,
-				61D6EB561AC1A2E600A301BD /* UIToolbar+GCDelegateBlock.h in Headers */,
-				61D6EB4E1AC1A2E600A301BD /* UITabBarController+GCDelegateBlock.h in Headers */,
-				61D6EB291AC1A2E500A301BD /* UISearchBarDelegateImplementationProxy.h in Headers */,
-				61D6EB441AC1A2E500A301BD /* UIPickerView+GCDelegateAndDataSourceBlock.h in Headers */,
 				61D6EB751AC1A2E800A301BD /* UITextView+GCDelegate.h in Headers */,
 				61D6EB831AC1A2E900A301BD /* NSObject+GCNotificationObserver.h in Headers */,
 				61D6EB141AC1A2E400A301BD /* GCMacro.h in Headers */,
 				61D6EB6B1AC1A2E700A301BD /* UISearchBar+GCDelegate.h in Headers */,
 				61D6EB651AC1A2E700A301BD /* UIPickerView+GCDelegateAndDataSource.h in Headers */,
-				61D6EB581AC1A2E600A301BD /* UIWebView+GCDelegateBlock.h in Headers */,
 				61D6EB611AC1A2E700A301BD /* UINavigationBar+GCDelegate.h in Headers */,
-				61D6EB331AC1A2E500A301BD /* UITextViewDelegateImplementationProxy.h in Headers */,
-				61D6EB2F1AC1A2E500A301BD /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				61D6EB6D1AC1A2E700A301BD /* UITabBar+GCDelegate.h in Headers */,
 				61D6EB7D1AC1A2E800A301BD /* NSObject+GCAccessor.h in Headers */,
-				61D6EB421AC1A2E500A301BD /* UINavigationController+GCDelegateBlock.h in Headers */,
 				61D6EB871AC1A2E900A301BD /* ObjectExtensionKit.h in Headers */,
 				61D6EB6F1AC1A2E700A301BD /* UITabBarController+GCDelegate.h in Headers */,
 				61D6EB8A1AC1A2E900A301BD /* UIExtensionKit.h in Headers */,
 				61D6EB711AC1A2E700A301BD /* UITableView+GCDelegateAndDataSource.h in Headers */,
+				61D6EB8F1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.h in Headers */,
+				61D6EB5B1AC1A2E600A301BD /* UICollectionView+GCDelegateAndDataSource.h in Headers */,
+				61D6EB5D1AC1A2E600A301BD /* UIGestureRecognizer+GCDelegate.h in Headers */,
+				61D6EB401AC1A2E500A301BD /* UINavigationBar+GCDelegateBlock.h in Headers */,
+				61D6EB521AC1A2E600A301BD /* UITextField+GCDelegateBlock.h in Headers */,
+				61D6EB461AC1A2E500A301BD /* UIPopoverController+GCDelegateBlock.h in Headers */,
+				61D6EB3C1AC1A2E500A301BD /* UIGestureRecognizer+GCDelegateBlock.h in Headers */,
+				61D6EB501AC1A2E600A301BD /* UITableView+GCDelegateAndDataSourceBlock.h in Headers */,
+				61D6EB4A1AC1A2E500A301BD /* UISearchBar+GCDelegateBlock.h in Headers */,
+				61D6EB561AC1A2E600A301BD /* UIToolbar+GCDelegateBlock.h in Headers */,
+				61D6EB4E1AC1A2E600A301BD /* UITabBarController+GCDelegateBlock.h in Headers */,
+				61D6EB441AC1A2E500A301BD /* UIPickerView+GCDelegateAndDataSourceBlock.h in Headers */,
+				61D6EB581AC1A2E600A301BD /* UIWebView+GCDelegateBlock.h in Headers */,
+				61D6EB421AC1A2E500A301BD /* UINavigationController+GCDelegateBlock.h in Headers */,
+				61D6EB941AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h in Headers */,
 				61D6EB541AC1A2E600A301BD /* UITextView+GCDelegateBlock.h in Headers */,
 				61D6EB4C1AC1A2E600A301BD /* UITabBar+GCDelegateBlock.h in Headers */,
 				61D6EB481AC1A2E500A301BD /* UIScrollView+GCDelegateBlock.h in Headers */,
+				61D6EB171AC1A2E400A301BD /* NSObject+GCProxyRegister.h in Headers */,
+				61D6EB371AC1A2E500A301BD /* UIWebViewDelegateImplementationProxy.h in Headers */,
+				61D6EB981AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.h in Headers */,
+				61D6EB271AC1A2E500A301BD /* UIScrollViewDelegateImplementationProxy.h in Headers */,
+				61D6EB211AC1A2E400A301BD /* UINavigationControllerDelegateImplementionProxy.h in Headers */,
+				61D6EB351AC1A2E500A301BD /* UIToolbarDelegateImplementationProxy.h in Headers */,
+				61D6EB251AC1A2E400A301BD /* UIPopoverControllerImplementationProxy.h in Headers */,
+				61D6EB151AC1A2E400A301BD /* GCImplementationProxy.h in Headers */,
+				61D6EB191AC1A2E400A301BD /* UICollectionViewDelegateAndDataSourceImplementationProxy.h in Headers */,
+				61D6EB1B1AC1A2E400A301BD /* UIGestureRecognizerDelegateImplementProxy.h in Headers */,
+				61D6EB2B1AC1A2E500A301BD /* UITabbarControllerDelegateImplementationProxy.h in Headers */,
+				61D6EB1F1AC1A2E400A301BD /* UINavigationBarDelegateImpletationProxy.h in Headers */,
+				61D6EB311AC1A2E500A301BD /* UITextFieldDelegateImplementationProxy.h in Headers */,
+				61D6EB2D1AC1A2E500A301BD /* UITabbarDelegateImplementationProxy.h in Headers */,
+				61D6EB291AC1A2E500A301BD /* UISearchBarDelegateImplementationProxy.h in Headers */,
+				61D6EB331AC1A2E500A301BD /* UITextViewDelegateImplementationProxy.h in Headers */,
+				61D6EB2F1AC1A2E500A301BD /* UITableViewDelegateAndDataSourceImplementationProxy.h in Headers */,
 				61D6EB1D1AC1A2E400A301BD /* UIImagePickerControllerDelegateImplementationProxy.h in Headers */,
-				61D6EB5B1AC1A2E600A301BD /* UICollectionView+GCDelegateAndDataSource.h in Headers */,
-				61D6EB3E1AC1A2E500A301BD /* UIImagePickerController+GCDelegateBlock.h in Headers */,
 				61D6EB231AC1A2E400A301BD /* UIPickerViewDelegateImplementationProxy.h in Headers */,
-				61D6EB5D1AC1A2E600A301BD /* UIGestureRecognizer+GCDelegate.h in Headers */,
+				61D6EB3E1AC1A2E500A301BD /* UIImagePickerController+GCDelegateBlock.h in Headers */,
 				61D6EB391AC1A2E500A301BD /* UICollectionView+GCDelegateAndDataSourceBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,7 +752,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F2989E198E93F600461164 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +782,7 @@
 				61D6EB601AC1A2E600A301BD /* UIImagePickerController+GCDelegate.m in Sources */,
 				61D6EB451AC1A2E500A301BD /* UIPickerView+GCDelegateAndDataSourceBlock.m in Sources */,
 				61D6EB361AC1A2E500A301BD /* UIToolbarDelegateImplementationProxy.m in Sources */,
+				61D6EB991AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.m in Sources */,
 				61D6EB1A1AC1A2E400A301BD /* UICollectionViewDelegateAndDataSourceImplementationProxy.m in Sources */,
 				61D6EB181AC1A2E400A301BD /* NSObject+GCProxyRegister.m in Sources */,
 				61D6EB2E1AC1A2E500A301BD /* UITabbarDelegateImplementationProxy.m in Sources */,
@@ -787,6 +793,7 @@
 				61D6EB721AC1A2E800A301BD /* UITableView+GCDelegateAndDataSource.m in Sources */,
 				61D6EB781AC1A2E800A301BD /* UIToolbar+GCDelegate.m in Sources */,
 				61D6EB6A1AC1A2E700A301BD /* UIScrollView+GCDelegate.m in Sources */,
+				61D6EB901AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.m in Sources */,
 				61D6EB1E1AC1A2E400A301BD /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */,
 				61D6EB861AC1A2E900A301BD /* NSTimer+GCBlock.m in Sources */,
 				61D6EB551AC1A2E600A301BD /* UITextView+GCDelegateBlock.m in Sources */,
@@ -810,6 +817,7 @@
 				61D6EB491AC1A2E500A301BD /* UIScrollView+GCDelegateBlock.m in Sources */,
 				61D6EB471AC1A2E500A301BD /* UIPopoverController+GCDelegateBlock.m in Sources */,
 				61D6EB281AC1A2E500A301BD /* UIScrollViewDelegateImplementationProxy.m in Sources */,
+				61D6EB951AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.m in Sources */,
 				61D6EB621AC1A2E700A301BD /* UINavigationBar+GCDelegate.m in Sources */,
 				61D6EB701AC1A2E700A301BD /* UITabBarController+GCDelegate.m in Sources */,
 				61D6EB641AC1A2E700A301BD /* UINavigationController+GCDelegate.m in Sources */,
@@ -834,17 +842,6 @@
 			targetProxy = 61F29896198E93F600461164 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		61F2989C198E93F600461164 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61F2989D198E93F600461164 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		61F298A1198E93F600461164 /* Debug */ = {
@@ -927,6 +924,7 @@
 				GCC_PREFIX_HEADER = "GCExtension-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -941,6 +939,7 @@
 				GCC_PREFIX_HEADER = "GCExtension-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
