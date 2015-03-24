@@ -1,16 +1,13 @@
 //
-//  UIExtensionKit.h
+//  DelegateAndDataSourceKit.h
 //  GCExtension
 //
-//  Created by zhoujinqiang on 14-8-5.
-//  Copyright (c) 2014年 zhoujinqiang. All rights reserved.
+//  Created by njgarychow on 3/24/15.
+//  Copyright (c) 2015 zhoujinqiang. All rights reserved.
 //
 
-#ifndef GCExtension_UIExtensionKit_h
-#define GCExtension_UIExtensionKit_h
-
-#import "UIControl+GCEvent.h"
-#import "UIGestureRecognizer+GCAction.h"
+#ifndef GCExtension_DelegateAndDataSourceKit_h
+#define GCExtension_DelegateAndDataSourceKit_h
 
 #import "UIScrollView+GCDelegate.h"
 #import "UICollectionView+GCDelegateAndDataSource.h"
@@ -28,7 +25,5 @@
 #import "UIToolbar+GCDelegate.h"
 #import "UINavigationBar+GCDelegate.h"
 #import "UIPopoverController+GCDelegate.h"
-
-//#import "UIExtension_Private.h"
 
 #endif
