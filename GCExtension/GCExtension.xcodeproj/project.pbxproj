@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		61AA62CF19EEAF46005D845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AA62CE19EEAF46005D845A /* UIKit.framework */; };
+		61C742681AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C742661AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61C742691AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C742671AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.m */; };
+		61C7426C1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C7426A1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.h */; };
+		61C7426D1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C7426B1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.m */; };
+		61C742701AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C7426E1AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.h */; };
+		61C742711AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C7426F1AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.m */; };
 		61D6EB131AC1A2E400A301BD /* GCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA8C1AC1A2E400A301BD /* GCExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB141AC1A2E400A301BD /* GCMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA8D1AC1A2E400A301BD /* GCMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D6EB151AC1A2E400A301BD /* GCImplementationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D6EA901AC1A2E400A301BD /* GCImplementationProxy.h */; };
@@ -167,7 +173,12 @@
 
 /* Begin PBXFileReference section */
 		61AA62CE19EEAF46005D845A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		61D6E98A1AC19E6B00A301BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		61C742661AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioPlayer+GCDelegate.h"; sourceTree = "<group>"; };
+		61C742671AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioPlayer+GCDelegate.m"; sourceTree = "<group>"; };
+		61C7426A1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioPlayer+GCDelegateBlock.h"; sourceTree = "<group>"; };
+		61C7426B1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioPlayer+GCDelegateBlock.m"; sourceTree = "<group>"; };
+		61C7426E1AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioPlayerDelegateImplementationProxy.h; sourceTree = "<group>"; };
+		61C7426F1AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioPlayerDelegateImplementationProxy.m; sourceTree = "<group>"; };
 		61D6EA8C1AC1A2E400A301BD /* GCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCExtension.h; sourceTree = "<group>"; };
 		61D6EA8D1AC1A2E400A301BD /* GCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMacro.h; sourceTree = "<group>"; };
 		61D6EA901AC1A2E400A301BD /* GCImplementationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCImplementationProxy.h; sourceTree = "<group>"; };
@@ -367,6 +378,8 @@
 				61D6EB911AC1A47000A301BD /* GCDelegateImplementationProxy */,
 				61D6EB921AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h */,
 				61D6EB931AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.m */,
+				61C7426A1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.h */,
+				61C7426B1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -490,6 +503,8 @@
 			children = (
 				61D6EB8D1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.h */,
 				61D6EB8E1AC1A37A00A301BD /* AVAudioRecorder+GCDelegate.m */,
+				61C742661AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.h */,
+				61C742671AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -570,6 +585,8 @@
 			children = (
 				61D6EB961AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.h */,
 				61D6EB971AC1A59000A301BD /* AVAudioRecordDelegateImplementationProxy.m */,
+				61C7426E1AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.h */,
+				61C7426F1AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.m */,
 			);
 			path = GCDelegateImplementationProxy;
 			sourceTree = "<group>";
@@ -595,7 +612,6 @@
 		61F29882198E93F600461164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				61D6E98A1AC19E6B00A301BD /* AVFoundation.framework */,
 				61AA62CE19EEAF46005D845A /* UIKit.framework */,
 				61F29883198E93F600461164 /* Foundation.framework */,
 				61F29891198E93F600461164 /* XCTest.framework */,
@@ -611,11 +627,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C742681AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.h in Headers */,
 				61D6EB131AC1A2E400A301BD /* GCExtension.h in Headers */,
 				61D6EB771AC1A2E800A301BD /* UIToolbar+GCDelegate.h in Headers */,
 				61D6EB731AC1A2E800A301BD /* UITextField+GCDelegate.h in Headers */,
 				61D6EB851AC1A2E900A301BD /* NSTimer+GCBlock.h in Headers */,
 				61D6EB5A1AC1A2E600A301BD /* DelegateAndDataSourceKit.h in Headers */,
+				61C7426C1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.h in Headers */,
 				61D6EB881AC1A2E900A301BD /* UIControl+GCEvent.h in Headers */,
 				61D6EB7B1AC1A2E800A301BD /* GCAOPProxy.h in Headers */,
 				61D6EB3B1AC1A2E500A301BD /* UIExtension_Private.h in Headers */,
@@ -656,6 +674,7 @@
 				61D6EB941AC1A47F00A301BD /* AVAudioRecorder+GCDelegateBlock.h in Headers */,
 				61D6EB541AC1A2E600A301BD /* UITextView+GCDelegateBlock.h in Headers */,
 				61D6EB4C1AC1A2E600A301BD /* UITabBar+GCDelegateBlock.h in Headers */,
+				61C742701AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.h in Headers */,
 				61D6EB481AC1A2E500A301BD /* UIScrollView+GCDelegateBlock.h in Headers */,
 				61D6EB171AC1A2E400A301BD /* NSObject+GCProxyRegister.h in Headers */,
 				61D6EB371AC1A2E500A301BD /* UIWebViewDelegateImplementationProxy.h in Headers */,
@@ -797,6 +816,8 @@
 				61D6EB1E1AC1A2E400A301BD /* UIImagePickerControllerDelegateImplementationProxy.m in Sources */,
 				61D6EB861AC1A2E900A301BD /* NSTimer+GCBlock.m in Sources */,
 				61D6EB551AC1A2E600A301BD /* UITextView+GCDelegateBlock.m in Sources */,
+				61C742691AC1AFFC0065ADC8 /* AVAudioPlayer+GCDelegate.m in Sources */,
+				61C7426D1AC1B02C0065ADC8 /* AVAudioPlayer+GCDelegateBlock.m in Sources */,
 				61D6EB8C1AC1A2E900A301BD /* UIGestureRecognizer+GCAction.m in Sources */,
 				61D6EB6C1AC1A2E700A301BD /* UISearchBar+GCDelegate.m in Sources */,
 				61D6EB7A1AC1A2E800A301BD /* UIWebView+GCDelegate.m in Sources */,
@@ -822,6 +843,7 @@
 				61D6EB701AC1A2E700A301BD /* UITabBarController+GCDelegate.m in Sources */,
 				61D6EB641AC1A2E700A301BD /* UINavigationController+GCDelegate.m in Sources */,
 				61D6EB661AC1A2E700A301BD /* UIPickerView+GCDelegateAndDataSource.m in Sources */,
+				61C742711AC1B0510065ADC8 /* AVAudioPlayerDelegateImplementationProxy.m in Sources */,
 				61D6EB2C1AC1A2E500A301BD /* UITabbarControllerDelegateImplementationProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

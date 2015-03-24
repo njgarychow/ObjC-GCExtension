@@ -27,5 +27,6 @@
 #import "UIPopoverController+GCDelegate.h"
 
 #import "AVAudioRecorder+GCDelegate.h"
+#import "AVAudioPlayer+GCDelegate.h"
 
 #endif
