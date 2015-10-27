@@ -214,6 +214,7 @@ static inline SEL propertySetterSelector(NSString* propertyString) {
         }
         [self _extensionProperty:propertyName setter:setter getter:getter];
     }
+    free(propertyList);
 }
 
 @end
